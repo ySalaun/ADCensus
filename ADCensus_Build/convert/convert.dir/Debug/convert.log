@@ -1,0 +1,32 @@
+﻿La génération a démarré 18/10/2012 18:45:43.
+     1>Projet "C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\convert\convert.vcxproj" sur le nœud 2 (build cible(s)).
+     1>InitializeBuildStatus:
+         Création de "convert.dir\Debug\convert.unsuccessfulbuild", car "AlwaysCreate" a été spécifié.
+       CustomBuild:
+         Building Custom Rule C:/Users/Yohann/Desktop/ADCensus/ADCensus_CMake/convert/CMakeLists.txt
+         CMake does not need to re-run because C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\convert\CMakeFiles\generate.stamp is up-to-date.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IC:/Users/Yohann/Desktop/ADCensus/ADCensus_CMake/convert/.. /Zi /nologo /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"convert.dir\Debug\\" /Fd"C:/Users/Yohann/Desktop/ADCensus/ADCensus_Build/bin/Debug/convert.pdb" /Gd /TP /analyze- /errorReport:prompt C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\convert\convert.cpp  /Zm1000 
+         convert.cpp
+       ManifestResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"convert.dir\Debug\convert.exe.embed.manifest.res" convert.dir\Debug\convert_manifest.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\bin\Debug\convert.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib ..\lib\Debug\IO.lib ..\lib\Debug\tiff.lib ..\lib\Debug\png.lib ..\lib\Debug\zlibd.lib /MANIFEST /ManifestFile:"convert.dir\Debug\convert.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\bin\Debug\convert.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Yohann/Desktop/ADCensus/ADCensus_Build/lib/Debug/convert.lib" /MACHINE:X86 convert.dir\Debug\convert.exe.embed.manifest.res
+         convert.dir\Debug\convert.obj  /machine:X86 /debug 
+            Création de la bibliothèque C:/Users/Yohann/Desktop/ADCensus/ADCensus_Build/lib/Debug/convert.lib et de l'objet C:/Users/Yohann/Desktop/ADCensus/ADCensus_Build/lib/Debug/convert.exp
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"convert.dir\Debug\convert.exe.embed.manifest" /manifest convert.dir\Debug\convert.exe.intermediate.manifest
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"convert.dir\Debug\convert.exe.embed.manifest.res" convert.dir\Debug\convert_manifest.rc 
+       LinkEmbedManifest:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\bin\Debug\convert.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib ..\lib\Debug\IO.lib ..\lib\Debug\tiff.lib ..\lib\Debug\png.lib ..\lib\Debug\zlibd.lib /MANIFEST /ManifestFile:"convert.dir\Debug\convert.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\bin\Debug\convert.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Yohann/Desktop/ADCensus/ADCensus_Build/lib/Debug/convert.lib" /MACHINE:X86 convert.dir\Debug\convert.exe.embed.manifest.res
+         convert.dir\Debug\convert.obj  /machine:X86 /debug 
+            Création de la bibliothèque C:/Users/Yohann/Desktop/ADCensus/ADCensus_Build/lib/Debug/convert.lib et de l'objet C:/Users/Yohann/Desktop/ADCensus/ADCensus_Build/lib/Debug/convert.exp
+         convert.vcxproj -> C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\bin\Debug\convert.exe
+       FinalizeBuildStatus:
+         Suppression du fichier "convert.dir\Debug\convert.unsuccessfulbuild".
+         Mise à jour de l'horodatage "convert.dir\Debug\convert.lastbuildstate".
+     1>Génération du projet "C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\convert\convert.vcxproj" terminée (build cible(s)).
+
+La génération a réussi.
+
+Temps écoulé 00:00:01.83

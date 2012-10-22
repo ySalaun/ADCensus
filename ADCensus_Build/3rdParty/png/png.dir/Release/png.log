@@ -1,0 +1,50 @@
+﻿La génération a démarré 17/10/2012 21:51:15.
+     1>Projet "C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\3rdParty\png\png.vcxproj" sur le nœud 5 (build cible(s)).
+     1>InitializeBuildStatus:
+         Création de "png.dir\Release\png.unsuccessfulbuild", car "AlwaysCreate" a été spécifié.
+       CustomBuild:
+         Building Custom Rule C:/Users/Yohann/Desktop/ADCensus/ADCensus_CMake/3rdParty/png/CMakeLists.txt
+         CMake does not need to re-run because C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\3rdParty\png\CMakeFiles\generate.stamp is up-to-date.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IC:/Users/Yohann/Desktop/ADCensus/ADCensus_CMake/3rdParty/png/../zlib /nologo /W3 /WX- /O2 /Ob2 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D PNG_STATIC /D _CRT_SECURE_NO_WARNINGS /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"png.dir\Release\\" /Fd"C:/Users/Yohann/Desktop/ADCensus/ADCensus_Build/lib/Release/png.pdb" /Gd /TC /analyze- /errorReport:prompt C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\png\png.c C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\png\pngerror.c C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\png\pngget.c C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\png\pngmem.c C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\png\pngpread.c C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\png\pngread.c C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\png\pngrio.c C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\png\pngrtran.c C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\png\pngrutil.c C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\png\pngset.c C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\png\pngtrans.c C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\png\pngwio.c C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\png\pngwrite.c C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\png\pngwtran.c C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\png\pngwutil.c  /Zm1000 
+         png.c
+         pngerror.c
+         pngget.c
+         pngmem.c
+         pngpread.c
+         pngread.c
+         pngrio.c
+         pngrtran.c
+         pngrutil.c
+         pngset.c
+         pngtrans.c
+         pngwio.c
+         pngwrite.c
+         pngwtran.c
+         pngwutil.c
+         Génération de code en cours...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\lib\Release\png.lib" /NOLOGO png.dir\Release\png.obj
+         png.dir\Release\pngerror.obj
+         png.dir\Release\pngget.obj
+         png.dir\Release\pngmem.obj
+         png.dir\Release\pngpread.obj
+         png.dir\Release\pngread.obj
+         png.dir\Release\pngrio.obj
+         png.dir\Release\pngrtran.obj
+         png.dir\Release\pngrutil.obj
+         png.dir\Release\pngset.obj
+         png.dir\Release\pngtrans.obj
+         png.dir\Release\pngwio.obj
+         png.dir\Release\pngwrite.obj
+         png.dir\Release\pngwtran.obj
+         png.dir\Release\pngwutil.obj
+         png.vcxproj -> C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\lib\Release\png.lib
+       FinalizeBuildStatus:
+         Suppression du fichier "png.dir\Release\png.unsuccessfulbuild".
+         Mise à jour de l'horodatage "png.dir\Release\png.lastbuildstate".
+     1>Génération du projet "C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\3rdParty\png\png.vcxproj" terminée (build cible(s)).
+
+La génération a réussi.
+
+Temps écoulé 00:00:05.11

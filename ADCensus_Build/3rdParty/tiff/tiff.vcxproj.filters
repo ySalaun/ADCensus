@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_aux.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_close.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_codec.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_color.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_compress.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_dir.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_dirinfo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_dirread.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_dirwrite.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_dumpmode.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_error.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_extension.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_fax3.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_fax3sm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_flush.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_getimage.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_jbig.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_luv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_lzw.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_next.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_open.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_packbits.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_pixarlog.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_predict.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_print.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_read.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_strip.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_swab.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_thunder.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_tile.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_unix.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_version.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_warning.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_write.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_zip.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\t4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_config.vc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_dir.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_fax3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tiff.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tiffconf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tiffconf.vc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tiffio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tiffiop.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tiffvers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_predict.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\uvcode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\ADCensus_CMake\3rdParty\tiff\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{606F7027-8798-403A-8C08-2F3EAE11F1F6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{FC0917A6-BB3E-4DA7-8FEF-19BD7F64F725}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,20 @@
+﻿La génération a démarré 18/10/2012 18:51:01.
+     1>Projet "C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\libStereo\Stereo.vcxproj" sur le nœud 3 (build cible(s)).
+     1>InitializeBuildStatus:
+         Création de "Stereo.dir\Release\Stereo.unsuccessfulbuild", car "AlwaysCreate" a été spécifié.
+       CustomBuild:
+         Toutes les sorties sont à jour.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IC:/Users/Yohann/Desktop/ADCensus/ADCensus_CMake/libStereo/.. /nologo /W3 /WX- /O2 /Ob2 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"Stereo.dir\Release\\" /Fd"C:/Users/Yohann/Desktop/ADCensus/ADCensus_Build/lib/Release/Stereo.pdb" /Gd /TP /analyze- /errorReport:prompt C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\libStereo\patch.cpp  /Zm1000 
+         patch.cpp
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\lib\Release\Stereo.lib" /NOLOGO Stereo.dir\Release\patch.obj
+         Stereo.vcxproj -> C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\lib\Release\Stereo.lib
+       FinalizeBuildStatus:
+         Suppression du fichier "Stereo.dir\Release\Stereo.unsuccessfulbuild".
+         Mise à jour de l'horodatage "Stereo.dir\Release\Stereo.lastbuildstate".
+     1>Génération du projet "C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\libStereo\Stereo.vcxproj" terminée (build cible(s)).
+
+La génération a réussi.
+
+Temps écoulé 00:00:00.22

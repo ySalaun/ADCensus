@@ -1,0 +1,275 @@
+﻿La génération a démarré 17/10/2012 11:23:16.
+     1>Projet "C:\Users\Yohann\Desktop\ADCensus\ADCensus\ADCensus.vcxproj" sur le nœud 2 (build cible(s)).
+     1>InitializeBuildStatus:
+         Création de "Debug\ADCensus.unsuccessfulbuild", car "AlwaysCreate" a été spécifié.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt 3rdparty\png\png.c 3rdparty\png\pngerror.c 3rdparty\png\pngget.c 3rdparty\png\pngmem.c 3rdparty\png\pngpread.c 3rdparty\png\pngread.c 3rdparty\png\pngrio.c 3rdparty\png\pngrtran.c 3rdparty\png\pngrutil.c 3rdparty\png\pngset.c 3rdparty\png\pngtrans.c 3rdparty\png\pngwio.c 3rdparty\png\pngwrite.c 3rdparty\png\pngwtran.c 3rdparty\png\pngwutil.c 3rdparty\tiff\mkg3states.c 3rdparty\tiff\tif_apple.c 3rdparty\tiff\tif_atari.c 3rdparty\tiff\tif_aux.c 3rdparty\tiff\tif_close.c 3rdparty\tiff\tif_codec.c 3rdparty\tiff\tif_color.c 3rdparty\tiff\tif_compress.c 3rdparty\tiff\tif_dir.c 3rdparty\tiff\tif_dirinfo.c 3rdparty\tiff\tif_dirread.c 3rdparty\tiff\tif_dirwrite.c 3rdparty\tiff\tif_dumpmode.c 3rdparty\tiff\tif_error.c 3rdparty\tiff\tif_extension.c 3rdparty\tiff\tif_fax3.c 3rdparty\tiff\tif_fax3sm.c 3rdparty\tiff\tif_flush.c 3rdparty\tiff\tif_getimage.c 3rdparty\tiff\tif_jbig.c 3rdparty\tiff\tif_jpeg.c 3rdparty\tiff\tif_luv.c 3rdparty\tiff\tif_lzw.c 3rdparty\tiff\tif_msdos.c 3rdparty\tiff\tif_next.c 3rdparty\tiff\tif_ojpeg.c 3rdparty\tiff\tif_open.c 3rdparty\tiff\tif_packbits.c 3rdparty\tiff\tif_pixarlog.c 3rdparty\tiff\tif_predict.c 3rdparty\tiff\tif_print.c 3rdparty\tiff\tif_read.c 3rdparty\tiff\tif_strip.c 3rdparty\tiff\tif_swab.c 3rdparty\tiff\tif_thunder.c 3rdparty\tiff\tif_tile.c 3rdparty\tiff\tif_unix.c 3rdparty\tiff\tif_version.c 3rdparty\tiff\tif_warning.c 3rdparty\tiff\tif_win3.c 3rdparty\tiff\tif_win32.c 3rdparty\tiff\tif_write.c 3rdparty\tiff\tif_zip.c 3rdparty\zlib\adler32.c 3rdparty\zlib\compress.c 3rdparty\zlib\crc32.c 3rdparty\zlib\deflate.c 3rdparty\zlib\gzclose.c 3rdparty\zlib\gzlib.c 3rdparty\zlib\gzread.c 3rdparty\zlib\gzwrite.c 3rdparty\zlib\infback.c 3rdparty\zlib\inffast.c 3rdparty\zlib\inflate.c 3rdparty\zlib\inftrees.c 3rdparty\zlib\trees.c 3rdparty\zlib\uncompr.c 3rdparty\zlib\zutil.c libio\draw.c libio\io_png.c libio\io_tiff.c
+         io_tiff.c
+     1>libio\io_tiff.c(37): fatal error C1083: Impossible d'ouvrir le fichier include : 'tiffio.h' : No such file or directory
+         io_png.c
+     1>libio\io_png.c(44): fatal error C1083: Impossible d'ouvrir le fichier include : 'png.h' : No such file or directory
+         draw.c
+         zutil.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\zlib\zconf.h(380): fatal error C1083: Impossible d'ouvrir le fichier include : 'unistd.h' : No such file or directory
+         uncompr.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\zlib\zconf.h(380): fatal error C1083: Impossible d'ouvrir le fichier include : 'unistd.h' : No such file or directory
+         trees.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\zlib\zconf.h(380): fatal error C1083: Impossible d'ouvrir le fichier include : 'unistd.h' : No such file or directory
+         inftrees.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\zlib\zconf.h(380): fatal error C1083: Impossible d'ouvrir le fichier include : 'unistd.h' : No such file or directory
+         inflate.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\zlib\zconf.h(380): fatal error C1083: Impossible d'ouvrir le fichier include : 'unistd.h' : No such file or directory
+         inffast.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\zlib\zconf.h(380): fatal error C1083: Impossible d'ouvrir le fichier include : 'unistd.h' : No such file or directory
+         infback.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\zlib\zconf.h(380): fatal error C1083: Impossible d'ouvrir le fichier include : 'unistd.h' : No such file or directory
+         gzwrite.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\zlib\zconf.h(380): fatal error C1083: Impossible d'ouvrir le fichier include : 'unistd.h' : No such file or directory
+         gzread.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\zlib\zconf.h(380): fatal error C1083: Impossible d'ouvrir le fichier include : 'unistd.h' : No such file or directory
+         gzlib.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\zlib\zconf.h(380): fatal error C1083: Impossible d'ouvrir le fichier include : 'unistd.h' : No such file or directory
+         gzclose.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\zlib\zconf.h(380): fatal error C1083: Impossible d'ouvrir le fichier include : 'unistd.h' : No such file or directory
+         deflate.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\zlib\zconf.h(380): fatal error C1083: Impossible d'ouvrir le fichier include : 'unistd.h' : No such file or directory
+         crc32.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\zlib\zconf.h(380): fatal error C1083: Impossible d'ouvrir le fichier include : 'unistd.h' : No such file or directory
+         compress.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\zlib\zconf.h(380): fatal error C1083: Impossible d'ouvrir le fichier include : 'unistd.h' : No such file or directory
+         adler32.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\zlib\zconf.h(380): fatal error C1083: Impossible d'ouvrir le fichier include : 'unistd.h' : No such file or directory
+         tif_zip.c
+         tif_write.c
+     1>3rdparty\tiff\tif_write.c(633): warning C4018: '>=' : incompatibilité signed/unsigned
+         Génération de code en cours...
+         Compilation en cours...
+         tif_win32.c
+     1>3rdparty\tiff\tif_win32.c(356): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : voir la déclaration de 'sprintf'
+     1>3rdparty\tiff\tif_win32.c(358): warning C4996: 'vsprintf': This function or variable may be unsafe. Consider using vsprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : voir la déclaration de 'vsprintf'
+     1>3rdparty\tiff\tif_win32.c(384): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : voir la déclaration de 'sprintf'
+     1>3rdparty\tiff\tif_win32.c(386): warning C4996: 'vsprintf': This function or variable may be unsafe. Consider using vsprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : voir la déclaration de 'vsprintf'
+         tif_win3.c
+     1>3rdparty\tiff\tif_win3.c(42): warning C4047: 'fonction' : les niveaux d'indirection de 'HFILE' et de 'thandle_t' sont différents
+     1>3rdparty\tiff\tif_win3.c(42): warning C4024: '_hread' : types différents pour le paramètre formel et réel 1
+     1>3rdparty\tiff\tif_win3.c(48): warning C4047: 'fonction' : les niveaux d'indirection de 'HFILE' et de 'thandle_t' sont différents
+     1>3rdparty\tiff\tif_win3.c(48): warning C4024: '_hwrite' : types différents pour le paramètre formel et réel 1
+     1>3rdparty\tiff\tif_win3.c(54): warning C4047: 'fonction' : les niveaux d'indirection de 'HFILE' et de 'thandle_t' sont différents
+     1>3rdparty\tiff\tif_win3.c(54): warning C4024: '_llseek' : types différents pour le paramètre formel et réel 1
+     1>3rdparty\tiff\tif_win3.c(60): warning C4047: 'fonction' : les niveaux d'indirection de 'HFILE' et de 'thandle_t' sont différents
+     1>3rdparty\tiff\tif_win3.c(60): warning C4024: '_lclose' : types différents pour le paramètre formel et réel 1
+     1>3rdparty\tiff\tif_win3.c(160): error C2146: erreur de syntaxe : absence de ')' avant l'identificateur 'huge'
+     1>3rdparty\tiff\tif_win3.c(160): error C2065: 'huge' : identificateur non déclaré
+     1>3rdparty\tiff\tif_win3.c(160): error C2059: erreur de syntaxe : ')'
+     1>3rdparty\tiff\tif_win3.c(195): error C2146: erreur de syntaxe : absence de ')' avant l'identificateur 'huge'
+     1>3rdparty\tiff\tif_win3.c(195): error C2065: 'huge' : identificateur non déclaré
+     1>3rdparty\tiff\tif_win3.c(195): error C2059: erreur de syntaxe : ')'
+     1>3rdparty\tiff\tif_win3.c(196): error C2146: erreur de syntaxe : absence de ')' avant l'identificateur 'huge'
+     1>3rdparty\tiff\tif_win3.c(196): error C2065: 'huge' : identificateur non déclaré
+     1>3rdparty\tiff\tif_win3.c(196): error C2059: erreur de syntaxe : ')'
+         tif_warning.c
+         tif_version.c
+         tif_unix.c
+     1>3rdparty\tiff\tif_unix.c(58): warning C4996: 'read': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _read. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\io.h(313) : voir la déclaration de 'read'
+     1>3rdparty\tiff\tif_unix.c(64): warning C4996: 'write': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _write. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\io.h(318) : voir la déclaration de 'write'
+     1>3rdparty\tiff\tif_unix.c(70): warning C4996: 'lseek': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _lseek. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\io.h(310) : voir la déclaration de 'lseek'
+     1>3rdparty\tiff\tif_unix.c(76): warning C4996: 'close': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _close. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\io.h(302) : voir la déclaration de 'close'
+     1>3rdparty\tiff\tif_unix.c(171): warning C4996: 'open': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _open. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\io.h(312) : voir la déclaration de 'open'
+     1>3rdparty\tiff\tif_unix.c(180): warning C4996: 'close': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _close. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\io.h(302) : voir la déclaration de 'close'
+     1>3rdparty\tiff\tif_unix.c(207): warning C4996: '_wopen': This function or variable may be unsafe. Consider using _wsopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\io.h(272) : voir la déclaration de '_wopen'
+     1>3rdparty\tiff\tif_unix.c(233): warning C4996: 'close': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _close. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\io.h(302) : voir la déclaration de 'close'
+         tif_tile.c
+         tif_thunder.c
+         tif_swab.c
+         tif_strip.c
+         tif_read.c
+         tif_print.c
+         tif_predict.c
+         tif_pixarlog.c
+         tif_packbits.c
+         tif_open.c
+     1>3rdparty\tiff\tif_open.c(168): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(105) : voir la déclaration de 'strcpy'
+         tif_ojpeg.c
+         tif_next.c
+         tif_msdos.c
+     1>3rdparty\tiff\tif_msdos.c(39): warning C4996: 'read': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _read. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\io.h(313) : voir la déclaration de 'read'
+     1>3rdparty\tiff\tif_msdos.c(45): warning C4996: 'write': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _write. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\io.h(318) : voir la déclaration de 'write'
+     1>3rdparty\tiff\tif_msdos.c(51): warning C4996: 'lseek': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _lseek. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\io.h(310) : voir la déclaration de 'lseek'
+     1>3rdparty\tiff\tif_msdos.c(57): warning C4996: 'close': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _close. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\io.h(302) : voir la déclaration de 'close'
+     1>3rdparty\tiff\tif_msdos.c(110): warning C4996: 'open': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _open. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\io.h(312) : voir la déclaration de 'open'
+     1>3rdparty\tiff\tif_msdos.c(119): warning C4996: 'close': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _close. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\io.h(302) : voir la déclaration de 'close'
+         tif_lzw.c
+         tif_luv.c
+         Génération de code en cours...
+         Compilation en cours...
+         tif_jpeg.c
+         tif_jbig.c
+         tif_getimage.c
+     1>3rdparty\tiff\tif_getimage.c(79): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : voir la déclaration de 'sprintf'
+     1>3rdparty\tiff\tif_getimage.c(91): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : voir la déclaration de 'sprintf'
+     1>3rdparty\tiff\tif_getimage.c(104): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : voir la déclaration de 'sprintf'
+     1>3rdparty\tiff\tif_getimage.c(120): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : voir la déclaration de 'sprintf'
+     1>3rdparty\tiff\tif_getimage.c(140): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : voir la déclaration de 'sprintf'
+     1>3rdparty\tiff\tif_getimage.c(151): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : voir la déclaration de 'sprintf'
+     1>3rdparty\tiff\tif_getimage.c(157): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : voir la déclaration de 'sprintf'
+     1>3rdparty\tiff\tif_getimage.c(165): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : voir la déclaration de 'sprintf'
+     1>3rdparty\tiff\tif_getimage.c(173): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : voir la déclaration de 'sprintf'
+     1>3rdparty\tiff\tif_getimage.c(178): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : voir la déclaration de 'sprintf'
+     1>3rdparty\tiff\tif_getimage.c(186): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : voir la déclaration de 'sprintf'
+     1>3rdparty\tiff\tif_getimage.c(254): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : voir la déclaration de 'sprintf'
+     1>3rdparty\tiff\tif_getimage.c(303): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : voir la déclaration de 'sprintf'
+     1>3rdparty\tiff\tif_getimage.c(311): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : voir la déclaration de 'sprintf'
+     1>3rdparty\tiff\tif_getimage.c(321): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : voir la déclaration de 'sprintf'
+     1>3rdparty\tiff\tif_getimage.c(340): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : voir la déclaration de 'sprintf'
+     1>3rdparty\tiff\tif_getimage.c(373): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : voir la déclaration de 'sprintf'
+     1>3rdparty\tiff\tif_getimage.c(383): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : voir la déclaration de 'sprintf'
+     1>3rdparty\tiff\tif_getimage.c(388): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : voir la déclaration de 'sprintf'
+     1>3rdparty\tiff\tif_getimage.c(396): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : voir la déclaration de 'sprintf'
+     1>3rdparty\tiff\tif_getimage.c(406): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : voir la déclaration de 'sprintf'
+     1>3rdparty\tiff\tif_getimage.c(411): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : voir la déclaration de 'sprintf'
+     1>3rdparty\tiff\tif_getimage.c(422): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : voir la déclaration de 'sprintf'
+     1>3rdparty\tiff\tif_getimage.c(437): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : voir la déclaration de 'sprintf'
+     1>3rdparty\tiff\tif_getimage.c(442): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : voir la déclaration de 'sprintf'
+         tif_flush.c
+         tif_fax3sm.c
+         tif_fax3.c
+         tif_extension.c
+     1>3rdparty\tiff\tif_extension.c(107): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(105) : voir la déclaration de 'strcpy'
+         tif_error.c
+         tif_dumpmode.c
+         tif_dirwrite.c
+         tif_dirread.c
+         tif_dirinfo.c
+     1>3rdparty\tiff\tif_dirinfo.c(799): warning C4996: '_lfind': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _lfind. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\search.h(53) : voir la déclaration de '_lfind'
+     1>3rdparty\tiff\tif_dirinfo.c(872): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : voir la déclaration de 'sprintf'
+         tif_dir.c
+         tif_compress.c
+     1>3rdparty\tiff\tif_compress.c(203): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(105) : voir la déclaration de 'strcpy'
+         tif_color.c
+         tif_codec.c
+     1>3rdparty\tiff\tif_codec.c(107): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : voir la déclaration de 'sprintf'
+         tif_close.c
+         tif_aux.c
+         tif_atari.c
+     1>3rdparty\tiff\tif_atari.c(35): fatal error C1083: Impossible d'ouvrir le fichier include : 'osbind.h' : No such file or directory
+         tif_apple.c
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(29): error C2143: erreur de syntaxe : absence de ')' avant '*'
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(29): error C2143: erreur de syntaxe : absence de '{' avant '*'
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(29): error C2059: erreur de syntaxe : ')'
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(29): error C2122: 'char *' : paramètre de prototype non conforme dans la liste de noms
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(30): error C2143: erreur de syntaxe : absence de ')' avant '*'
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(30): error C2143: erreur de syntaxe : absence de '{' avant '*'
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(30): error C2059: erreur de syntaxe : ')'
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(30): error C2143: erreur de syntaxe : absence de ')' avant '*'
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(30): error C2143: erreur de syntaxe : absence de '{' avant '*'
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(30): error C2059: erreur de syntaxe : ','
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(30): error C2059: erreur de syntaxe : ')'
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(32): error C2061: erreur de syntaxe : identificateur 'DWORD'
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(32): error C2059: erreur de syntaxe : ';'
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(32): error C2061: erreur de syntaxe : identificateur 'AMGetErrorTextA'
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(32): error C2059: erreur de syntaxe : ';'
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(32): error C2146: erreur de syntaxe : absence de ')' avant l'identificateur 'hr'
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(32): error C2061: erreur de syntaxe : identificateur 'hr'
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(32): error C2059: erreur de syntaxe : ','
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(32): error C2059: erreur de syntaxe : ')'
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(33): error C2061: erreur de syntaxe : identificateur 'DWORD'
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(33): error C2059: erreur de syntaxe : ';'
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(33): error C2061: erreur de syntaxe : identificateur 'AMGetErrorTextW'
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(33): error C2059: erreur de syntaxe : ';'
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(33): error C2146: erreur de syntaxe : absence de ')' avant l'identificateur 'hr'
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(33): error C2061: erreur de syntaxe : identificateur 'hr'
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(33): error C2059: erreur de syntaxe : ','
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(33): error C2059: erreur de syntaxe : ')'
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(41): error C2061: erreur de syntaxe : identificateur 'AMGETERRORTEXTPROC'
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(41): error C2059: erreur de syntaxe : ';'
+     1>3rdparty\tiff\tif_apple.c(50): fatal error C1083: Impossible d'ouvrir le fichier include : 'Files.h' : No such file or directory
+         Génération de code en cours...
+         Compilation en cours...
+         mkg3states.c
+     1>3rdparty\tiff\mkg3states.c(411): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : voir la déclaration de 'fopen'
+         pngwutil.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\png\pngstruct.h(27): fatal error C1083: Impossible d'ouvrir le fichier include : 'zlib.h' : No such file or directory
+         pngwtran.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\png\pngstruct.h(27): fatal error C1083: Impossible d'ouvrir le fichier include : 'zlib.h' : No such file or directory
+         pngwrite.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\png\pngstruct.h(27): fatal error C1083: Impossible d'ouvrir le fichier include : 'zlib.h' : No such file or directory
+         pngwio.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\png\pngstruct.h(27): fatal error C1083: Impossible d'ouvrir le fichier include : 'zlib.h' : No such file or directory
+         pngtrans.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\png\pngstruct.h(27): fatal error C1083: Impossible d'ouvrir le fichier include : 'zlib.h' : No such file or directory
+         pngset.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\png\pngstruct.h(27): fatal error C1083: Impossible d'ouvrir le fichier include : 'zlib.h' : No such file or directory
+         pngrutil.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\png\pngstruct.h(27): fatal error C1083: Impossible d'ouvrir le fichier include : 'zlib.h' : No such file or directory
+         pngrtran.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\png\pngstruct.h(27): fatal error C1083: Impossible d'ouvrir le fichier include : 'zlib.h' : No such file or directory
+         pngrio.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\png\pngstruct.h(27): fatal error C1083: Impossible d'ouvrir le fichier include : 'zlib.h' : No such file or directory
+         pngread.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\png\pngstruct.h(27): fatal error C1083: Impossible d'ouvrir le fichier include : 'zlib.h' : No such file or directory
+         pngpread.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\png\pngstruct.h(27): fatal error C1083: Impossible d'ouvrir le fichier include : 'zlib.h' : No such file or directory
+         pngmem.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\png\pngstruct.h(27): fatal error C1083: Impossible d'ouvrir le fichier include : 'zlib.h' : No such file or directory
+         pngget.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\png\pngstruct.h(27): fatal error C1083: Impossible d'ouvrir le fichier include : 'zlib.h' : No such file or directory
+         pngerror.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\png\pngstruct.h(27): fatal error C1083: Impossible d'ouvrir le fichier include : 'zlib.h' : No such file or directory
+         png.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\png\pngstruct.h(27): fatal error C1083: Impossible d'ouvrir le fichier include : 'zlib.h' : No such file or directory
+         Génération de code en cours...
+     1>Génération du projet "C:\Users\Yohann\Desktop\ADCensus\ADCensus\ADCensus.vcxproj" terminée (build cible(s)) -- ÉCHEC.
+
+ÉCHEC de la build.
+
+Temps écoulé 00:00:03.72

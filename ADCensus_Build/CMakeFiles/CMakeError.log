@@ -1,0 +1,516 @@
+Determining size of off64_t failed with the following output:
+Change Dir: C:/Users/Yohann/Desktop/ADCensus/ADCensus_Build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1.0\Common7\IDE\VCExpress.exe CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft (R) Visual C++ 2010 Express Version 10.0.30319.1.
+Copyright (C) Microsoft Corp. Tous droits réservés.
+1>------ D‚but de la g‚n‚rationÿ: Projetÿ: cmTryCompileExec, Configurationÿ: Debug Win32 ------
+1>  OFF64_T.c
+1>C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\CMakeFiles\CheckTypeSize\OFF64_T.c(19): error C2065: 'off64_t'ÿ: identificateur non d‚clar‚
+1>C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\CMakeFiles\CheckTypeSize\OFF64_T.c(20): error C2065: 'off64_t'ÿ: identificateur non d‚clar‚
+1>C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\CMakeFiles\CheckTypeSize\OFF64_T.c(21): error C2065: 'off64_t'ÿ: identificateur non d‚clar‚
+1>C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\CMakeFiles\CheckTypeSize\OFF64_T.c(22): error C2065: 'off64_t'ÿ: identificateur non d‚clar‚
+1>C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\CMakeFiles\CheckTypeSize\OFF64_T.c(23): error C2065: 'off64_t'ÿ: identificateur non d‚clar‚
+========== G‚n‚rationÿ: 0 a r‚ussi, 1 a ‚chou‚, 0 mis … jour, 0 a ‚t‚ ignor‚ ==========
+
+C:/Users/Yohann/Desktop/ADCensus/ADCensus_Build/CMakeFiles/CheckTypeSize/OFF64_T.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(off64_t))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining if the function fseeko exists failed with the following output:
+Change Dir: C:/Users/Yohann/Desktop/ADCensus/ADCensus_Build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1.0\Common7\IDE\VCExpress.exe CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft (R) Visual C++ 2010 Express Version 10.0.30319.1.
+Copyright (C) Microsoft Corp. Tous droits réservés.
+1>------ D‚but de la g‚n‚rationÿ: Projetÿ: cmTryCompileExec, Configurationÿ: Debug Win32 ------
+1>  CheckFunctionExists.c
+1>CheckFunctionExists.obj : error LNK2019: symbole externe non r‚solu _fseeko r‚f‚renc‚ dans la fonction _main
+1>C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe : fatal error LNK1120: 1 externes non r‚solus
+========== G‚n‚rationÿ: 0 a r‚ussi, 1 a ‚chou‚, 0 mis … jour, 0 a ‚t‚ ignor‚ ==========
+
+
+Determining if the include file unistd.h exists failed with the following output:
+Change Dir: C:/Users/Yohann/Desktop/ADCensus/ADCensus_Build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1.0\Common7\IDE\VCExpress.exe CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft (R) Visual C++ 2010 Express Version 10.0.30319.1.
+Copyright (C) Microsoft Corp. Tous droits réservés.
+1>------ D‚but de la g‚n‚rationÿ: Projetÿ: cmTryCompileExec, Configurationÿ: Debug Win32 ------
+1>  CheckIncludeFile.c
+1>C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1): fatal error C1083: Impossible d'ouvrir le fichier includeÿ: 'unistd.h'ÿ: No such file or directory
+========== G‚n‚rationÿ: 0 a r‚ussi, 1 a ‚chou‚, 0 mis … jour, 0 a ‚t‚ ignor‚ ==========
+
+
+Performing C SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
+Change Dir: C:/Users/Yohann/Desktop/ADCensus/ADCensus_Build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1.0\Common7\IDE\VCExpress.exe CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft (R) Visual C++ 2010 Express Version 10.0.30319.1.
+Copyright (C) Microsoft Corp. Tous droits réservés.
+1>------ D‚but de la g‚n‚rationÿ: Projetÿ: cmTryCompileExec, Configurationÿ: Debug Win32 ------
+1>cl : Ligne de commande warning D9002: option '-fopenmp' inconnue ignor‚e
+1>  src.c
+1>C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\CMakeFiles\CMakeTmp\src.c(2): fatal error C1083: Impossible d'ouvrir le fichier includeÿ: 'omp.h'ÿ: No such file or directory
+========== G‚n‚rationÿ: 0 a r‚ussi, 1 a ‚chou‚, 0 mis … jour, 0 a ‚t‚ ignor‚ ==========
+
+Source file was:
+
+#include <omp.h>
+int main() { 
+#ifdef _OPENMP
+  return 0; 
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
+Change Dir: C:/Users/Yohann/Desktop/ADCensus/ADCensus_Build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1.0\Common7\IDE\VCExpress.exe CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft (R) Visual C++ 2010 Express Version 10.0.30319.1.
+Copyright (C) Microsoft Corp. Tous droits réservés.
+1>------ D‚but de la g‚n‚rationÿ: Projetÿ: cmTryCompileExec, Configurationÿ: Debug Win32 ------
+1>  src.c
+1>C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\CMakeFiles\CMakeTmp\src.c(2): fatal error C1083: Impossible d'ouvrir le fichier includeÿ: 'omp.h'ÿ: No such file or directory
+========== G‚n‚rationÿ: 0 a r‚ussi, 1 a ‚chou‚, 0 mis … jour, 0 a ‚t‚ ignor‚ ==========
+
+Source file was:
+
+#include <omp.h>
+int main() { 
+#ifdef _OPENMP
+  return 0; 
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
+Change Dir: C:/Users/Yohann/Desktop/ADCensus/ADCensus_Build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1.0\Common7\IDE\VCExpress.exe CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft (R) Visual C++ 2010 Express Version 10.0.30319.1.
+Copyright (C) Microsoft Corp. Tous droits réservés.
+1>------ D‚but de la g‚n‚rationÿ: Projetÿ: cmTryCompileExec, Configurationÿ: Debug Win32 ------
+1>cl : Ligne de commande warning D9002: option '-Qopenmp' inconnue ignor‚e
+1>  src.c
+1>C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\CMakeFiles\CMakeTmp\src.c(2): fatal error C1083: Impossible d'ouvrir le fichier includeÿ: 'omp.h'ÿ: No such file or directory
+========== G‚n‚rationÿ: 0 a r‚ussi, 1 a ‚chou‚, 0 mis … jour, 0 a ‚t‚ ignor‚ ==========
+
+Source file was:
+
+#include <omp.h>
+int main() { 
+#ifdef _OPENMP
+  return 0; 
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
+Change Dir: C:/Users/Yohann/Desktop/ADCensus/ADCensus_Build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1.0\Common7\IDE\VCExpress.exe CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft (R) Visual C++ 2010 Express Version 10.0.30319.1.
+Copyright (C) Microsoft Corp. Tous droits réservés.
+1>------ D‚but de la g‚n‚rationÿ: Projetÿ: cmTryCompileExec, Configurationÿ: Debug Win32 ------
+1>  src.c
+1>C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\CMakeFiles\CMakeTmp\src.c(2): fatal error C1083: Impossible d'ouvrir le fichier includeÿ: 'omp.h'ÿ: No such file or directory
+========== G‚n‚rationÿ: 0 a r‚ussi, 1 a ‚chou‚, 0 mis … jour, 0 a ‚t‚ ignor‚ ==========
+
+Source file was:
+
+#include <omp.h>
+int main() { 
+#ifdef _OPENMP
+  return 0; 
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
+Change Dir: C:/Users/Yohann/Desktop/ADCensus/ADCensus_Build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1.0\Common7\IDE\VCExpress.exe CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft (R) Visual C++ 2010 Express Version 10.0.30319.1.
+Copyright (C) Microsoft Corp. Tous droits réservés.
+1>------ D‚but de la g‚n‚rationÿ: Projetÿ: cmTryCompileExec, Configurationÿ: Debug Win32 ------
+1>  src.c
+1>C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\CMakeFiles\CMakeTmp\src.c(2): fatal error C1083: Impossible d'ouvrir le fichier includeÿ: 'omp.h'ÿ: No such file or directory
+========== G‚n‚rationÿ: 0 a r‚ussi, 1 a ‚chou‚, 0 mis … jour, 0 a ‚t‚ ignor‚ ==========
+
+Source file was:
+
+#include <omp.h>
+int main() { 
+#ifdef _OPENMP
+  return 0; 
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
+Change Dir: C:/Users/Yohann/Desktop/ADCensus/ADCensus_Build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1.0\Common7\IDE\VCExpress.exe CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft (R) Visual C++ 2010 Express Version 10.0.30319.1.
+Copyright (C) Microsoft Corp. Tous droits réservés.
+1>------ D‚but de la g‚n‚rationÿ: Projetÿ: cmTryCompileExec, Configurationÿ: Debug Win32 ------
+1>cl : Ligne de commande warning D9002: option '-xopenmp' inconnue ignor‚e
+1>  src.c
+1>C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\CMakeFiles\CMakeTmp\src.c(2): fatal error C1083: Impossible d'ouvrir le fichier includeÿ: 'omp.h'ÿ: No such file or directory
+========== G‚n‚rationÿ: 0 a r‚ussi, 1 a ‚chou‚, 0 mis … jour, 0 a ‚t‚ ignor‚ ==========
+
+Source file was:
+
+#include <omp.h>
+int main() { 
+#ifdef _OPENMP
+  return 0; 
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
+Change Dir: C:/Users/Yohann/Desktop/ADCensus/ADCensus_Build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1.0\Common7\IDE\VCExpress.exe CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft (R) Visual C++ 2010 Express Version 10.0.30319.1.
+Copyright (C) Microsoft Corp. Tous droits réservés.
+1>------ D‚but de la g‚n‚rationÿ: Projetÿ: cmTryCompileExec, Configurationÿ: Debug Win32 ------
+1>  src.c
+1>C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\CMakeFiles\CMakeTmp\src.c(2): fatal error C1083: Impossible d'ouvrir le fichier includeÿ: 'omp.h'ÿ: No such file or directory
+1>  +Oopenmp
+1>c1 : fatal error C1083: Impossible d'ouvrir le fichier sourceÿ: '+Oopenmp'ÿ: No such file or directory
+1>  G‚n‚ration de code en cours...
+========== G‚n‚rationÿ: 0 a r‚ussi, 1 a ‚chou‚, 0 mis … jour, 0 a ‚t‚ ignor‚ ==========
+
+Source file was:
+
+#include <omp.h>
+int main() { 
+#ifdef _OPENMP
+  return 0; 
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
+Change Dir: C:/Users/Yohann/Desktop/ADCensus/ADCensus_Build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1.0\Common7\IDE\VCExpress.exe CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft (R) Visual C++ 2010 Express Version 10.0.30319.1.
+Copyright (C) Microsoft Corp. Tous droits réservés.
+1>------ D‚but de la g‚n‚rationÿ: Projetÿ: cmTryCompileExec, Configurationÿ: Debug Win32 ------
+1>cl : Ligne de commande warning D9002: option '-qsmp' inconnue ignor‚e
+1>  src.c
+1>C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\CMakeFiles\CMakeTmp\src.c(2): fatal error C1083: Impossible d'ouvrir le fichier includeÿ: 'omp.h'ÿ: No such file or directory
+========== G‚n‚rationÿ: 0 a r‚ussi, 1 a ‚chou‚, 0 mis … jour, 0 a ‚t‚ ignor‚ ==========
+
+Source file was:
+
+#include <omp.h>
+int main() { 
+#ifdef _OPENMP
+  return 0; 
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
+Change Dir: C:/Users/Yohann/Desktop/ADCensus/ADCensus_Build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1.0\Common7\IDE\VCExpress.exe CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft (R) Visual C++ 2010 Express Version 10.0.30319.1.
+Copyright (C) Microsoft Corp. Tous droits réservés.
+1>------ D‚but de la g‚n‚rationÿ: Projetÿ: cmTryCompileExec, Configurationÿ: Debug Win32 ------
+1>cl : Ligne de commande warning D9002: option '-mp' inconnue ignor‚e
+1>  src.c
+1>C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\CMakeFiles\CMakeTmp\src.c(2): fatal error C1083: Impossible d'ouvrir le fichier includeÿ: 'omp.h'ÿ: No such file or directory
+========== G‚n‚rationÿ: 0 a r‚ussi, 1 a ‚chou‚, 0 mis … jour, 0 a ‚t‚ ignor‚ ==========
+
+Source file was:
+
+#include <omp.h>
+int main() { 
+#ifdef _OPENMP
+  return 0; 
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C++ SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
+Change Dir: C:/Users/Yohann/Desktop/ADCensus/ADCensus_Build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1.0\Common7\IDE\VCExpress.exe CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft (R) Visual C++ 2010 Express Version 10.0.30319.1.
+Copyright (C) Microsoft Corp. Tous droits réservés.
+1>------ D‚but de la g‚n‚rationÿ: Projetÿ: cmTryCompileExec, Configurationÿ: Debug Win32 ------
+1>cl : Ligne de commande warning D9002: option '-fopenmp' inconnue ignor‚e
+1>  src.cxx
+1>C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\CMakeFiles\CMakeTmp\src.cxx(2): fatal error C1083: Impossible d'ouvrir le fichier includeÿ: 'omp.h'ÿ: No such file or directory
+========== G‚n‚rationÿ: 0 a r‚ussi, 1 a ‚chou‚, 0 mis … jour, 0 a ‚t‚ ignor‚ ==========
+
+Source file was:
+
+#include <omp.h>
+int main() { 
+#ifdef _OPENMP
+  return 0; 
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C++ SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
+Change Dir: C:/Users/Yohann/Desktop/ADCensus/ADCensus_Build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1.0\Common7\IDE\VCExpress.exe CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft (R) Visual C++ 2010 Express Version 10.0.30319.1.
+Copyright (C) Microsoft Corp. Tous droits réservés.
+1>------ D‚but de la g‚n‚rationÿ: Projetÿ: cmTryCompileExec, Configurationÿ: Debug Win32 ------
+1>  src.cxx
+1>C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\CMakeFiles\CMakeTmp\src.cxx(2): fatal error C1083: Impossible d'ouvrir le fichier includeÿ: 'omp.h'ÿ: No such file or directory
+========== G‚n‚rationÿ: 0 a r‚ussi, 1 a ‚chou‚, 0 mis … jour, 0 a ‚t‚ ignor‚ ==========
+
+Source file was:
+
+#include <omp.h>
+int main() { 
+#ifdef _OPENMP
+  return 0; 
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C++ SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
+Change Dir: C:/Users/Yohann/Desktop/ADCensus/ADCensus_Build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1.0\Common7\IDE\VCExpress.exe CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft (R) Visual C++ 2010 Express Version 10.0.30319.1.
+Copyright (C) Microsoft Corp. Tous droits réservés.
+1>------ D‚but de la g‚n‚rationÿ: Projetÿ: cmTryCompileExec, Configurationÿ: Debug Win32 ------
+1>cl : Ligne de commande warning D9002: option '-Qopenmp' inconnue ignor‚e
+1>  src.cxx
+1>C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\CMakeFiles\CMakeTmp\src.cxx(2): fatal error C1083: Impossible d'ouvrir le fichier includeÿ: 'omp.h'ÿ: No such file or directory
+========== G‚n‚rationÿ: 0 a r‚ussi, 1 a ‚chou‚, 0 mis … jour, 0 a ‚t‚ ignor‚ ==========
+
+Source file was:
+
+#include <omp.h>
+int main() { 
+#ifdef _OPENMP
+  return 0; 
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C++ SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
+Change Dir: C:/Users/Yohann/Desktop/ADCensus/ADCensus_Build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1.0\Common7\IDE\VCExpress.exe CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft (R) Visual C++ 2010 Express Version 10.0.30319.1.
+Copyright (C) Microsoft Corp. Tous droits réservés.
+1>------ D‚but de la g‚n‚rationÿ: Projetÿ: cmTryCompileExec, Configurationÿ: Debug Win32 ------
+1>  src.cxx
+1>C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\CMakeFiles\CMakeTmp\src.cxx(2): fatal error C1083: Impossible d'ouvrir le fichier includeÿ: 'omp.h'ÿ: No such file or directory
+========== G‚n‚rationÿ: 0 a r‚ussi, 1 a ‚chou‚, 0 mis … jour, 0 a ‚t‚ ignor‚ ==========
+
+Source file was:
+
+#include <omp.h>
+int main() { 
+#ifdef _OPENMP
+  return 0; 
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C++ SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
+Change Dir: C:/Users/Yohann/Desktop/ADCensus/ADCensus_Build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1.0\Common7\IDE\VCExpress.exe CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft (R) Visual C++ 2010 Express Version 10.0.30319.1.
+Copyright (C) Microsoft Corp. Tous droits réservés.
+1>------ D‚but de la g‚n‚rationÿ: Projetÿ: cmTryCompileExec, Configurationÿ: Debug Win32 ------
+1>  src.cxx
+1>C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\CMakeFiles\CMakeTmp\src.cxx(2): fatal error C1083: Impossible d'ouvrir le fichier includeÿ: 'omp.h'ÿ: No such file or directory
+========== G‚n‚rationÿ: 0 a r‚ussi, 1 a ‚chou‚, 0 mis … jour, 0 a ‚t‚ ignor‚ ==========
+
+Source file was:
+
+#include <omp.h>
+int main() { 
+#ifdef _OPENMP
+  return 0; 
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C++ SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
+Change Dir: C:/Users/Yohann/Desktop/ADCensus/ADCensus_Build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1.0\Common7\IDE\VCExpress.exe CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft (R) Visual C++ 2010 Express Version 10.0.30319.1.
+Copyright (C) Microsoft Corp. Tous droits réservés.
+1>------ D‚but de la g‚n‚rationÿ: Projetÿ: cmTryCompileExec, Configurationÿ: Debug Win32 ------
+1>cl : Ligne de commande warning D9002: option '-xopenmp' inconnue ignor‚e
+1>  src.cxx
+1>C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\CMakeFiles\CMakeTmp\src.cxx(2): fatal error C1083: Impossible d'ouvrir le fichier includeÿ: 'omp.h'ÿ: No such file or directory
+========== G‚n‚rationÿ: 0 a r‚ussi, 1 a ‚chou‚, 0 mis … jour, 0 a ‚t‚ ignor‚ ==========
+
+Source file was:
+
+#include <omp.h>
+int main() { 
+#ifdef _OPENMP
+  return 0; 
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C++ SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
+Change Dir: C:/Users/Yohann/Desktop/ADCensus/ADCensus_Build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1.0\Common7\IDE\VCExpress.exe CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft (R) Visual C++ 2010 Express Version 10.0.30319.1.
+Copyright (C) Microsoft Corp. Tous droits réservés.
+1>------ D‚but de la g‚n‚rationÿ: Projetÿ: cmTryCompileExec, Configurationÿ: Debug Win32 ------
+1>  src.cxx
+1>C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\CMakeFiles\CMakeTmp\src.cxx(2): fatal error C1083: Impossible d'ouvrir le fichier includeÿ: 'omp.h'ÿ: No such file or directory
+1>  +Oopenmp
+1>c1xx : fatal error C1083: Impossible d'ouvrir le fichier sourceÿ: '+Oopenmp'ÿ: No such file or directory
+1>  G‚n‚ration de code en cours...
+========== G‚n‚rationÿ: 0 a r‚ussi, 1 a ‚chou‚, 0 mis … jour, 0 a ‚t‚ ignor‚ ==========
+
+Source file was:
+
+#include <omp.h>
+int main() { 
+#ifdef _OPENMP
+  return 0; 
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C++ SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
+Change Dir: C:/Users/Yohann/Desktop/ADCensus/ADCensus_Build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1.0\Common7\IDE\VCExpress.exe CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft (R) Visual C++ 2010 Express Version 10.0.30319.1.
+Copyright (C) Microsoft Corp. Tous droits réservés.
+1>------ D‚but de la g‚n‚rationÿ: Projetÿ: cmTryCompileExec, Configurationÿ: Debug Win32 ------
+1>cl : Ligne de commande warning D9002: option '-qsmp' inconnue ignor‚e
+1>  src.cxx
+1>C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\CMakeFiles\CMakeTmp\src.cxx(2): fatal error C1083: Impossible d'ouvrir le fichier includeÿ: 'omp.h'ÿ: No such file or directory
+========== G‚n‚rationÿ: 0 a r‚ussi, 1 a ‚chou‚, 0 mis … jour, 0 a ‚t‚ ignor‚ ==========
+
+Source file was:
+
+#include <omp.h>
+int main() { 
+#ifdef _OPENMP
+  return 0; 
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C++ SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
+Change Dir: C:/Users/Yohann/Desktop/ADCensus/ADCensus_Build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1.0\Common7\IDE\VCExpress.exe CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft (R) Visual C++ 2010 Express Version 10.0.30319.1.
+Copyright (C) Microsoft Corp. Tous droits réservés.
+1>------ D‚but de la g‚n‚rationÿ: Projetÿ: cmTryCompileExec, Configurationÿ: Debug Win32 ------
+1>cl : Ligne de commande warning D9002: option '-mp' inconnue ignor‚e
+1>  src.cxx
+1>C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\CMakeFiles\CMakeTmp\src.cxx(2): fatal error C1083: Impossible d'ouvrir le fichier includeÿ: 'omp.h'ÿ: No such file or directory
+========== G‚n‚rationÿ: 0 a r‚ussi, 1 a ‚chou‚, 0 mis … jour, 0 a ‚t‚ ignor‚ ==========
+
+Source file was:
+
+#include <omp.h>
+int main() { 
+#ifdef _OPENMP
+  return 0; 
+#else
+  breaks_on_purpose
+#endif
+}
+

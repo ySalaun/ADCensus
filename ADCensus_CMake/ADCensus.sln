@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C++ Express 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ADCensus", "ADCensus.vcxproj", "{F22F6228-A2F9-7D7C-A5C5-FB23D35C0DE2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F22F6228-A2F9-7D7C-A5C5-FB23D35C0DE2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F22F6228-A2F9-7D7C-A5C5-FB23D35C0DE2}.Debug|Win32.Build.0 = Debug|Win32
+		{F22F6228-A2F9-7D7C-A5C5-FB23D35C0DE2}.Release|Win32.ActiveCfg = Release|Win32
+		{F22F6228-A2F9-7D7C-A5C5-FB23D35C0DE2}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,135 @@
+﻿La génération a démarré 17/10/2012 11:25:55.
+     1>Projet "C:\Users\Yohann\Desktop\ADCensus\ADCensus\ADCensus.vcxproj" sur le nœud 2 (build cible(s)).
+     1>InitializeBuildStatus:
+         Mise à jour de l'horodatage "Release\ADCensus.unsuccessfulbuild".
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oy- /D WIN32 /D NDEBUG /D _WINDOWS /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt 3rdparty\png\png.c 3rdparty\png\pngerror.c 3rdparty\png\pngget.c 3rdparty\png\pngmem.c 3rdparty\png\pngpread.c 3rdparty\png\pngread.c 3rdparty\png\pngrio.c 3rdparty\png\pngrtran.c 3rdparty\png\pngrutil.c 3rdparty\png\pngset.c 3rdparty\png\pngtrans.c 3rdparty\png\pngwio.c 3rdparty\png\pngwrite.c 3rdparty\png\pngwtran.c 3rdparty\png\pngwutil.c 3rdparty\tiff\tif_apple.c 3rdparty\tiff\tif_atari.c 3rdparty\tiff\tif_win3.c 3rdparty\zlib\adler32.c 3rdparty\zlib\compress.c 3rdparty\zlib\crc32.c 3rdparty\zlib\deflate.c 3rdparty\zlib\gzclose.c 3rdparty\zlib\gzlib.c 3rdparty\zlib\gzread.c 3rdparty\zlib\gzwrite.c 3rdparty\zlib\infback.c 3rdparty\zlib\inffast.c 3rdparty\zlib\inflate.c 3rdparty\zlib\inftrees.c 3rdparty\zlib\trees.c 3rdparty\zlib\uncompr.c 3rdparty\zlib\zutil.c libio\io_png.c libio\io_tiff.c
+         png.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\png\pngstruct.h(27): fatal error C1083: Impossible d'ouvrir le fichier include : 'zlib.h' : No such file or directory
+         pngerror.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\png\pngstruct.h(27): fatal error C1083: Impossible d'ouvrir le fichier include : 'zlib.h' : No such file or directory
+         pngget.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\png\pngstruct.h(27): fatal error C1083: Impossible d'ouvrir le fichier include : 'zlib.h' : No such file or directory
+         pngmem.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\png\pngstruct.h(27): fatal error C1083: Impossible d'ouvrir le fichier include : 'zlib.h' : No such file or directory
+         pngpread.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\png\pngstruct.h(27): fatal error C1083: Impossible d'ouvrir le fichier include : 'zlib.h' : No such file or directory
+         pngread.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\png\pngstruct.h(27): fatal error C1083: Impossible d'ouvrir le fichier include : 'zlib.h' : No such file or directory
+         pngrio.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\png\pngstruct.h(27): fatal error C1083: Impossible d'ouvrir le fichier include : 'zlib.h' : No such file or directory
+         pngrtran.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\png\pngstruct.h(27): fatal error C1083: Impossible d'ouvrir le fichier include : 'zlib.h' : No such file or directory
+         pngrutil.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\png\pngstruct.h(27): fatal error C1083: Impossible d'ouvrir le fichier include : 'zlib.h' : No such file or directory
+         pngset.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\png\pngstruct.h(27): fatal error C1083: Impossible d'ouvrir le fichier include : 'zlib.h' : No such file or directory
+         pngtrans.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\png\pngstruct.h(27): fatal error C1083: Impossible d'ouvrir le fichier include : 'zlib.h' : No such file or directory
+         pngwio.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\png\pngstruct.h(27): fatal error C1083: Impossible d'ouvrir le fichier include : 'zlib.h' : No such file or directory
+         pngwrite.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\png\pngstruct.h(27): fatal error C1083: Impossible d'ouvrir le fichier include : 'zlib.h' : No such file or directory
+         pngwtran.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\png\pngstruct.h(27): fatal error C1083: Impossible d'ouvrir le fichier include : 'zlib.h' : No such file or directory
+         pngwutil.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\png\pngstruct.h(27): fatal error C1083: Impossible d'ouvrir le fichier include : 'zlib.h' : No such file or directory
+         tif_apple.c
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(29): error C2143: erreur de syntaxe : absence de ')' avant '*'
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(29): error C2143: erreur de syntaxe : absence de '{' avant '*'
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(29): error C2059: erreur de syntaxe : ')'
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(29): error C2122: 'char *' : paramètre de prototype non conforme dans la liste de noms
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(30): error C2143: erreur de syntaxe : absence de ')' avant '*'
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(30): error C2143: erreur de syntaxe : absence de '{' avant '*'
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(30): error C2059: erreur de syntaxe : ')'
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(30): error C2143: erreur de syntaxe : absence de ')' avant '*'
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(30): error C2143: erreur de syntaxe : absence de '{' avant '*'
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(30): error C2059: erreur de syntaxe : ','
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(30): error C2059: erreur de syntaxe : ')'
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(32): error C2061: erreur de syntaxe : identificateur 'DWORD'
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(32): error C2059: erreur de syntaxe : ';'
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(32): error C2061: erreur de syntaxe : identificateur 'AMGetErrorTextA'
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(32): error C2059: erreur de syntaxe : ';'
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(32): error C2146: erreur de syntaxe : absence de ')' avant l'identificateur 'hr'
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(32): error C2061: erreur de syntaxe : identificateur 'hr'
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(32): error C2059: erreur de syntaxe : ','
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(32): error C2059: erreur de syntaxe : ')'
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(33): error C2061: erreur de syntaxe : identificateur 'DWORD'
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(33): error C2059: erreur de syntaxe : ';'
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(33): error C2061: erreur de syntaxe : identificateur 'AMGetErrorTextW'
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(33): error C2059: erreur de syntaxe : ';'
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(33): error C2146: erreur de syntaxe : absence de ')' avant l'identificateur 'hr'
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(33): error C2061: erreur de syntaxe : identificateur 'hr'
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(33): error C2059: erreur de syntaxe : ','
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(33): error C2059: erreur de syntaxe : ')'
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(41): error C2061: erreur de syntaxe : identificateur 'AMGETERRORTEXTPROC'
+     1>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\Errors.h(41): error C2059: erreur de syntaxe : ';'
+     1>3rdparty\tiff\tif_apple.c(50): fatal error C1083: Impossible d'ouvrir le fichier include : 'Files.h' : No such file or directory
+         tif_atari.c
+     1>3rdparty\tiff\tif_atari.c(35): fatal error C1083: Impossible d'ouvrir le fichier include : 'osbind.h' : No such file or directory
+         tif_win3.c
+     1>3rdparty\tiff\tif_win3.c(42): warning C4047: 'fonction' : les niveaux d'indirection de 'HFILE' et de 'thandle_t' sont différents
+     1>3rdparty\tiff\tif_win3.c(42): warning C4024: '_hread' : types différents pour le paramètre formel et réel 1
+     1>3rdparty\tiff\tif_win3.c(48): warning C4047: 'fonction' : les niveaux d'indirection de 'HFILE' et de 'thandle_t' sont différents
+     1>3rdparty\tiff\tif_win3.c(48): warning C4024: '_hwrite' : types différents pour le paramètre formel et réel 1
+     1>3rdparty\tiff\tif_win3.c(54): warning C4047: 'fonction' : les niveaux d'indirection de 'HFILE' et de 'thandle_t' sont différents
+     1>3rdparty\tiff\tif_win3.c(54): warning C4024: '_llseek' : types différents pour le paramètre formel et réel 1
+     1>3rdparty\tiff\tif_win3.c(60): warning C4047: 'fonction' : les niveaux d'indirection de 'HFILE' et de 'thandle_t' sont différents
+     1>3rdparty\tiff\tif_win3.c(60): warning C4024: '_lclose' : types différents pour le paramètre formel et réel 1
+     1>3rdparty\tiff\tif_win3.c(160): error C2146: erreur de syntaxe : absence de ')' avant l'identificateur 'huge'
+     1>3rdparty\tiff\tif_win3.c(160): error C2065: 'huge' : identificateur non déclaré
+     1>3rdparty\tiff\tif_win3.c(160): error C2059: erreur de syntaxe : ')'
+     1>3rdparty\tiff\tif_win3.c(195): error C2146: erreur de syntaxe : absence de ')' avant l'identificateur 'huge'
+     1>3rdparty\tiff\tif_win3.c(195): error C2065: 'huge' : identificateur non déclaré
+     1>3rdparty\tiff\tif_win3.c(195): error C2059: erreur de syntaxe : ')'
+     1>3rdparty\tiff\tif_win3.c(196): error C2146: erreur de syntaxe : absence de ')' avant l'identificateur 'huge'
+     1>3rdparty\tiff\tif_win3.c(196): error C2065: 'huge' : identificateur non déclaré
+     1>3rdparty\tiff\tif_win3.c(196): error C2059: erreur de syntaxe : ')'
+     1>3rdparty\tiff\tif_win3.c(207): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>3rdparty\tiff\tif_win3.c(207): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>3rdparty\tiff\tif_win3.c(209): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>3rdparty\tiff\tif_win3.c(220): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>3rdparty\tiff\tif_win3.c(220): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>3rdparty\tiff\tif_win3.c(222): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         adler32.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\zlib\zconf.h(380): fatal error C1083: Impossible d'ouvrir le fichier include : 'unistd.h' : No such file or directory
+         compress.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\zlib\zconf.h(380): fatal error C1083: Impossible d'ouvrir le fichier include : 'unistd.h' : No such file or directory
+         Génération de code en cours...
+         Compilation en cours...
+         crc32.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\zlib\zconf.h(380): fatal error C1083: Impossible d'ouvrir le fichier include : 'unistd.h' : No such file or directory
+         deflate.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\zlib\zconf.h(380): fatal error C1083: Impossible d'ouvrir le fichier include : 'unistd.h' : No such file or directory
+         gzclose.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\zlib\zconf.h(380): fatal error C1083: Impossible d'ouvrir le fichier include : 'unistd.h' : No such file or directory
+         gzlib.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\zlib\zconf.h(380): fatal error C1083: Impossible d'ouvrir le fichier include : 'unistd.h' : No such file or directory
+         gzread.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\zlib\zconf.h(380): fatal error C1083: Impossible d'ouvrir le fichier include : 'unistd.h' : No such file or directory
+         gzwrite.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\zlib\zconf.h(380): fatal error C1083: Impossible d'ouvrir le fichier include : 'unistd.h' : No such file or directory
+         infback.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\zlib\zconf.h(380): fatal error C1083: Impossible d'ouvrir le fichier include : 'unistd.h' : No such file or directory
+         inffast.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\zlib\zconf.h(380): fatal error C1083: Impossible d'ouvrir le fichier include : 'unistd.h' : No such file or directory
+         inflate.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\zlib\zconf.h(380): fatal error C1083: Impossible d'ouvrir le fichier include : 'unistd.h' : No such file or directory
+         inftrees.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\zlib\zconf.h(380): fatal error C1083: Impossible d'ouvrir le fichier include : 'unistd.h' : No such file or directory
+         trees.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\zlib\zconf.h(380): fatal error C1083: Impossible d'ouvrir le fichier include : 'unistd.h' : No such file or directory
+         uncompr.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\zlib\zconf.h(380): fatal error C1083: Impossible d'ouvrir le fichier include : 'unistd.h' : No such file or directory
+         zutil.c
+     1>c:\users\yohann\desktop\adcensus\adcensus\3rdparty\zlib\zconf.h(380): fatal error C1083: Impossible d'ouvrir le fichier include : 'unistd.h' : No such file or directory
+         io_png.c
+     1>libio\io_png.c(44): fatal error C1083: Impossible d'ouvrir le fichier include : 'png.h' : No such file or directory
+         io_tiff.c
+     1>libio\io_tiff.c(37): fatal error C1083: Impossible d'ouvrir le fichier include : 'tiffio.h' : No such file or directory
+         Génération de code en cours...
+     1>Génération du projet "C:\Users\Yohann\Desktop\ADCensus\ADCensus\ADCensus.vcxproj" terminée (build cible(s)) -- ÉCHEC.
+
+ÉCHEC de la build.
+
+Temps écoulé 00:00:01.11
