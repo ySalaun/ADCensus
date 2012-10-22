@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Yohann/Desktop/ADCensus/ADCensus_CMake/3rdParty
+# Install script for directory: C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake/3rdParty
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -28,14 +28,14 @@ IF(NOT CMAKE_INSTALL_COMPONENT)
 ENDIF(NOT CMAKE_INSTALL_COMPONENT)
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/src/3rdParty" TYPE FILE FILES "C:/Users/Yohann/Desktop/ADCensus/ADCensus_CMake/3rdParty/CMakeLists.txt")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/src/3rdParty" TYPE FILE FILES "C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake/3rdParty/CMakeLists.txt")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  INCLUDE("C:/Users/Yohann/Desktop/ADCensus/ADCensus_Build/3rdParty/zlib/cmake_install.cmake")
-  INCLUDE("C:/Users/Yohann/Desktop/ADCensus/ADCensus_Build/3rdParty/png/cmake_install.cmake")
-  INCLUDE("C:/Users/Yohann/Desktop/ADCensus/ADCensus_Build/3rdParty/tiff/cmake_install.cmake")
+  INCLUDE("C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build/3rdParty/zlib/cmake_install.cmake")
+  INCLUDE("C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build/3rdParty/png/cmake_install.cmake")
+  INCLUDE("C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build/3rdParty/tiff/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
 

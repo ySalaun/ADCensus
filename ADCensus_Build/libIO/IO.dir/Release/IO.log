@@ -1,31 +1,31 @@
-﻿La génération a démarré 17/10/2012 21:51:20.
-     1>Projet "C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\libIO\IO.vcxproj" sur le nœud 4 (build cible(s)).
+﻿La génération a démarré 22/10/2012 10:20:10.
+     1>Projet "C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\libIO\IO.vcxproj" sur le nœud 4 (build cible(s)).
      1>InitializeBuildStatus:
          Création de "IO.dir\Release\IO.unsuccessfulbuild", car "AlwaysCreate" a été spécifié.
        CustomBuild:
-         Building Custom Rule C:/Users/Yohann/Desktop/ADCensus/ADCensus_CMake/libIO/CMakeLists.txt
-         CMake does not need to re-run because C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\libIO\CMakeFiles\generate.stamp is up-to-date.
+         Building Custom Rule C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake/libIO/CMakeLists.txt
+         CMake does not need to re-run because C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\libIO\CMakeFiles\generate.stamp is up-to-date.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IC:/Users/Yohann/Desktop/ADCensus/ADCensus_CMake/libIO/../3rdParty/tiff /IC:/Users/Yohann/Desktop/ADCensus/ADCensus_CMake/libIO/../3rdParty/png /IC:/Users/Yohann/Desktop/ADCensus/ADCensus_CMake/libIO/.. /nologo /W3 /WX- /O2 /Ob2 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"IO.dir\Release\\" /Fd"C:/Users/Yohann/Desktop/ADCensus/ADCensus_Build/lib/Release/IO.pdb" /Gd /TC /analyze- /errorReport:prompt C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\libIO\io_tiff.c C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\libIO\io_png.c C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\libIO\draw.c  /Zm1000 
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IC:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake/libIO/../3rdParty/tiff /IC:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake/libIO/../3rdParty/png /IC:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake/libIO/.. /nologo /W3 /WX- /O2 /Ob2 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"IO.dir\Release\\" /Fd"C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build/lib/Release/IO.pdb" /Gd /TC /analyze- /errorReport:prompt C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\libIO\io_tiff.c C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\libIO\io_png.c C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\libIO\draw.c  /Zm1000 
          io_tiff.c
          io_png.c
-     1>C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\libIO\io_png.c(122): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\libIO\io_png.c(122): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : voir la déclaration de 'fopen'
-     1>C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\libIO\io_png.c(524): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\libIO\io_png.c(524): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : voir la déclaration de 'fopen'
-     1>C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\libIO\io_png.c(627): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+     1>C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\libIO\io_png.c(627): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
          draw.c
          Génération de code en cours...
        Lib:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\lib\Release\IO.lib" /NOLOGO IO.dir\Release\io_tiff.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\lib\Release\IO.lib" /NOLOGO IO.dir\Release\io_tiff.obj
          IO.dir\Release\io_png.obj
          IO.dir\Release\draw.obj
-         IO.vcxproj -> C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\lib\Release\IO.lib
+         IO.vcxproj -> C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\lib\Release\IO.lib
        FinalizeBuildStatus:
          Suppression du fichier "IO.dir\Release\IO.unsuccessfulbuild".
          Mise à jour de l'horodatage "IO.dir\Release\IO.lastbuildstate".
-     1>Génération du projet "C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\libIO\IO.vcxproj" terminée (build cible(s)).
+     1>Génération du projet "C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\libIO\IO.vcxproj" terminée (build cible(s)).
 
 La génération a réussi.
 
-Temps écoulé 00:00:00.32
+Temps écoulé 00:00:00.36

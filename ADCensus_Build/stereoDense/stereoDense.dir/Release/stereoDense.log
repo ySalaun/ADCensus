@@ -1,23 +1,23 @@
-﻿La génération a démarré 18/10/2012 18:51:50.
-     1>Projet "C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\stereoDense\stereoDense.vcxproj" sur le nœud 3 (build cible(s)).
+﻿La génération a démarré 22/10/2012 10:34:57.
+     1>Projet "C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\stereoDense\stereoDense.vcxproj" sur le nœud 3 (build cible(s)).
      1>InitializeBuildStatus:
-         Mise à jour de l'horodatage "stereoDense.dir\Release\stereoDense.unsuccessfulbuild".
+         Création de "stereoDense.dir\Release\stereoDense.unsuccessfulbuild", car "AlwaysCreate" a été spécifié.
        CustomBuild:
          Toutes les sorties sont à jour.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IC:/Users/Yohann/Desktop/ADCensus/ADCensus_CMake/stereoDense/.. /nologo /W3 /WX- /O2 /Ob2 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"stereoDense.dir\Release\\" /Fd"C:/Users/Yohann/Desktop/ADCensus/ADCensus_Build/bin/Release/stereoDense.pdb" /Gd /TP /analyze- /errorReport:prompt C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\stereoDense\stereoDense.cpp  /Zm1000 
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IC:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake/stereoDense/.. /nologo /W3 /WX- /O2 /Ob2 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"stereoDense.dir\Release\\" /Fd"C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build/bin/Release/stereoDense.pdb" /Gd /TP /analyze- /errorReport:prompt C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\stereoDense\stereoDense.cpp  /Zm1000 
          stereoDense.cpp
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\bin\Release\stereoDense.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib ..\lib\Release\Stereo.lib ..\lib\Release\IO.lib ..\lib\Release\tiff.lib ..\lib\Release\png.lib ..\lib\Release\zlib.lib /MANIFEST /ManifestFile:"stereoDense.dir\Release\stereoDense.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /PDB:"C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\bin\Release\stereoDense.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Yohann/Desktop/ADCensus/ADCensus_Build/lib/Release/stereoDense.lib" /MACHINE:X86 stereoDense.dir\Release\stereoDense.obj  /machine:X86 
-            Création de la bibliothèque C:/Users/Yohann/Desktop/ADCensus/ADCensus_Build/lib/Release/stereoDense.lib et de l'objet C:/Users/Yohann/Desktop/ADCensus/ADCensus_Build/lib/Release/stereoDense.exp
-         stereoDense.vcxproj -> C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\bin\Release\stereoDense.exe
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\bin\Release\stereoDense.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib ..\lib\Release\Stereo.lib ..\lib\Release\IO.lib ..\lib\Release\tiff.lib ..\lib\Release\png.lib ..\lib\Release\zlib.lib /MANIFEST /ManifestFile:"stereoDense.dir\Release\stereoDense.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /PDB:"C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\bin\Release\stereoDense.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build/lib/Release/stereoDense.lib" /MACHINE:X86 stereoDense.dir\Release\stereoDense.obj  /machine:X86 
+            Création de la bibliothèque C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build/lib/Release/stereoDense.lib et de l'objet C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build/lib/Release/stereoDense.exp
+         stereoDense.vcxproj -> C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\bin\Release\stereoDense.exe
        Manifest:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\bin\Release\stereoDense.exe;#1" /manifest stereoDense.dir\Release\stereoDense.exe.intermediate.manifest
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\bin\Release\stereoDense.exe;#1" /manifest stereoDense.dir\Release\stereoDense.exe.intermediate.manifest
        FinalizeBuildStatus:
          Suppression du fichier "stereoDense.dir\Release\stereoDense.unsuccessfulbuild".
          Mise à jour de l'horodatage "stereoDense.dir\Release\stereoDense.lastbuildstate".
-     1>Génération du projet "C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\stereoDense\stereoDense.vcxproj" terminée (build cible(s)).
+     1>Génération du projet "C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\stereoDense\stereoDense.vcxproj" terminée (build cible(s)).
 
 La génération a réussi.
 
-Temps écoulé 00:00:00.77
+Temps écoulé 00:00:01.72

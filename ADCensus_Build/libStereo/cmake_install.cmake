@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Yohann/Desktop/ADCensus/ADCensus_CMake/libStereo
+# Install script for directory: C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake/libStereo
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -29,9 +29,9 @@ ENDIF(NOT CMAKE_INSTALL_COMPONENT)
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/src/libStereo" TYPE FILE FILES
-    "C:/Users/Yohann/Desktop/ADCensus/ADCensus_CMake/libStereo/CMakeLists.txt"
-    "C:/Users/Yohann/Desktop/ADCensus/ADCensus_CMake/libStereo/patch.cpp"
-    "C:/Users/Yohann/Desktop/ADCensus/ADCensus_CMake/libStereo/patch.h"
+    "C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake/libStereo/CMakeLists.txt"
+    "C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake/libStereo/patch.cpp"
+    "C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake/libStereo/patch.h"
     )
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 

@@ -1,72 +1,72 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\png\png.c">
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\png\png.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\png\pngerror.c">
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\png\pngerror.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\png\pngget.c">
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\png\pngget.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\png\pngmem.c">
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\png\pngmem.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\png\pngpread.c">
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\png\pngpread.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\png\pngread.c">
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\png\pngread.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\png\pngrio.c">
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\png\pngrio.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\png\pngrtran.c">
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\png\pngrtran.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\png\pngrutil.c">
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\png\pngrutil.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\png\pngset.c">
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\png\pngset.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\png\pngtrans.c">
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\png\pngtrans.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\png\pngwio.c">
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\png\pngwio.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\png\pngwrite.c">
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\png\pngwrite.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\png\pngwtran.c">
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\png\pngwtran.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\png\pngwutil.c">
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\png\pngwutil.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\png\png.h">
+    <ClInclude Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\png\png.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\png\pnglibconf.h">
+    <ClInclude Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\png\pnglibconf.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\png\pngconf.h">
+    <ClInclude Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\png\pngconf.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\png\pngdebug.h">
+    <ClInclude Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\png\pngdebug.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\png\pnginfo.h">
+    <ClInclude Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\png\pnginfo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\png\pngpriv.h">
+    <ClInclude Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\png\pngpriv.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\png\pngstruct.h">
+    <ClInclude Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\png\pngstruct.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -79,10 +79,10 @@
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{606F7027-8798-403A-8C08-2F3EAE11F1F6}</UniqueIdentifier>
+      <UniqueIdentifier>{84949139-7C0F-4413-A7E8-09E42356335C}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{FC0917A6-BB3E-4DA7-8FEF-19BD7F64F725}</UniqueIdentifier>
+      <UniqueIdentifier>{0EE26774-DAF9-46E3-9A60-94DC4C092348}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

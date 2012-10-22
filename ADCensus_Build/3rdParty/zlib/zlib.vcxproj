@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGUID>{09D9A6E1-23D3-43E4-9E8C-B6E7941E9782}</ProjectGUID>
+    <ProjectGUID>{14BD4FD6-2E41-4D53-9CD3-F6489ED63C38}</ProjectGUID>
     <SccProjectName />
     <SccLocalPath />
     <Keyword>Win32Proj</Keyword>
@@ -55,19 +55,19 @@
   <PropertyGroup Label="UserMacros" />
     <PropertyGroup>
       <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\lib\Debug\</OutDir>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\lib\Debug\</OutDir>
       <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">zlib.dir\Debug\</IntDir>
       <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">zlibd</TargetName>
       <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.lib</TargetExt>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\lib\Release\</OutDir>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\lib\Release\</OutDir>
       <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">zlib.dir\Release\</IntDir>
       <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">zlib</TargetName>
       <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.lib</TargetExt>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\lib\MinSizeRel\</OutDir>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\lib\MinSizeRel\</OutDir>
       <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">zlib.dir\MinSizeRel\</IntDir>
       <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">zlib</TargetName>
       <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.lib</TargetExt>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\lib\RelWithDebInfo\</OutDir>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\lib\RelWithDebInfo\</OutDir>
       <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">zlib.dir\RelWithDebInfo\</IntDir>
       <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">zlib</TargetName>
       <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.lib</TargetExt>
@@ -88,7 +88,7 @@
       <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;NO_FSEEKO;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>Debug</AssemblerListingLocation>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <ProgramDataBaseFileName>C:/Users/Yohann/Desktop/ADCensus/ADCensus_Build/lib/Debug/zlibd.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build/lib/Debug/zlibd.pdb</ProgramDataBaseFileName>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;NO_FSEEKO;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -118,7 +118,7 @@
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;NO_FSEEKO;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>Release</AssemblerListingLocation>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <ProgramDataBaseFileName>C:/Users/Yohann/Desktop/ADCensus/ADCensus_Build/lib/Release/zlib.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build/lib/Release/zlib.pdb</ProgramDataBaseFileName>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;NO_FSEEKO;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -148,7 +148,7 @@
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;NO_FSEEKO;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>MinSizeRel</AssemblerListingLocation>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <ProgramDataBaseFileName>C:/Users/Yohann/Desktop/ADCensus/ADCensus_Build/lib/MinSizeRel/zlib.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build/lib/MinSizeRel/zlib.pdb</ProgramDataBaseFileName>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;NO_FSEEKO;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -178,7 +178,7 @@
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;NO_FSEEKO;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>RelWithDebInfo</AssemblerListingLocation>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <ProgramDataBaseFileName>C:/Users/Yohann/Desktop/ADCensus/ADCensus_Build/lib/RelWithDebInfo/zlib.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build/lib/RelWithDebInfo/zlib.pdb</ProgramDataBaseFileName>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;NO_FSEEKO;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -195,9 +195,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <CustomBuild Include="..\..\..\ADCensus_CMake\3rdParty\zlib\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/Yohann/Desktop/ADCensus/ADCensus_CMake/3rdParty/zlib/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake/3rdParty/zlib/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
-"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Users/Yohann/Desktop/ADCensus/ADCensus_CMake -BC:/Users/Yohann/Desktop/ADCensus/ADCensus_Build --check-stamp-file C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\3rdParty\zlib\CMakeFiles\generate.stamp
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake -BC:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build --check-stamp-file C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\3rdParty\zlib\CMakeFiles\generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -205,11 +205,11 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/Yohann/Desktop/ADCensus/ADCensus_CMake/3rdParty/zlib/CMakeLists.txt;C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\zlib\CMakeLists.txt;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindZLIB.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.c.in;C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\CMakeFiles\CheckTypeSize\OFF64_T.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\zlib\zconf.h.cmakein;C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\zlib\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\3rdParty\zlib\CMakeFiles\generate.stamp;%(Outputs)</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/Yohann/Desktop/ADCensus/ADCensus_CMake/3rdParty/zlib/CMakeLists.txt</Message>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake/3rdParty/zlib/CMakeLists.txt;C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\CMakeLists.txt;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindZLIB.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.c.in;C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\CMakeFiles\CheckTypeSize\OFF64_T.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\zconf.h.cmakein;C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\3rdParty\zlib\CMakeFiles\generate.stamp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake/3rdParty/zlib/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
-"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Users/Yohann/Desktop/ADCensus/ADCensus_CMake -BC:/Users/Yohann/Desktop/ADCensus/ADCensus_Build --check-stamp-file C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\3rdParty\zlib\CMakeFiles\generate.stamp
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake -BC:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build --check-stamp-file C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\3rdParty\zlib\CMakeFiles\generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -217,11 +217,11 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/Yohann/Desktop/ADCensus/ADCensus_CMake/3rdParty/zlib/CMakeLists.txt;C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\zlib\CMakeLists.txt;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindZLIB.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.c.in;C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\CMakeFiles\CheckTypeSize\OFF64_T.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\zlib\zconf.h.cmakein;C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\zlib\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\3rdParty\zlib\CMakeFiles\generate.stamp;%(Outputs)</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Users/Yohann/Desktop/ADCensus/ADCensus_CMake/3rdParty/zlib/CMakeLists.txt</Message>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake/3rdParty/zlib/CMakeLists.txt;C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\CMakeLists.txt;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindZLIB.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.c.in;C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\CMakeFiles\CheckTypeSize\OFF64_T.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\zconf.h.cmakein;C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\3rdParty\zlib\CMakeFiles\generate.stamp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake/3rdParty/zlib/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
-"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Users/Yohann/Desktop/ADCensus/ADCensus_CMake -BC:/Users/Yohann/Desktop/ADCensus/ADCensus_Build --check-stamp-file C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\3rdParty\zlib\CMakeFiles\generate.stamp
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake -BC:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build --check-stamp-file C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\3rdParty\zlib\CMakeFiles\generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -229,11 +229,11 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/Yohann/Desktop/ADCensus/ADCensus_CMake/3rdParty/zlib/CMakeLists.txt;C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\zlib\CMakeLists.txt;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindZLIB.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.c.in;C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\CMakeFiles\CheckTypeSize\OFF64_T.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\zlib\zconf.h.cmakein;C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\zlib\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\3rdParty\zlib\CMakeFiles\generate.stamp;%(Outputs)</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/Yohann/Desktop/ADCensus/ADCensus_CMake/3rdParty/zlib/CMakeLists.txt</Message>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake/3rdParty/zlib/CMakeLists.txt;C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\CMakeLists.txt;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindZLIB.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.c.in;C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\CMakeFiles\CheckTypeSize\OFF64_T.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\zconf.h.cmakein;C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\3rdParty\zlib\CMakeFiles\generate.stamp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake/3rdParty/zlib/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
-"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Users/Yohann/Desktop/ADCensus/ADCensus_CMake -BC:/Users/Yohann/Desktop/ADCensus/ADCensus_Build --check-stamp-file C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\3rdParty\zlib\CMakeFiles\generate.stamp
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake -BC:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build --check-stamp-file C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\3rdParty\zlib\CMakeFiles\generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -241,41 +241,41 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/Yohann/Desktop/ADCensus/ADCensus_CMake/3rdParty/zlib/CMakeLists.txt;C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\zlib\CMakeLists.txt;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindZLIB.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.c.in;C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\CMakeFiles\CheckTypeSize\OFF64_T.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\zlib\zconf.h.cmakein;C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\zlib\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\3rdParty\zlib\CMakeFiles\generate.stamp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake/3rdParty/zlib/CMakeLists.txt;C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\CMakeLists.txt;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindZLIB.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.c.in;C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\CMakeFiles\CheckTypeSize\OFF64_T.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\zconf.h.cmakein;C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\3rdParty\zlib\CMakeFiles\generate.stamp;%(Outputs)</Outputs>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\zlib\adler32.c" />
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\zlib\compress.c" />
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\zlib\crc32.c" />
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\zlib\deflate.c" />
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\zlib\gzclose.c" />
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\zlib\gzlib.c" />
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\zlib\gzread.c" />
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\zlib\gzwrite.c" />
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\zlib\inflate.c" />
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\zlib\infback.c" />
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\zlib\inftrees.c" />
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\zlib\inffast.c" />
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\zlib\trees.c" />
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\zlib\uncompr.c" />
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\zlib\zutil.c" />
-    <ClInclude Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\zlib\zconf.h" />
-    <ClInclude Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\zlib\zlib.h" />
-    <ClInclude Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\zlib\crc32.h" />
-    <ClInclude Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\zlib\deflate.h" />
-    <ClInclude Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\zlib\gzguts.h" />
-    <ClInclude Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\zlib\inffast.h" />
-    <ClInclude Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\zlib\inffixed.h" />
-    <ClInclude Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\zlib\inflate.h" />
-    <ClInclude Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\zlib\inftrees.h" />
-    <ClInclude Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\zlib\trees.h" />
-    <ClInclude Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\zlib\zutil.h" />
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\adler32.c" />
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\compress.c" />
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\crc32.c" />
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\deflate.c" />
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\gzclose.c" />
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\gzlib.c" />
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\gzread.c" />
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\gzwrite.c" />
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\inflate.c" />
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\infback.c" />
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\inftrees.c" />
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\inffast.c" />
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\trees.c" />
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\uncompr.c" />
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\zutil.c" />
+    <ClInclude Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\zconf.h" />
+    <ClInclude Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\zlib.h" />
+    <ClInclude Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\crc32.h" />
+    <ClInclude Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\deflate.h" />
+    <ClInclude Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\gzguts.h" />
+    <ClInclude Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\inffast.h" />
+    <ClInclude Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\inffixed.h" />
+    <ClInclude Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\inflate.h" />
+    <ClInclude Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\inftrees.h" />
+    <ClInclude Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\trees.h" />
+    <ClInclude Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\zutil.h" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:/Users/Yohann/Desktop/ADCensus/ADCensus_Build/ZERO_CHECK.vcxproj">
-      <Project>AD47CCD9-02B3-47C8-A8E8-E4651E8AA0F9</Project>
+    <ProjectReference Include="C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build/ZERO_CHECK.vcxproj">
+      <Project>3596AB89-4F17-4B65-9FCF-DAA5AA1F3EDE</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -1,14 +1,14 @@
-﻿La génération a démarré 17/10/2012 21:51:13.
-     1>Projet "C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\3rdParty\tiff\tiff.vcxproj" sur le nœud 2 (build cible(s)).
+﻿La génération a démarré 22/10/2012 10:19:59.
+     1>Projet "C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\3rdParty\tiff\tiff.vcxproj" sur le nœud 2 (build cible(s)).
      1>PrepareForBuild:
-         Création du répertoire "C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\lib\Release\".
+         Création du répertoire "C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\lib\Release\".
        InitializeBuildStatus:
          Création de "tiff.dir\Release\tiff.unsuccessfulbuild", car "AlwaysCreate" a été spécifié.
        CustomBuild:
-         Building Custom Rule C:/Users/Yohann/Desktop/ADCensus/ADCensus_CMake/3rdParty/tiff/CMakeLists.txt
-         CMake does not need to re-run because C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\3rdParty\tiff\CMakeFiles\generate.stamp is up-to-date.
+         Building Custom Rule C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake/3rdParty/tiff/CMakeLists.txt
+         CMake does not need to re-run because C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\3rdParty\tiff\CMakeFiles\generate.stamp is up-to-date.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /nologo /W3 /WX- /O2 /Ob2 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D _CRT_SECURE_NO_DEPRECATE /D _CRT_SECURE_NO_WARNINGS /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"tiff.dir\Release\\" /Fd"C:/Users/Yohann/Desktop/ADCensus/ADCensus_Build/lib/Release/tiff.pdb" /Gd /TC /analyze- /errorReport:prompt C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_aux.c C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_close.c C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_codec.c C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_color.c C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_compress.c C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_dir.c C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_dirinfo.c C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_dirread.c C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_dirwrite.c C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_dumpmode.c C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_error.c C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_extension.c C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_fax3.c C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_fax3sm.c C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_flush.c C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_getimage.c C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_jbig.c C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_luv.c C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_lzw.c C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_next.c C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_open.c C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_packbits.c C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_pixarlog.c C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_predict.c C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_print.c C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_read.c C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_strip.c C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_swab.c C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_thunder.c C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_tile.c C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_unix.c C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_version.c C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_warning.c C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_write.c C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_zip.c  /Zm1000 
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /nologo /W3 /WX- /O2 /Ob2 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D _CRT_SECURE_NO_DEPRECATE /D _CRT_SECURE_NO_WARNINGS /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"tiff.dir\Release\\" /Fd"C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build/lib/Release/tiff.pdb" /Gd /TC /analyze- /errorReport:prompt C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_aux.c C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_close.c C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_codec.c C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_color.c C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_compress.c C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_dir.c C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_dirinfo.c C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_dirread.c C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_dirwrite.c C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_dumpmode.c C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_error.c C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_extension.c C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_fax3.c C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_fax3sm.c C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_flush.c C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_getimage.c C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_jbig.c C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_luv.c C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_lzw.c C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_next.c C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_open.c C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_packbits.c C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_pixarlog.c C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_predict.c C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_print.c C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_read.c C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_strip.c C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_swab.c C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_thunder.c C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_tile.c C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_unix.c C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_version.c C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_warning.c C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_write.c C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_zip.c  /Zm1000 
          tif_aux.c
          tif_close.c
          tif_codec.c
@@ -16,7 +16,7 @@
          tif_compress.c
          tif_dir.c
          tif_dirinfo.c
-     1>C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_dirinfo.c(799): warning C4996: '_lfind': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _lfind. See online help for details.
+     1>C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_dirinfo.c(799): warning C4996: '_lfind': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _lfind. See online help for details.
                  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\search.h(53) : voir la déclaration de '_lfind'
          tif_dirread.c
          tif_dirwrite.c
@@ -44,28 +44,28 @@
          tif_thunder.c
          tif_tile.c
          tif_unix.c
-     1>C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_unix.c(58): warning C4996: 'read': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _read. See online help for details.
+     1>C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_unix.c(58): warning C4996: 'read': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _read. See online help for details.
                  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\io.h(313) : voir la déclaration de 'read'
-     1>C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_unix.c(64): warning C4996: 'write': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _write. See online help for details.
+     1>C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_unix.c(64): warning C4996: 'write': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _write. See online help for details.
                  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\io.h(318) : voir la déclaration de 'write'
-     1>C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_unix.c(70): warning C4996: 'lseek': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _lseek. See online help for details.
+     1>C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_unix.c(70): warning C4996: 'lseek': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _lseek. See online help for details.
                  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\io.h(310) : voir la déclaration de 'lseek'
-     1>C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_unix.c(76): warning C4996: 'close': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _close. See online help for details.
+     1>C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_unix.c(76): warning C4996: 'close': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _close. See online help for details.
                  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\io.h(302) : voir la déclaration de 'close'
-     1>C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_unix.c(171): warning C4996: 'open': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _open. See online help for details.
+     1>C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_unix.c(171): warning C4996: 'open': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _open. See online help for details.
                  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\io.h(312) : voir la déclaration de 'open'
-     1>C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_unix.c(180): warning C4996: 'close': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _close. See online help for details.
+     1>C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_unix.c(180): warning C4996: 'close': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _close. See online help for details.
                  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\io.h(302) : voir la déclaration de 'close'
-     1>C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_unix.c(233): warning C4996: 'close': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _close. See online help for details.
+     1>C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_unix.c(233): warning C4996: 'close': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _close. See online help for details.
                  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\io.h(302) : voir la déclaration de 'close'
          tif_version.c
          tif_warning.c
          tif_write.c
-     1>C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_write.c(633): warning C4018: '>=' : incompatibilité signed/unsigned
+     1>C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_write.c(633): warning C4018: '>=' : incompatibilité signed/unsigned
          tif_zip.c
          Génération de code en cours...
        Lib:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\lib\Release\tiff.lib" /NOLOGO tiff.dir\Release\tif_aux.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\lib\Release\tiff.lib" /NOLOGO tiff.dir\Release\tif_aux.obj
          tiff.dir\Release\tif_close.obj
          tiff.dir\Release\tif_codec.obj
          tiff.dir\Release\tif_color.obj
@@ -100,12 +100,12 @@
          tiff.dir\Release\tif_warning.obj
          tiff.dir\Release\tif_write.obj
          tiff.dir\Release\tif_zip.obj
-         tiff.vcxproj -> C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\lib\Release\tiff.lib
+         tiff.vcxproj -> C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\lib\Release\tiff.lib
        FinalizeBuildStatus:
          Suppression du fichier "tiff.dir\Release\tiff.unsuccessfulbuild".
          Mise à jour de l'horodatage "tiff.dir\Release\tiff.lastbuildstate".
-     1>Génération du projet "C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\3rdParty\tiff\tiff.vcxproj" terminée (build cible(s)).
+     1>Génération du projet "C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\3rdParty\tiff\tiff.vcxproj" terminée (build cible(s)).
 
 La génération a réussi.
 
-Temps écoulé 00:00:03.04
+Temps écoulé 00:00:05.88

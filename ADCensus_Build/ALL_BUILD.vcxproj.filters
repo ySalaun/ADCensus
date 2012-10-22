@@ -16,10 +16,10 @@
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{A80D4847-9426-441E-9E0F-DD4F1EA8FE34}</UniqueIdentifier>
+      <UniqueIdentifier>{05333A2E-A4A7-4FEE-BF7A-0580568D7EC4}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\CMakeFiles\ALL_BUILD" />
+    <None Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\CMakeFiles\ALL_BUILD" />
   </ItemGroup>
 </Project>

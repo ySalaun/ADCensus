@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Yohann/Desktop/ADCensus/ADCensus_CMake/libIO
+# Install script for directory: C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake/libIO
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -29,14 +29,14 @@ ENDIF(NOT CMAKE_INSTALL_COMPONENT)
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/src/libIO" TYPE FILE FILES
-    "C:/Users/Yohann/Desktop/ADCensus/ADCensus_CMake/libIO/CMakeLists.txt"
-    "C:/Users/Yohann/Desktop/ADCensus/ADCensus_CMake/libIO/io_tiff.c"
-    "C:/Users/Yohann/Desktop/ADCensus/ADCensus_CMake/libIO/io_tiff.h"
-    "C:/Users/Yohann/Desktop/ADCensus/ADCensus_CMake/libIO/io_png.c"
-    "C:/Users/Yohann/Desktop/ADCensus/ADCensus_CMake/libIO/io_png.h"
-    "C:/Users/Yohann/Desktop/ADCensus/ADCensus_CMake/libIO/draw.c"
-    "C:/Users/Yohann/Desktop/ADCensus/ADCensus_CMake/libIO/draw.h"
-    "C:/Users/Yohann/Desktop/ADCensus/ADCensus_CMake/libIO/nan.h"
+    "C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake/libIO/CMakeLists.txt"
+    "C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake/libIO/io_tiff.c"
+    "C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake/libIO/io_tiff.h"
+    "C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake/libIO/io_png.c"
+    "C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake/libIO/io_png.h"
+    "C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake/libIO/draw.c"
+    "C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake/libIO/draw.h"
+    "C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake/libIO/nan.h"
     )
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 

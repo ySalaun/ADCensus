@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGUID>{FE1E1B00-BDFD-4814-83B4-F87254B0472E}</ProjectGUID>
+    <ProjectGUID>{9C47DD9B-2332-4584-AA03-E506AC997CCB}</ProjectGUID>
     <SccProjectName />
     <SccLocalPath />
     <Keyword>Win32Proj</Keyword>
@@ -55,19 +55,19 @@
   <PropertyGroup Label="UserMacros" />
     <PropertyGroup>
       <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\lib\Debug\</OutDir>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\lib\Debug\</OutDir>
       <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">tiff.dir\Debug\</IntDir>
       <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">tiff</TargetName>
       <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.lib</TargetExt>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\lib\Release\</OutDir>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\lib\Release\</OutDir>
       <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">tiff.dir\Release\</IntDir>
       <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">tiff</TargetName>
       <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.lib</TargetExt>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\lib\MinSizeRel\</OutDir>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\lib\MinSizeRel\</OutDir>
       <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">tiff.dir\MinSizeRel\</IntDir>
       <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">tiff</TargetName>
       <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.lib</TargetExt>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\lib\RelWithDebInfo\</OutDir>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\lib\RelWithDebInfo\</OutDir>
       <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">tiff.dir\RelWithDebInfo\</IntDir>
       <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">tiff</TargetName>
       <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.lib</TargetExt>
@@ -88,7 +88,7 @@
       <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>Debug</AssemblerListingLocation>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <ProgramDataBaseFileName>C:/Users/Yohann/Desktop/ADCensus/ADCensus_Build/lib/Debug/tiff.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build/lib/Debug/tiff.pdb</ProgramDataBaseFileName>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -118,7 +118,7 @@
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>Release</AssemblerListingLocation>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <ProgramDataBaseFileName>C:/Users/Yohann/Desktop/ADCensus/ADCensus_Build/lib/Release/tiff.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build/lib/Release/tiff.pdb</ProgramDataBaseFileName>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -148,7 +148,7 @@
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>MinSizeRel</AssemblerListingLocation>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <ProgramDataBaseFileName>C:/Users/Yohann/Desktop/ADCensus/ADCensus_Build/lib/MinSizeRel/tiff.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build/lib/MinSizeRel/tiff.pdb</ProgramDataBaseFileName>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -178,7 +178,7 @@
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>RelWithDebInfo</AssemblerListingLocation>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <ProgramDataBaseFileName>C:/Users/Yohann/Desktop/ADCensus/ADCensus_Build/lib/RelWithDebInfo/tiff.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build/lib/RelWithDebInfo/tiff.pdb</ProgramDataBaseFileName>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -195,9 +195,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <CustomBuild Include="..\..\..\ADCensus_CMake\3rdParty\tiff\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/Yohann/Desktop/ADCensus/ADCensus_CMake/3rdParty/tiff/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake/3rdParty/tiff/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
-"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Users/Yohann/Desktop/ADCensus/ADCensus_CMake -BC:/Users/Yohann/Desktop/ADCensus/ADCensus_Build --check-stamp-file C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\3rdParty\tiff\CMakeFiles\generate.stamp
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake -BC:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build --check-stamp-file C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\3rdParty\tiff\CMakeFiles\generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -205,11 +205,11 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/Yohann/Desktop/ADCensus/ADCensus_CMake/3rdParty/tiff/CMakeLists.txt;C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\CMakeLists.txt;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindTIFF.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\3rdParty\tiff\CMakeFiles\generate.stamp;%(Outputs)</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/Yohann/Desktop/ADCensus/ADCensus_CMake/3rdParty/tiff/CMakeLists.txt</Message>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake/3rdParty/tiff/CMakeLists.txt;C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\CMakeLists.txt;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindTIFF.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\3rdParty\tiff\CMakeFiles\generate.stamp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake/3rdParty/tiff/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
-"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Users/Yohann/Desktop/ADCensus/ADCensus_CMake -BC:/Users/Yohann/Desktop/ADCensus/ADCensus_Build --check-stamp-file C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\3rdParty\tiff\CMakeFiles\generate.stamp
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake -BC:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build --check-stamp-file C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\3rdParty\tiff\CMakeFiles\generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -217,11 +217,11 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/Yohann/Desktop/ADCensus/ADCensus_CMake/3rdParty/tiff/CMakeLists.txt;C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\CMakeLists.txt;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindTIFF.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\3rdParty\tiff\CMakeFiles\generate.stamp;%(Outputs)</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Users/Yohann/Desktop/ADCensus/ADCensus_CMake/3rdParty/tiff/CMakeLists.txt</Message>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake/3rdParty/tiff/CMakeLists.txt;C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\CMakeLists.txt;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindTIFF.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\3rdParty\tiff\CMakeFiles\generate.stamp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake/3rdParty/tiff/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
-"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Users/Yohann/Desktop/ADCensus/ADCensus_CMake -BC:/Users/Yohann/Desktop/ADCensus/ADCensus_Build --check-stamp-file C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\3rdParty\tiff\CMakeFiles\generate.stamp
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake -BC:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build --check-stamp-file C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\3rdParty\tiff\CMakeFiles\generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -229,11 +229,11 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/Yohann/Desktop/ADCensus/ADCensus_CMake/3rdParty/tiff/CMakeLists.txt;C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\CMakeLists.txt;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindTIFF.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\3rdParty\tiff\CMakeFiles\generate.stamp;%(Outputs)</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/Yohann/Desktop/ADCensus/ADCensus_CMake/3rdParty/tiff/CMakeLists.txt</Message>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake/3rdParty/tiff/CMakeLists.txt;C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\CMakeLists.txt;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindTIFF.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\3rdParty\tiff\CMakeFiles\generate.stamp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake/3rdParty/tiff/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
-"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Users/Yohann/Desktop/ADCensus/ADCensus_CMake -BC:/Users/Yohann/Desktop/ADCensus/ADCensus_Build --check-stamp-file C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\3rdParty\tiff\CMakeFiles\generate.stamp
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake -BC:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build --check-stamp-file C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\3rdParty\tiff\CMakeFiles\generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -241,63 +241,63 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/Yohann/Desktop/ADCensus/ADCensus_CMake/3rdParty/tiff/CMakeLists.txt;C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\CMakeLists.txt;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindTIFF.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Yohann\Desktop\ADCensus\ADCensus_Build\3rdParty\tiff\CMakeFiles\generate.stamp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake/3rdParty/tiff/CMakeLists.txt;C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\CMakeLists.txt;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindTIFF.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\3rdParty\tiff\CMakeFiles\generate.stamp;%(Outputs)</Outputs>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_aux.c" />
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_close.c" />
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_codec.c" />
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_color.c" />
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_compress.c" />
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_dir.c" />
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_dirinfo.c" />
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_dirread.c" />
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_dirwrite.c" />
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_dumpmode.c" />
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_error.c" />
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_extension.c" />
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_fax3.c" />
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_fax3sm.c" />
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_flush.c" />
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_getimage.c" />
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_jbig.c" />
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_luv.c" />
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_lzw.c" />
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_next.c" />
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_open.c" />
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_packbits.c" />
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_pixarlog.c" />
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_predict.c" />
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_print.c" />
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_read.c" />
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_strip.c" />
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_swab.c" />
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_thunder.c" />
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_tile.c" />
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_unix.c" />
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_version.c" />
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_warning.c" />
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_write.c" />
-    <ClCompile Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_zip.c" />
-    <ClInclude Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\t4.h" />
-    <ClInclude Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_config.h" />
-    <ClInclude Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_config.vc.h" />
-    <ClInclude Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_dir.h" />
-    <ClInclude Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_fax3.h" />
-    <ClInclude Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tiff.h" />
-    <ClInclude Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tiffconf.h" />
-    <ClInclude Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tiffconf.vc.h" />
-    <ClInclude Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tiffio.h" />
-    <ClInclude Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tiffiop.h" />
-    <ClInclude Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tiffvers.h" />
-    <ClInclude Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_predict.h" />
-    <ClInclude Include="C:\Users\Yohann\Desktop\ADCensus\ADCensus_CMake\3rdParty\tiff\uvcode.h" />
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_aux.c" />
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_close.c" />
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_codec.c" />
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_color.c" />
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_compress.c" />
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_dir.c" />
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_dirinfo.c" />
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_dirread.c" />
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_dirwrite.c" />
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_dumpmode.c" />
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_error.c" />
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_extension.c" />
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_fax3.c" />
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_fax3sm.c" />
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_flush.c" />
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_getimage.c" />
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_jbig.c" />
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_luv.c" />
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_lzw.c" />
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_next.c" />
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_open.c" />
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_packbits.c" />
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_pixarlog.c" />
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_predict.c" />
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_print.c" />
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_read.c" />
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_strip.c" />
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_swab.c" />
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_thunder.c" />
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_tile.c" />
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_unix.c" />
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_version.c" />
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_warning.c" />
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_write.c" />
+    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_zip.c" />
+    <ClInclude Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\t4.h" />
+    <ClInclude Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_config.h" />
+    <ClInclude Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_config.vc.h" />
+    <ClInclude Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_dir.h" />
+    <ClInclude Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_fax3.h" />
+    <ClInclude Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tiff.h" />
+    <ClInclude Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tiffconf.h" />
+    <ClInclude Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tiffconf.vc.h" />
+    <ClInclude Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tiffio.h" />
+    <ClInclude Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tiffiop.h" />
+    <ClInclude Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tiffvers.h" />
+    <ClInclude Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\tif_predict.h" />
+    <ClInclude Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\tiff\uvcode.h" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:/Users/Yohann/Desktop/ADCensus/ADCensus_Build/ZERO_CHECK.vcxproj">
-      <Project>AD47CCD9-02B3-47C8-A8E8-E4651E8AA0F9</Project>
+    <ProjectReference Include="C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build/ZERO_CHECK.vcxproj">
+      <Project>3596AB89-4F17-4B65-9FCF-DAA5AA1F3EDE</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
