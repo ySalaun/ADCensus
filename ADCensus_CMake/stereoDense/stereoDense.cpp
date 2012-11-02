@@ -25,8 +25,9 @@ static bool loadImage(const char* name, LWImage<float>& im) {
 /// Compute disparity map from \a im1 to \a im2.
 static void disparity(LWImage<float> im1, LWImage<float> im2,
                       int dMin, int dMax, int win,
-                      LWImage<float>& disp, LWImage<float>* costMap) {
-    float (*dispFunction)(const LWImage<float>&,int,int,
+                      LWImage<float>& disp, LWImage<float>* costMap) 
+{
+    /*float (*dispFunction)(const LWImage<float>&,int,int,
                           const LWImage<float>&,int,int, int)=
         (bIgnoreContrast? cssd: ssd);
     std::fill_n(disp.data, disp.w*disp.h, NaN);
@@ -54,7 +55,51 @@ static void disparity(LWImage<float> im1, LWImage<float> im2,
                 if(costMap)
                     *costMap->pixel(x,y) = lowCost;
             }
-        }
+        }*/
+	int i, j, disparity, step;
+	bool horizontalFirst;
+
+	// parameters
+	int w = im1.w, h = im1.h;		// width and height of pictures
+	int l1 = 0, l2 = 0;				// for adaptative window
+	float tau1 = 0.0f, tau2 = 0.0f;	// for adaptative window
+	int nbAgregatingIteration = 4;	// for cost agregation
+	
+	// tables
+	float *costs;
+	int *upBorders, *downBorders, *leftBorders, *rightBorders;
+	costs = new float[h*w*(dMax-dMin+1)];
+	
+	// compute borders for adaptative windows
+	upBorders    = patchesBorder(im1, -1,  0, l1, l2, tau1, tau2);
+	downBorders  = patchesBorder(im1,  1,  0, l1, l2, tau1, tau2);
+	leftBorders  = patchesBorder(im1,  0, -1, l1, l2, tau1, tau2);
+	rightBorders = patchesBorder(im1,  0,  1, l1, l2, tau1, tau2);
+
+	// computes ad census costs for each pixel and each disparity
+	for(i = 0; i < w; ++i){
+		for(j = 0; j < h; ++j){
+            for(disparity = dMin; disparity <= dMax; ++disparity){
+				if(i + disparity < 0 || i + disparity >= w){
+					costs[disparity*h*w+i*h+j] = 0;
+				}
+				else{
+					costs[disparity*h*w+i*h+j] = adCensus(im1,i,j, im2,i+disparity,j);
+				}
+			}
+		}
+	}
+	
+	// agregate cost for each pichel in its adaptive window for each possible value of disparity
+	for(disparity = dMin; disparity <= dMax; ++disparity){
+		horizontalFirst = true;
+		for(step = 0; step < nbAgregatingIteration; ++step){
+			agregateCosts2D(costs, w, h, disparity, leftBorders, rightBorders, upBorders, downBorders, horizontalFirst);
+			horizontalFirst = !horizontalFirst;
+		}
+	}
+
+	// find lowest cost and explicit disparity
 }
 
 int main (int argc, char** argv)
