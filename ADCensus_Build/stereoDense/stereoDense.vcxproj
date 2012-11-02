@@ -19,9 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGUID>{A22D7E17-1410-4D8C-8C8E-C8AB8C9ECA3C}</ProjectGUID>
-    <SccProjectName />
-    <SccLocalPath />
+    <ProjectGUID>{5B2882C4-F4B6-4427-8648-92FC58E56D75}</ProjectGUID>
     <Keyword>Win32Proj</Keyword>
     <Platform>Win32</Platform>
     <ProjectName>stereoDense</ProjectName>
@@ -90,13 +88,14 @@
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
       <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>Debug</AssemblerListingLocation>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <ProgramDataBaseFileName>C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build/bin/Debug/stereoDense.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build/stereoDense/Debug/stereoDense.pdb</ProgramDataBaseFileName>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -117,7 +116,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ImportLibrary>C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build/lib/Debug/stereoDense.lib</ImportLibrary>
       <LinkIncremental>true</LinkIncremental>
-      <ProgramDataBaseFileName>C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build/bin/Debug/stereoDense.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFile>C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build/stereoDense/Debug/stereoDense.pdb</ProgramDataBaseFile>
       <StackReserveSize>10000000</StackReserveSize>
       <SubSystem>Console</SubSystem>
       <Version></Version>
@@ -134,6 +133,7 @@
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <WarningLevel>Level3</WarningLevel>
@@ -141,7 +141,7 @@
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>Release</AssemblerListingLocation>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <ProgramDataBaseFileName>C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build/bin/Release/stereoDense.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build/stereoDense/Release/stereoDense.pdb</ProgramDataBaseFileName>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -161,7 +161,7 @@
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <ImportLibrary>C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build/lib/Release/stereoDense.lib</ImportLibrary>
-      <ProgramDataBaseFileName>C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build/bin/Release/stereoDense.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFile>C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build/stereoDense/Release/stereoDense.pdb</ProgramDataBaseFile>
       <StackReserveSize>10000000</StackReserveSize>
       <SubSystem>Console</SubSystem>
       <Version></Version>
@@ -178,6 +178,7 @@
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
       <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <WarningLevel>Level3</WarningLevel>
@@ -185,7 +186,7 @@
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>MinSizeRel</AssemblerListingLocation>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <ProgramDataBaseFileName>C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build/bin/MinSizeRel/stereoDense.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build/stereoDense/MinSizeRel/stereoDense.pdb</ProgramDataBaseFileName>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -205,7 +206,7 @@
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <ImportLibrary>C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build/lib/MinSizeRel/stereoDense.lib</ImportLibrary>
-      <ProgramDataBaseFileName>C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build/bin/MinSizeRel/stereoDense.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFile>C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build/stereoDense/MinSizeRel/stereoDense.pdb</ProgramDataBaseFile>
       <StackReserveSize>10000000</StackReserveSize>
       <SubSystem>Console</SubSystem>
       <Version></Version>
@@ -223,13 +224,14 @@
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
       <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>RelWithDebInfo</AssemblerListingLocation>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <ProgramDataBaseFileName>C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build/bin/RelWithDebInfo/stereoDense.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build/stereoDense/RelWithDebInfo/stereoDense.pdb</ProgramDataBaseFileName>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -250,7 +252,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ImportLibrary>C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build/lib/RelWithDebInfo/stereoDense.lib</ImportLibrary>
       <LinkIncremental>true</LinkIncremental>
-      <ProgramDataBaseFileName>C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build/bin/RelWithDebInfo/stereoDense.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFile>C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build/stereoDense/RelWithDebInfo/stereoDense.pdb</ProgramDataBaseFile>
       <StackReserveSize>10000000</StackReserveSize>
       <SubSystem>Console</SubSystem>
       <Version></Version>
@@ -263,7 +265,7 @@
     <CustomBuild Include="..\..\ADCensus_CMake\stereoDense\CMakeLists.txt">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake/stereoDense/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
-"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake -BC:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build --check-stamp-file C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\stereoDense\CMakeFiles\generate.stamp
+"C:\Program Files\CMake 2.8\bin\cmake.exe" -HC:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake -BC:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build --check-stamp-file C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\stereoDense\CMakeFiles\generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -271,11 +273,11 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake/stereoDense/CMakeLists.txt;C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\stereoDense\CMakeLists.txt;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindOpenMP.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\stereoDense\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\stereoDense\CMakeFiles\generate.stamp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake/stereoDense/CMakeLists.txt;C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\stereoDense\CMakeLists.txt;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindOpenMP.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeExpandImportedTargets.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeExpandImportedTargets.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\stereoDense\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\stereoDense\CMakeFiles\generate.stamp</Outputs>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake/stereoDense/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
-"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake -BC:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build --check-stamp-file C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\stereoDense\CMakeFiles\generate.stamp
+"C:\Program Files\CMake 2.8\bin\cmake.exe" -HC:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake -BC:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build --check-stamp-file C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\stereoDense\CMakeFiles\generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -283,11 +285,11 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake/stereoDense/CMakeLists.txt;C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\stereoDense\CMakeLists.txt;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindOpenMP.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\stereoDense\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\stereoDense\CMakeFiles\generate.stamp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake/stereoDense/CMakeLists.txt;C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\stereoDense\CMakeLists.txt;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindOpenMP.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeExpandImportedTargets.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeExpandImportedTargets.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\stereoDense\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\stereoDense\CMakeFiles\generate.stamp</Outputs>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake/stereoDense/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
-"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake -BC:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build --check-stamp-file C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\stereoDense\CMakeFiles\generate.stamp
+"C:\Program Files\CMake 2.8\bin\cmake.exe" -HC:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake -BC:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build --check-stamp-file C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\stereoDense\CMakeFiles\generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -295,11 +297,11 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake/stereoDense/CMakeLists.txt;C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\stereoDense\CMakeLists.txt;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindOpenMP.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\stereoDense\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\stereoDense\CMakeFiles\generate.stamp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake/stereoDense/CMakeLists.txt;C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\stereoDense\CMakeLists.txt;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindOpenMP.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeExpandImportedTargets.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeExpandImportedTargets.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\stereoDense\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\stereoDense\CMakeFiles\generate.stamp</Outputs>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake/stereoDense/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
-"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake -BC:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build --check-stamp-file C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\stereoDense\CMakeFiles\generate.stamp
+"C:\Program Files\CMake 2.8\bin\cmake.exe" -HC:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake -BC:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build --check-stamp-file C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\stereoDense\CMakeFiles\generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -307,22 +309,22 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake/stereoDense/CMakeLists.txt;C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\stereoDense\CMakeLists.txt;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindOpenMP.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\stereoDense\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\stereoDense\CMakeFiles\generate.stamp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_CMake/stereoDense/CMakeLists.txt;C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\stereoDense\CMakeLists.txt;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindOpenMP.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeExpandImportedTargets.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeExpandImportedTargets.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\stereoDense\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\stereoDense\CMakeFiles\generate.stamp</Outputs>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\stereoDense\stereoDense.cpp" />
+    <ClCompile Include="..\..\ADCensus_CMake\stereoDense\stereoDense.cpp"  />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build/libIO/IO.vcxproj">
-      <Project>935DED95-004B-404A-800E-A72DB74AD0C8</Project>
+      <Project>54089CCF-1C29-4E68-9A82-5826038440B6</Project>
     </ProjectReference>
     <ProjectReference Include="C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build/libStereo/Stereo.vcxproj">
-      <Project>8E2CA2CF-A9A3-4C41-8D9A-6E14CD7943BC</Project>
+      <Project>5CFEB211-51AD-47CC-A4E9-D0983B0D4DDE</Project>
     </ProjectReference>
     <ProjectReference Include="C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_Build/ZERO_CHECK.vcxproj">
-      <Project>3596AB89-4F17-4B65-9FCF-DAA5AA1F3EDE</Project>
+      <Project>99E76616-65E0-4AF3-AD8E-C839B06998D1</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

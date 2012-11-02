@@ -1,45 +1,39 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\libIO\io_tiff.c">
+    <ClCompile Include="..\..\ADCensus_CMake\libIO\io_tiff.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\libIO\io_png.c">
+    <ClCompile Include="..\..\ADCensus_CMake\libIO\io_png.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\libIO\draw.c">
+    <ClCompile Include="..\..\ADCensus_CMake\libIO\draw.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\libIO\io_tiff.h">
+    <ClInclude Include="..\..\ADCensus_CMake\libIO\io_tiff.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\libIO\io_png.h">
+    <ClInclude Include="..\..\ADCensus_CMake\libIO\io_png.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\libIO\draw.h">
+    <ClInclude Include="..\..\ADCensus_CMake\libIO\draw.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\libIO\nan.h">
+    <ClInclude Include="..\..\ADCensus_CMake\libIO\nan.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-  </ItemGroup>
-  <ItemGroup>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\..\ADCensus_CMake\libIO\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{84949139-7C0F-4413-A7E8-09E42356335C}</UniqueIdentifier>
+      <UniqueIdentifier>{79D28D10-2C38-48AE-A742-8AAA8263EA04}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{0EE26774-DAF9-46E3-9A60-94DC4C092348}</UniqueIdentifier>
+      <UniqueIdentifier>{847CF286-57F2-4C28-9396-AAF87C6F8435}</UniqueIdentifier>
     </Filter>
-  </ItemGroup>
-  <ItemGroup>
   </ItemGroup>
 </Project>

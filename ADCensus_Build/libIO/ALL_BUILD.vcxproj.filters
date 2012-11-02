@@ -1,25 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-  </ItemGroup>
-  <ItemGroup>
-  </ItemGroup>
-  <ItemGroup>
-  </ItemGroup>
-  <ItemGroup>
-  </ItemGroup>
-  <ItemGroup>
-    <CustomBuild Include="CMakeFiles\ALL_BUILD.rule">
+    <CustomBuild Include="..\..\ADCensus_CMake\libIO\CMakeLists.txt" />
+    <CustomBuild Include="..\CMakeFiles\323200930c72820c856349b0158cb625\ALL_BUILD.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="..\..\ADCensus_CMake\libIO\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CMakeFiles\ALL_BUILD" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{05333A2E-A4A7-4FEE-BF7A-0580568D7EC4}</UniqueIdentifier>
+      <UniqueIdentifier>{BBC2FC4C-D907-4E13-88A0-4781E475412E}</UniqueIdentifier>
     </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\libIO\CMakeFiles\ALL_BUILD" />
   </ItemGroup>
 </Project>

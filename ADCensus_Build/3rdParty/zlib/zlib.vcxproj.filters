@@ -1,102 +1,96 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\adler32.c">
+    <ClCompile Include="..\..\..\ADCensus_CMake\3rdParty\zlib\adler32.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\compress.c">
+    <ClCompile Include="..\..\..\ADCensus_CMake\3rdParty\zlib\compress.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\crc32.c">
+    <ClCompile Include="..\..\..\ADCensus_CMake\3rdParty\zlib\crc32.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\deflate.c">
+    <ClCompile Include="..\..\..\ADCensus_CMake\3rdParty\zlib\deflate.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\gzclose.c">
+    <ClCompile Include="..\..\..\ADCensus_CMake\3rdParty\zlib\gzclose.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\gzlib.c">
+    <ClCompile Include="..\..\..\ADCensus_CMake\3rdParty\zlib\gzlib.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\gzread.c">
+    <ClCompile Include="..\..\..\ADCensus_CMake\3rdParty\zlib\gzread.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\gzwrite.c">
+    <ClCompile Include="..\..\..\ADCensus_CMake\3rdParty\zlib\gzwrite.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\inflate.c">
+    <ClCompile Include="..\..\..\ADCensus_CMake\3rdParty\zlib\inflate.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\infback.c">
+    <ClCompile Include="..\..\..\ADCensus_CMake\3rdParty\zlib\infback.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\inftrees.c">
+    <ClCompile Include="..\..\..\ADCensus_CMake\3rdParty\zlib\inftrees.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\inffast.c">
+    <ClCompile Include="..\..\..\ADCensus_CMake\3rdParty\zlib\inffast.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\trees.c">
+    <ClCompile Include="..\..\..\ADCensus_CMake\3rdParty\zlib\trees.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\uncompr.c">
+    <ClCompile Include="..\..\..\ADCensus_CMake\3rdParty\zlib\uncompr.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\zutil.c">
+    <ClCompile Include="..\..\..\ADCensus_CMake\3rdParty\zlib\zutil.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\zconf.h">
+    <ClInclude Include="..\..\..\ADCensus_CMake\3rdParty\zlib\zconf.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\zlib.h">
+    <ClInclude Include="..\..\..\ADCensus_CMake\3rdParty\zlib\zlib.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\crc32.h">
+    <ClInclude Include="..\..\..\ADCensus_CMake\3rdParty\zlib\crc32.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\deflate.h">
+    <ClInclude Include="..\..\..\ADCensus_CMake\3rdParty\zlib\deflate.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\gzguts.h">
+    <ClInclude Include="..\..\..\ADCensus_CMake\3rdParty\zlib\gzguts.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\inffast.h">
+    <ClInclude Include="..\..\..\ADCensus_CMake\3rdParty\zlib\inffast.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\inffixed.h">
+    <ClInclude Include="..\..\..\ADCensus_CMake\3rdParty\zlib\inffixed.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\inflate.h">
+    <ClInclude Include="..\..\..\ADCensus_CMake\3rdParty\zlib\inflate.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\inftrees.h">
+    <ClInclude Include="..\..\..\ADCensus_CMake\3rdParty\zlib\inftrees.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\trees.h">
+    <ClInclude Include="..\..\..\ADCensus_CMake\3rdParty\zlib\trees.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_CMake\3rdParty\zlib\zutil.h">
+    <ClInclude Include="..\..\..\ADCensus_CMake\3rdParty\zlib\zutil.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-  </ItemGroup>
-  <ItemGroup>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\..\..\ADCensus_CMake\3rdParty\zlib\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{84949139-7C0F-4413-A7E8-09E42356335C}</UniqueIdentifier>
+      <UniqueIdentifier>{79D28D10-2C38-48AE-A742-8AAA8263EA04}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{0EE26774-DAF9-46E3-9A60-94DC4C092348}</UniqueIdentifier>
+      <UniqueIdentifier>{847CF286-57F2-4C28-9396-AAF87C6F8435}</UniqueIdentifier>
     </Filter>
-  </ItemGroup>
-  <ItemGroup>
   </ItemGroup>
 </Project>

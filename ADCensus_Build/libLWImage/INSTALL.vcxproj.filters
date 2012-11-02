@@ -1,24 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-  </ItemGroup>
-  <ItemGroup>
-  </ItemGroup>
-  <ItemGroup>
-  </ItemGroup>
-  <ItemGroup>
-  </ItemGroup>
-  <ItemGroup>
-    <CustomBuild Include="CMakeFiles\INSTALL_force.rule">
+    <CustomBuild Include="..\CMakeFiles\0b29dea1385ad83c56be7be2a63487e7\INSTALL_force.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="..\..\ADCensus_CMake\libLWImage\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{05333A2E-A4A7-4FEE-BF7A-0580568D7EC4}</UniqueIdentifier>
+      <UniqueIdentifier>{BBC2FC4C-D907-4E13-88A0-4781E475412E}</UniqueIdentifier>
     </Filter>
-  </ItemGroup>
-  <ItemGroup>
   </ItemGroup>
 </Project>
