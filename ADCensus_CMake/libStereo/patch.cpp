@@ -165,7 +165,7 @@ int* patchesBorder(const LWImage<float>& im, const int di, const int dj,
 /// d gives the current disparity
 /// it returns a table of the agregated costs
 float* agregateCosts1D(float* costs, int w, int h, int disparity,
-					   const float* leftBorders, const float* rightBorders,
+					   const int* leftBorders, const int* rightBorders,
 					   int di, int dj)
 {
 	int i, j, d, dmin, dmax;
@@ -192,8 +192,8 @@ float* agregateCosts1D(float* costs, int w, int h, int disparity,
 /// d gives the current disparity
 /// it replaces the costs table by its agregated correspondent
 void agregateCosts2D(float* costs, int w, int h, int d,
-					 const float* leftBorders, const float* rightBorders,
-					 const float* upBorders, const float* downBorders,
+					 const int* leftBorders, const int* rightBorders,
+					 const int* upBorders, const int* downBorders,
 					 bool horizontalFirst)
 {
 	int step, i, j;
@@ -212,6 +212,8 @@ void agregateCosts2D(float* costs, int w, int h, int d,
 		for(i = 0; i < w; ++i){
 			for(j = 0; j < h; ++j){
 				costs[d*h*w+i*h+j] = temporaryCosts[i*h+j];
+			}
+		}
 		horizontalFirst = !horizontalFirst;
 	}
 }

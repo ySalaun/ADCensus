@@ -67,24 +67,29 @@ static void disparity(LWImage<float> im1, LWImage<float> im2,
 	
 	// tables
 	float *costs;
+	float *lowCosts;
 	int *upBorders, *downBorders, *leftBorders, *rightBorders;
 	costs = new float[h*w*(dMax-dMin+1)];
+	lowCosts = new float[h*w];
 	
 	// compute borders for adaptative windows
 	upBorders    = patchesBorder(im1, -1,  0, l1, l2, tau1, tau2);
 	downBorders  = patchesBorder(im1,  1,  0, l1, l2, tau1, tau2);
 	leftBorders  = patchesBorder(im1,  0, -1, l1, l2, tau1, tau2);
 	rightBorders = patchesBorder(im1,  0,  1, l1, l2, tau1, tau2);
-
+	
 	// computes ad census costs for each pixel and each disparity
 	for(i = 0; i < w; ++i){
 		for(j = 0; j < h; ++j){
             for(disparity = dMin; disparity <= dMax; ++disparity){
+				std::cout << i << "/" << j << "/" << disparity << std::endl;
 				if(i + disparity < 0 || i + disparity >= w){
-					costs[disparity*h*w+i*h+j] = 0;
+					costs[(disparity-dMin)*h*w+i*h+j] = 0;
 				}
 				else{
-					costs[disparity*h*w+i*h+j] = adCensus(im1,i,j, im2,i+disparity,j);
+					std::cout << "test" << std::endl;
+					costs[(disparity-dMin)*h*w+i*h+j] = adCensus(im1,i,j, im2,i+disparity,j);
+					std::cout << "test" << std::endl;	
 				}
 			}
 		}
@@ -99,7 +104,28 @@ static void disparity(LWImage<float> im1, LWImage<float> im2,
 		}
 	}
 
+	// compute scanline optimization
+	// TODO
+
 	// find lowest cost and explicit disparity
+	// initialize lowCosts table and disparity table
+	for(i = 0; i < w; ++i){
+		for(j = 0; j < h; ++j){
+			lowCosts[i*h+j] = costs[i*h+j];
+			*disp.pixel(i,j) = static_cast<float>(dMin);
+		}
+	}
+	// find best disparity
+	for(disparity = dMin+1; disparity <= dMax; ++disparity){
+		for(i = 0; i < w; ++i){
+			for(j = 0; j < h; ++j){
+				if(lowCosts[i*h+j] > costs[(disparity-dMin)*h*w+i*h+j]){
+					*disp.pixel(i,j) = static_cast<float>(disparity);
+					lowCosts[i*h+j] = costs[(disparity-dMin)*h*w+i*h+j];
+				}
+			}	
+		}
+	}
 }
 
 int main (int argc, char** argv)
