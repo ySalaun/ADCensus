@@ -23,6 +23,8 @@ static bool loadImage(const char* name, LWImage<float>& im) {
 }
 
 /// Compute disparity map from \a im1 to \a im2.
+// TODO change value of win into winX & winY and uses the values 9 & 7
+// TODO with agregation & windows, borders are more and more truncated....
 static void disparity(LWImage<float> im1, LWImage<float> im2,
                       int dMin, int dMax, int win,
                       LWImage<float>& disp, LWImage<float>* costMap) 
@@ -60,10 +62,9 @@ static void disparity(LWImage<float> im1, LWImage<float> im2,
 	bool horizontalFirst;
 
 	// parameters
-	int w = im1.w, h = im1.h;		// width and height of pictures
-	int l1 = 0, l2 = 0;				// for adaptative window
-	float tau1 = 0.0f, tau2 = 0.0f;	// for adaptative window
-	int nbAgregatingIteration = 4;	// for cost agregation
+	int w = im1.w, h = im1.h;					// width and height of pictures
+	int l1 = 34, l2 = 17, tau1 = 20, tau2 = 6;	// for adaptative window
+	int nbAgregatingIteration = 4;				// for cost agregation
 	
 	// tables
 	float *costs;
@@ -82,21 +83,18 @@ static void disparity(LWImage<float> im1, LWImage<float> im2,
 	for(i = 0; i < w; ++i){
 		for(j = 0; j < h; ++j){
             for(disparity = dMin; disparity <= dMax; ++disparity){
-				std::cout << i << "/" << j << "/" << disparity << std::endl;
-				if(i + disparity < 0 || i + disparity >= w){
-					costs[(disparity-dMin)*h*w+i*h+j] = 0;
+				if(i + disparity < win || i + disparity >= w - win || i < win || i >= w-win || j < win || j > h-win){
+					costs[(disparity-dMin)*h*w+i*h+j] = 5;
 				}
 				else{
-					std::cout << "test" << std::endl;
 					costs[(disparity-dMin)*h*w+i*h+j] = adCensus(im1,i,j, im2,i+disparity,j);
-					std::cout << "test" << std::endl;	
 				}
 			}
 		}
 	}
 	
 	// agregate cost for each pichel in its adaptive window for each possible value of disparity
-	for(disparity = dMin; disparity <= dMax; ++disparity){
+	for(disparity = 0; disparity <= dMax-dMin; ++disparity){
 		horizontalFirst = true;
 		for(step = 0; step < nbAgregatingIteration; ++step){
 			agregateCosts2D(costs, w, h, disparity, leftBorders, rightBorders, upBorders, downBorders, horizontalFirst);
@@ -158,7 +156,7 @@ int main (int argc, char** argv)
 	// these lines are here to transform float disparity into unsigned char disparity and save it into a png format
 	unsigned char* disparity_map = new unsigned char[disp.w*disp.h];
 	for(int i=0; i<disp.w*disp.h; ++i){
-		disparity_map[i] = (unsigned char)(10*disp.data[i]);
+		disparity_map[i] = (unsigned char)(abs(10*disp.data[i]));
 	}
 	
 	if(write_png_u8(argv[5], disparity_map, disp.w, disp.h, 1) != 0) {

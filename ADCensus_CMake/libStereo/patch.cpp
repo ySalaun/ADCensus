@@ -17,6 +17,7 @@
 
 #include "patch.h"
 #include "math.h"
+#include <iostream>
 
 /// Sum of pixel values in patch centered on (i,j).
 float sum(const LWImage<float>& im, int i, int j, int win)
@@ -104,9 +105,10 @@ float adCensus(const LWImage<float>& im1, int i1,int j1,
 }
 
 /// patchBorder computes the border of a patch centered in (i,j) in image im and in the direction (dx,dy)
+/// TODO why values borders are 17 or 33 only ????
 int patchBorder(const LWImage<float>& im, const int i, const int j,
 				const int di, const int dj,
-				const int l1, const int l2, const float tau1, const float tau2)
+				const int l1, const int l2, const int tau1, const int tau2)
 {
 	const float p = *(im.pixel(i, j));
 	
@@ -129,26 +131,27 @@ int patchBorder(const LWImage<float>& im, const int i, const int j,
 		bool condition2 = d < l1;
 
 		// test for better color similarities for farther neighbours
-		bool condition3 = d > l2 && abs(p1 - p) < tau2;
+		bool condition3 = d <= l2 || (d > l2 && abs(p1 - p) < tau2);
 
 		// if conditions are checked, go further in (di, dj) direction
 		if(condition1 && condition2 && condition3){
 			++ d;
-			int i1 = i + d*di;
-			int j1 = j + d*dj;
+			i1 = i + d*di;
+			j1 = j + d*dj;
 			p2 = p1;
 		}
 		else{
 			break;
 		}
 	}
+
 	return d-1;
 }
 
 /// patchesBorder computes the border of every patches in image im and in the direction (dx,dy)
 /// return the value of theses borders
 int* patchesBorder(const LWImage<float>& im, const int di, const int dj,
-				   const int l1, const int l2, const float tau1, const float tau2)
+				   const int l1, const int l2, const int tau1, const int tau2)
 {
 	int i, j;
 	int* borders = new int[im.w * im.h];
@@ -178,6 +181,7 @@ float* agregateCosts1D(float* costs, int w, int h, int disparity,
 			agregatedCost = 0;
 			dmin = -leftBorders[i*h+j];
 			dmax = rightBorders[i*h+j];
+
 			for(d = dmin; d<= dmax; ++d){
 				agregatedCost += costs[disparity*h*w+(i+d*di)*h+(j+d*dj)];
 			}

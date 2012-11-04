@@ -34,9 +34,9 @@ float adCensus(const LWImage<float>& im1, int i1,int j1,
 			   const float lambdaAD = 10, const float lambdaCensus = 30);
 int patchBorder(const LWImage<float>& im, const int i, const int j,
 				const int di, const int dj,
-				const int l1, const int l2, const float tau1, const float tau2);
+				const int l1, const int l2, const int tau1, const int tau2);
 int* patchesBorder(const LWImage<float>& im, const int di, const int dj,
-				   const int l1, const int l2, const float tau1, const float tau2);
+				   const int l1, const int l2, const int tau1, const int tau2);
 float* agregateCosts1D(float* costs, int w, int h, int d,
 					   const int* leftBorders, const int* rightBorders,
 					   int di, int dj);
