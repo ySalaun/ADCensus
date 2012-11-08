@@ -24,7 +24,7 @@ static bool loadImage(const char* name, LWImage<float>& im) {
 
 /// Compute disparity map from \a im1 to \a im2.
 // TODO change value of win into winX & winY and uses the values 9 & 7
-// TODO with agregation & windows, borders are more and more truncated....
+// TODO with agregation & census windows, borders are more and more truncated....
 static void disparity(LWImage<float> im1, LWImage<float> im2,
                       int dMin, int dMax, int win,
                       LWImage<float>& disp, LWImage<float>* costMap) 
