@@ -44,4 +44,41 @@ void agregateCosts2D(float* costs, int w, int h, int d,
 					 const int* leftBorders, const int* rightBorders,
 					 const int* upBorders, const int* downBorders,
 					 bool horizontalFirst);
+void scanlineOptimizationParameters(const LWImage<float>& im1, const LWImage<float>& im2,
+									const int i1, const int i2, const int j1, const int j2, const int disparity,
+									const float pi1, const float pi2, const int tauSO,
+									float &P1, float &P2);
+// costs = Cr
+// soCosts = C1
+// w & h = width & height of picture
+// dMin & dMax = disparity range
+// j1 column for so, j2 previous line
+void scanlineOptimizationV(const LWImage<float>& im1, const LWImage<float>& im2,
+						   const float* costs, float* soCosts,
+						   const int dMin, const int dMax, const int j1, const int j2,
+						   const float pi1, const float pi2, const int tauSO);
+// costs = Cr
+// soCosts = C1
+// w & h = width & height of picture
+// dMin & dMax = disparity range
+// i1 line for so, i2 previous column
+void scanlineOptimizationH(const LWImage<float>& im1, const LWImage<float>& im2,
+						   const float* costs, float* soCosts,
+						   const int dMin, const int dMax, const int i1, const int i2,
+						   const float pi1, const float pi2, const int tauSO);
+// compute the so cost by computing a vertical so
+void scanlineOptimizationComputationV(const LWImage<float>& im1, const LWImage<float>& im2,
+									  const float* costs, const int dMin, const int dMax,
+									  const float pi1, const float pi2, const int tauSO,
+									  const int j0, const int way, float* costSO);
+// compute the so cost by computing an horizontal so
+void scanlineOptimizationComputationH(const LWImage<float>& im1, const LWImage<float>& im2,
+									  const float* costs, const int dMin, const int dMax,
+									  const float pi1, const float pi2, const int tauSO,
+									  const int i0, const int way, float* costSO);
+// C1(p,d) + min(Cr(p-r,d), Cr(p-r, d+-1) + P1, min_k(Cr(p-r,k)+P2)) - min_k(Cr(p-r,k))
+float* scanlineOptimization(const LWImage<float>& im1, const LWImage<float>& im2,
+							const float* costs, const int dMin, const int dMax,
+							const float pi1 = 1.0, const float pi2 = 3.0,
+							const int tauSO = 15);
 #endif

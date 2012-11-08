@@ -105,7 +105,6 @@ float adCensus(const LWImage<float>& im1, int i1,int j1,
 }
 
 /// patchBorder computes the border of a patch centered in (i,j) in image im and in the direction (dx,dy)
-/// TODO why values borders are 17 or 33 only ????
 int patchBorder(const LWImage<float>& im, const int i, const int j,
 				const int di, const int dj,
 				const int l1, const int l2, const int tau1, const int tau2)
@@ -222,98 +221,238 @@ void agregateCosts2D(float* costs, int w, int h, int d,
 	}
 }
 
+void scanlineOptimizationParameters(const LWImage<float>& im1, const LWImage<float>& im2,
+									const int i1, const int i2, const int j1, const int j2, const int disparity,
+									const float pi1, const float pi2, const int tauSO,
+									float &P1, float &P2)
+{
+
+	int h = im1.h;
+	int w = im2.w;
+	int d1, d2;
+
+	d1 = int(abs(*(im1.pixel(i1, j1)) - *(im1.pixel(i2, j2))));
+	if(i1 + disparity < w && i1 + disparity >= 0 && i2 + disparity < w && i2 + disparity >= 0){
+		d2 = int(abs(*(im1.pixel(i1 + disparity, j1)) - *(im2.pixel(i2 + disparity, j2))));
+	}
+	else{
+		d2 = 0;
+	}
+	if(d1 < tauSO){
+		if(d2 < tauSO){
+			P1 = pi1;
+			P2 = pi2;
+		}
+		else{
+			P1 = pi1/4;
+			P2 = pi2/4;
+		}
+	}
+	else{
+		if(d2 < tauSO){
+			P1 = pi1/4;
+			P2 = pi2/4;
+		}
+		else{
+			P1 = pi1/10;
+			P2 = pi2/10;
+		}
+	}
+}
+
 // costs = Cr
 // soCosts = C1
 // w & h = width & height of picture
 // dMin & dMax = disparity range
-// i1 line for so, i2 previous line
-void scanlineOptimizationH(const LWImage<float>& im1, const LWImage<float>& im2,
-						   const float* costs, float * soCosts,
+// j1 column for so, j2 previous line
+void scanlineOptimizationV(const LWImage<float>& im1, const LWImage<float>& im2,
+						   const float* costs, float* soCosts,
 						   const int dMin, const int dMax, const int j1, const int j2,
-						   const float pi1 = 1.0, const float pi2 = 3.0,
-						   const int tauSO = 15)
+						   const float pi1, const float pi2, const int tauSO)
 {
-	int i, k, disparity, soCost, minCost;
-	float d1, d2, P1, P2;
+	int i, disparity;
+	float minCost, soCost, P1, P2;
 	const int h = im1.h, w = im1.w;
 
 	for(i = 0; i < w; ++i){
-		minCost = costs[(disparity-dMin)*h*w+i*h+j1];
+		minCost = costs[0*h*w+i*h+j1];
 		// find minimal previous cost for a given column index
 		for(disparity = dMin+1; disparity <= dMax; ++disparity){
 			if(minCost > costs[(disparity-dMin)*h*w+i*h+j2]){
-				minCost = (costs[(disparity-dMin)*h*w+i*h+j2]);
+				minCost = (soCosts[(disparity-dMin)*h*w+i*h+j2]);
 			}
 		}
 		for(disparity = dMin; disparity <= dMax; ++disparity){
 			soCost = costs[(disparity-dMin)*h*w+i*h+j1];
 
-			// TODO do sub method that compute parameters P1 and P2
-			d1 = abs(*(im1.pixel(i, j1)) - *(im1.pixel(i, j2)));
-			if(i + disparity < w && i + disparity >= 0){
-				d2 = abs(*(im1.pixel(i + disparity, j1)) - *(im2.pixel(i + disparity, j2)));
-			}
-			else{
-				d2 = 0;
-			}
-			if(d1 < tauSO){
-				if(d2 < tauSO){
-					P1 = pi1;
-					P2 = pi2;
-				}
-				else{
-					P1 = pi1/4;
-					P2 = pi2/4;
-				}
-			}
-			else{
-				if(d2 < tauSO){
-					P1 = pi1/4;
-					P2 = pi2/4;
-				}
-				else{
-					P1 = pi1/10;
-					P2 = pi2/10;
-				}
-			}
-			// TODO sub method of above
+			// compute P1 and P2 parameters for better scanline optimization
+			scanlineOptimizationParameters(im1, im2, i, i, j1, j2, disparity, pi1, pi2, tauSO, P1, P2);
+
+			// substract by min_k(Cr(p-r,k))
 			soCost -= minCost;
 
+			// compute min(Cr(p-r,d), Cr(p-r, d+-1) + P1, min_k(Cr(p-r,k)+P2)) 
 			minCost += P2;
 			if(minCost > costs[(disparity-dMin)*h*w+i*h+j2]){
-				minCost = costs[(disparity-dMin)*h*w+i*h+j2];
+				minCost = soCosts[(disparity-dMin)*h*w+i*h+j2];
 			}
 			if(disparity != dMin && minCost > costs[(disparity-dMin-1)*h*w+i*h+j2] + P1){
-				minCost = costs[(disparity-dMin-1)*h*w+i*h+j2] + P1;
+				minCost = soCosts[(disparity-dMin-1)*h*w+i*h+j2] + P1;
 			}
 			if(disparity != dMax && minCost > costs[(disparity-dMin+1)*h*w+i*h+j2] + P1){
-				minCost = costs[(disparity-dMin+1)*h*w+i*h+j2] + P1;
+				minCost = soCosts[(disparity-dMin+1)*h*w+i*h+j2] + P1;
 			}
 
 			soCost += minCost;
 			soCosts[(disparity-dMin)*h*w+i*h+j1] = soCost;
 		}
 	}
-
 }
 
-// C1(p,d) +min(Cr(p-r,d), Cr(p-r, d+-1) + P1, min_k(Cr(p-r,k)+P2)) - min_k(Cr(p-r,k))
+// costs = Cr
+// soCosts = C1
+// w & h = width & height of picture
+// dMin & dMax = disparity range
+// i1 line for so, i2 previous column
+void scanlineOptimizationH(const LWImage<float>& im1, const LWImage<float>& im2,
+						   const float* costs, float* soCosts,
+						   const int dMin, const int dMax, const int i1, const int i2,
+						   const float pi1, const float pi2, const int tauSO)
+{
+	int j, disparity;
+	float minCost, soCost, P1, P2;
+	const int h = im1.h, w = im1.w;
+
+	for(j = 0; j < h; ++j){
+		minCost = costs[0*h*w+i1*h+j];
+		// find minimal previous cost for a given line index
+		for(disparity = dMin+1; disparity <= dMax; ++disparity){
+			if(minCost > costs[(disparity-dMin)*h*w+i2*h+j]){
+				minCost = (soCosts[(disparity-dMin)*h*w+i2*h+j]);
+			}
+		}
+		for(disparity = dMin; disparity <= dMax; ++disparity){
+			soCost = costs[(disparity-dMin)*h*w+i1*h+j];
+
+			// compute P1 and P2 parameters for better scanline optimization
+			scanlineOptimizationParameters(im1, im2, i1, i2, j, j, disparity, pi1, pi2, tauSO, P1, P2);
+
+			// substract by min_k(Cr(p-r,k))
+			soCost -= minCost;
+
+			// compute min(Cr(p-r,d), Cr(p-r, d+-1) + P1, min_k(Cr(p-r,k)+P2)) 
+			minCost += P2;
+			if(minCost > costs[(disparity-dMin)*h*w+i2*h+j]){
+				minCost = soCosts[(disparity-dMin)*h*w+i2*h+j];
+			}
+			if(disparity != dMin && minCost > costs[(disparity-dMin-1)*h*w+i2*h+j] + P1){
+				minCost = soCosts[(disparity-dMin-1)*h*w+i2*h+j] + P1;
+			}
+			if(disparity != dMax && minCost > costs[(disparity-dMin+1)*h*w+i2*h+j] + P1){
+				minCost = soCosts[(disparity-dMin+1)*h*w+i2*h+j] + P1;
+			}
+
+			soCost += minCost;
+			soCosts[(disparity-dMin)*h*w+i1*h+j] = soCost;
+		}
+	}
+}
+
+// compute the so cost by computing a vertical so
+void scanlineOptimizationComputationV(const LWImage<float>& im1, const LWImage<float>& im2,
+									  const float* costs, const int dMin, const int dMax,
+									  const float pi1, const float pi2, const int tauSO,
+									  const int j0, const int way, float* costSO)
+{
+	int i, j, disparity;
+	const int h = im1.h, w = im1.w;
+	float *tempor = new float[w*h*(dMax-dMin+1)];
+
+	// initialize vertical so cost
+	for(i = 0; i < w; ++i){
+		for(disparity = dMin; disparity <= dMax; ++disparity){
+			tempor[(disparity-dMin)*h*w+i*h+j0] = costs[(disparity-dMin)*h*w+i*h+j0];
+		}
+	}
+
+	// computes vertical so cost
+	for(j = j0 + way; j < h && j >= 0; j += way){
+		scanlineOptimizationV(im1, im2, costs, tempor, dMin, dMax, j, j-way, pi1, pi2, tauSO);
+	}
+
+	// add so cost into costSO table
+	for(i = 0; i < w; ++i){
+		for(j = 0; j < h; ++j){
+			for(disparity = dMin; disparity <= dMax; ++disparity){
+				costSO[(disparity-dMin)*h*w+i*h+j] += tempor[(disparity-dMin)*h*w+i*h+j];
+			}
+		}
+	}
+}
+
+
+// compute the so cost by computing an horizontal so
+void scanlineOptimizationComputationH(const LWImage<float>& im1, const LWImage<float>& im2,
+									  const float* costs, const int dMin, const int dMax,
+									  const float pi1, const float pi2, const int tauSO,
+									  const int i0, const int way, float* costSO)
+{
+	int i, j, disparity;
+	const int h = im1.h, w = im1.w;
+	float *tempor = new float[w*h*(dMax-dMin+1)];
+
+	// initialize horizontal so cost
+	for(j = 0; j < h; ++j){
+		for(disparity = dMin; disparity <= dMax; ++disparity){
+			tempor[(disparity-dMin)*h*w+i0*h+j] = costs[(disparity-dMin)*h*w+i0*h+j];
+		}
+	}
+
+	// computes horizontal so cost
+	for(i = i0 + way; i < w && i >= 0; i += way){
+		scanlineOptimizationH(im1, im2, costs, tempor, dMin, dMax, i, i-way, pi1, pi2, tauSO);
+	}
+
+	// add so cost into costSO table
+	for(i = 0; i < w; ++i){
+		for(j = 0; j < h; ++j){
+			for(disparity = dMin; disparity <= dMax; ++disparity){
+				costSO[(disparity-dMin)*h*w+i*h+j] += tempor[(disparity-dMin)*h*w+i*h+j];
+			}
+		}
+	}
+}
+
+
+
+// C1(p,d) + min(Cr(p-r,d), Cr(p-r, d+-1) + P1, min_k(Cr(p-r,k)+P2)) - min_k(Cr(p-r,k))
 float* scanlineOptimization(const LWImage<float>& im1, const LWImage<float>& im2,
 							const float* costs, const int dMin, const int dMax,
-							const int di, const int dj,
-							const float pi1 = 1.0, const float pi2 = 3.0,
-							const int tauSO = 15)
+							const float pi1, const float pi2, const int tauSO)
 {
 	int i, j, disparity;
 	const int h = im1.h, w = im1.w;
 
 	float *costSO = new float[w*h*(dMax-dMin+1)];
-
+	
+	// initialize so cost
 	for(i = 0; i < w; ++i){
 		for(j = 0; j < h; ++j){
 			for(disparity = dMin; disparity <= dMax; ++disparity){
-
+				costSO[(disparity-dMin)*h*w+i*h+j] = 0;
 			}
 		}
 	}
+
+	// computes the 4 directionnal so costs
+	// vertical downward
+	scanlineOptimizationComputationV(im1, im2, costs, dMin, dMax, pi1, pi2, tauSO, 0, 1, costSO);
+	// vertical upward
+	scanlineOptimizationComputationV(im1, im2, costs, dMin, dMax, pi1, pi2, tauSO, h-1, -1, costSO);
+	// horizontal leftward
+	scanlineOptimizationComputationH(im1, im2, costs, dMin, dMax, pi1, pi2, tauSO, 0, 1, costSO);
+	// horizontal rightward
+	scanlineOptimizationComputationH(im1, im2, costs, dMin, dMax, pi1, pi2, tauSO, w-1, 1, costSO);
+	
+	return costSO;
 }

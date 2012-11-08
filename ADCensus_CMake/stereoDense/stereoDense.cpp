@@ -103,7 +103,7 @@ static void disparity(LWImage<float> im1, LWImage<float> im2,
 	}
 
 	// compute scanline optimization
-	// TODO
+	costs = scanlineOptimization(im1, im2, costs, dMin, dMax);
 
 	// find lowest cost and explicit disparity
 	// initialize lowCosts table and disparity table
