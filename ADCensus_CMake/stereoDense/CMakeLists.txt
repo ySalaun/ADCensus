@@ -3,7 +3,7 @@ CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
 PROJECT(stereoDense)
 
 SET(SRC
-	stereoDense.cpp)
+	stereoDense.cpp parameters.cpp parameters.h)
 
 ADD_EXECUTABLE(stereoDense ${SRC})
 
