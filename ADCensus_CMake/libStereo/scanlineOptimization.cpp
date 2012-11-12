@@ -26,13 +26,27 @@ void scanlineOptimizationParameters(const int x1, const int x2, const int y1, co
 	int w = params.w;
 	int d1, d2;
 
-	d1 = int(abs(*(params.im1.pixel(x1, y1)) - *(params.im1.pixel(x2, y2))));
-	if(x1 + disparity < w && x1 + disparity >= 0 && x2 + disparity < w && x2 + disparity >= 0){
-		d2 = int(abs(*(params.im2.pixel(x1 + disparity, y1)) - *(params.im2.pixel(x2 + disparity, y2))));
+	// compute color differences between pixels in the two pictures
+	if (params.activePicture == 1){
+		d1 = int(abs(*(params.im1.pixel(x1, y1)) - *(params.im1.pixel(x2, y2))));
+		if(x1 + disparity < w && x1 + disparity >= 0 && x2 + disparity < w && x2 + disparity >= 0){
+			d2 = int(abs(*(params.im2.pixel(x1 + disparity, y1)) - *(params.im2.pixel(x2 + disparity, y2))));
+		}
+		else{
+			d2 = 0;
+		}
 	}
 	else{
-		d2 = 0;
+		d1 = int(abs(*(params.im2.pixel(x1, y1)) - *(params.im2.pixel(x2, y2))));
+		if(x1 - disparity < w && x1 - disparity >= 0 && x2 - disparity < w && x2 - disparity >= 0){
+			d2 = int(abs(*(params.im1.pixel(x1 - disparity, y1)) - *(params.im1.pixel(x2 - disparity, y2))));
+		}
+		else{
+			d2 = 0;
+		}
 	}
+
+	// depending on the color differences computed previously, find the so parameters
 	if(d1 < params.tauSO){
 		if(d2 < params.tauSO){
 			P1 = params.pi1;
@@ -74,6 +88,7 @@ void scanlineOptimizationV(const float* costs, float* soCosts,
 				minCost = (soCosts[(disparity-dMin)*h*w+x*h+y2]);
 			}
 		}
+
 		for(disparity = dMin; disparity <= dMax; ++disparity){
 			soCost = costs[(disparity-dMin)*h*w+x*h+y1];
 

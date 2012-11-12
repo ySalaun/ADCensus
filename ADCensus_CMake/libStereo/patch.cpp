@@ -25,6 +25,7 @@ float ad(int x1, int y1, int x2, int y2, const PARAMETERS& params)
 	const float* p1 = params.im1.pixel(x1, y1);
 	const float* p2 = params.im2.pixel(x2, y2);
 	const float dist = (float)(std::abs((int)(*p1 - *p2)));
+
 	return dist;
 }
 
@@ -54,9 +55,13 @@ float adCensus(int x1,int y1, int x2,int y2, const PARAMETERS& params)
 {
 	float dist = 0.0f;
 	
+	// compute Absolute Difference cost
 	const float cAD = ad(x1, y1, x2, y2, params);
+
+	// compute Census cost
 	const float cCensus = census(x1, y1, x2, y2, params);
 
+	// combine the two costs
 	dist += 1-exp(-cAD/params.lambdaAD);
 	dist += 1-exp(-cCensus/params.lambdaCensus);
 
@@ -69,25 +74,37 @@ float adCensus(int x1,int y1, int x2,int y2, const PARAMETERS& params)
 float* agregateCosts1D(float* costs, int disparity, int dx, int dy, const PARAMETERS& params)
 {
 	int x, y, d, dmin, dmax;
+
+	const int w = params.w, h = params.h;
+	const int offset = (params.activePicture - 1)*w*h;
+
 	float agregatedCost;
-	float* agregatedCosts = new float[params.w*params.h];
+	float* agregatedCosts = new float[w*h];
 	
 	// agregate costs in the direction (dx, dy)
-	for(x = 0; x < params.w; ++x){
-		for(y = 0; y < params.h; ++y){
+	for(x = 0; x < w; ++x){
+		for(y = 0; y < h; ++y){
+			// initialize agregated cost
 			agregatedCost = 0;
+			
+			// compute agregation window borders
+			// horizontal agregation
 			if(dy == 0){
-				dmin = -params.leftBorders[x*params.h+y];
-				dmax =  params.rightBorders[x*params.h+y];
+				dmin = -params.leftBorders[offset+x*h+y];
+				dmax =  params.rightBorders[offset+x*h+y];
 			}
+			// vertical agregation
 			else{
-				dmin = -params.upBorders[x*params.h+y];
-				dmax =  params.downBorders[x*params.h+y];
+				dmin = -params.upBorders[offset+x*h+y];
+				dmax =  params.downBorders[offset+x*h+y];
+			}
+			 
+			// agregate cost
+			for(d = dmin; d <= dmax; ++d){
+				agregatedCost += costs[(disparity-params.dMin)*h*w+(x+d*dx)*h+(y+d*dy)];
 			}
 
-			for(d = dmin; d <= dmax; ++d){
-				agregatedCost += costs[(disparity-params.dMin)*params.h*params.w+(x+d*dx)*params.h+(y+d*dy)];
-			}
+			// update cost in table
 			agregatedCosts[x*params.h+y] = agregatedCost;
 		}
 	}
@@ -101,6 +118,10 @@ float* agregateCosts1D(float* costs, int disparity, int dx, int dy, const PARAME
 void agregateCosts2D(float* costs, int disparity, bool horizontalFirst, const PARAMETERS& params)
 {
 	int step, x, y;
+
+	const int w = params.w, h = params.h;
+	const int dMin = params.dMin, dMax = params.dMax;
+
 	float *temporaryCosts;
 	
 	// agregate costs horizontally and vertically in the order imposed by horizontalFirst
@@ -115,9 +136,9 @@ void agregateCosts2D(float* costs, int disparity, bool horizontalFirst, const PA
 		}
 
 		// update the costs in costs table
-		for(x = 0; x < params.w; ++x){
-			for(y = 0; y < params.h; ++y){
-				costs[(disparity-params.dMin)*params.h*params.w+x*params.h+y] = temporaryCosts[x*params.h+y];
+		for(x = 0; x < w; ++x){
+			for(y = 0; y < h; ++y){
+				costs[(disparity-dMin)*h*w+x*h+y] = temporaryCosts[x*h+y];
 			}
 		}
 

@@ -12,6 +12,9 @@ class PARAMETERS{
 	// height and width of pictures
 	int h,w;
 
+	// index of picture for processing
+	int activePicture;
+
 	/*--------------DISPARITY--------------*/
 	// disparity range = [dMin;dMax]
 	int dMin, dMax;
@@ -35,7 +38,7 @@ class PARAMETERS{
 	int *upBorders, *downBorders, *leftBorders, *rightBorders;
 
 	// method for adaptive windows
-	int patchBorder(const int x, const int y, const int dx, const int dy);
+	int patchBorder(const int x, const int y, const int dx, const int dy, const int index);
 	int* patchesBorder(const int dx, const int dy);
 
 	/*--------SCANLINE OPTIMIZATION---------*/
@@ -52,6 +55,9 @@ class PARAMETERS{
 		// width and height of images
 		h = im1.h;
 		w = im1.w;
+
+		// index of active picture
+		activePicture = 1;
 
 		// disparity range
 		dMin = disparityMin;
