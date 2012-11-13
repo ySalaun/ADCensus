@@ -49,7 +49,7 @@ static void disparity(LWImage<float> im1, LWImage<float> im2,
 			for(y = 0; y < params.h; ++y){
 				for(disparity = dMin; disparity <= dMax; ++disparity){
 					if(image == 1){
-						if(x + disparity < params.winX || x + disparity >= w - params.winX || x < params.winX || x >= w-params.winX || y < params.winY || y > h-params.winY){
+						if(x + disparity < params.winX || x + disparity >= w - params.winX || x < params.winX || x >= w-params.winX || y < params.winY || y >= h-params.winY){
 							costs[(disparity-dMin)*h*w+x*h+y] = 5;
 						}
 						else{
@@ -57,7 +57,7 @@ static void disparity(LWImage<float> im1, LWImage<float> im2,
 						}
 					}
 					else{
-						if(x - disparity < params.winX || x - disparity >= w - params.winX || x < params.winX || x >= w-params.winX || y < params.winY || y > h-params.winY){
+						if(x - disparity < params.winX || x - disparity >= w - params.winX || x < params.winX || x >= w-params.winX || y < params.winY || y >= h-params.winY){
 							costs[(disparity-dMin)*h*w+x*h+y] = 5;
 						}
 						else{
