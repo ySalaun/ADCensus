@@ -1,5 +1,5 @@
 /*  Scanline optimization.
-    Copyright (C) 2012-2013 Yohann Salaun <yohann.salaun@polytechnique.org
+    Copyright (C) 2012-2013 Yohann Salaun <yohann.salaun@polytechnique.org>
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -16,236 +16,158 @@
 */
 
 #include "scanlineOptimization.h"
-#include "math.h"
+#include <cmath>
+#include <algorithm>
 
 /// computes the parameters for each pixel cost update during scanline optimization
-void scanlineOptimizationParameters(const int x1, const int x2, const int y1, const int y2,
-									const int disparity, float &P1, float &P2, const PARAMETERS& params)
+void scanlineOptimizationParameters(int x1, int x2, int y1, int y2,	int d,
+                                    float& P1, float& P2,
+                                    const PARAMETERS& p)
 {
-	int h = params.h;
-	int w = params.w;
-	int d1, d2;
+    int a=p.activePicture, b=1-a;
+    if(a!=0) d=-d;
 
-	// compute color differences between pixels in the two pictures
-	if (params.activePicture == 1){
-		d1 = int(abs(*(params.im1.pixel(x1, y1)) - *(params.im1.pixel(x2, y2))));
-		if(x1 + disparity < w && x1 + disparity >= 0 && x2 + disparity < w && x2 + disparity >= 0){
-			d2 = int(abs(*(params.im2.pixel(x1 + disparity, y1)) - *(params.im2.pixel(x2 + disparity, y2))));
-		}
-		else{
-			d2 = 0;
-		}
-	}
-	else{
-		d1 = int(abs(*(params.im2.pixel(x1, y1)) - *(params.im2.pixel(x2, y2))));
-		if(x1 - disparity < w && x1 - disparity >= 0 && x2 - disparity < w && x2 - disparity >= 0){
-			d2 = int(abs(*(params.im1.pixel(x1 - disparity, y1)) - *(params.im1.pixel(x2 - disparity, y2))));
-		}
-		else{
-			d2 = 0;
-		}
-	}
+    // compute color differences between pixels in the two pictures
+    int d1 = (int)abs(*p.im[a].pixel(x1,y1)-*p.im[a].pixel(x2,y2)), d2=0;
+    if(0<=x1+d && x1+d<p.w && 0<=x2+d && x2+d<p.w)
+       d2 = (int)abs(*p.im[b].pixel(x1+d,y1)-*p.im[b].pixel(x2+d,y2));
 
-	// depending on the color differences computed previously, find the so parameters
-	if(d1 < params.tauSO){
-		if(d2 < params.tauSO){
-			P1 = params.pi1;
-			P2 = params.pi2;
+    // depending on the color differences computed previously, find the so parameters
+    if(d1 < p.tauSO){
+		if(d2 < p.tauSO){
+			P1 = p.pi1;
+			P2 = p.pi2;
 		}
 		else{
-			P1 = float(params.pi1/4.0);
-			P2 = float(params.pi2/4.0);
+			P1 = float(p.pi1/4.0);
+			P2 = float(p.pi2/4.0);
 		}
 	}
-	else{
-		if(d2 < params.tauSO){
-			P1 = float(params.pi1/4.0);
-			P2 = float(params.pi2/4.0);
+	else {
+		if(d2 < p.tauSO){
+			P1 = float(p.pi1/4.0);
+			P2 = float(p.pi2/4.0);
 		}
-		else{
-			P1 = float(params.pi1/10.0);
-			P2 = float(params.pi2/10.0);
+		else {
+			P1 = float(p.pi1/10.0);
+			P2 = float(p.pi2/10.0);
 		}
 	}
+}
+
+void optim(const float* costs, float* soCosts,
+           int x1, int x2, int y1, int y2, const PARAMETERS& params) {
+	const int w=params.w, h=params.h;
+	const int dMin = params.dMin, dMax = params.dMax;
+
+    float minCost = soCosts[0*h*w+x2*h+y2];
+    // find minimal previous cost for a given column index
+    for(int d=dMin+1; d<=dMax; ++d)
+        if(minCost > soCosts[(d-dMin)*h*w+x2*h+y2])
+            minCost = soCosts[(d-dMin)*h*w+x2*h+y2];
+
+    for(int d=dMin; d<=dMax; ++d) {
+        // C1(p,d) - min_k(Cr(p-r,k))
+        float soCost = costs[(d-dMin)*h*w+x1*h+y1]-minCost;
+
+        // compute P1 and P2 parameters for better scanline optimization
+        float P1, P2;
+        scanlineOptimizationParameters(x1, x2, y1, y2, d, P1, P2, params);
+
+        // compute min(Cr(p-r,d), Cr(p-r, d+-1) + P1, min_k(Cr(p-r,k)+P2)) 
+        minCost += P2;
+        if(minCost > soCosts[(d-dMin)*h*w+x2*h+y2])
+            minCost = soCosts[(d-dMin)*h*w+x2*h+y2];
+        if(d != params.dMin && minCost > soCosts[(d-dMin-1)*h*w+x2*h+y2] + P1)
+            minCost = soCosts[(d-dMin-1)*h*w+x2*h+y2] + P1;
+        if(d != params.dMax && minCost > soCosts[(d-dMin+1)*h*w+x2*h+y2] + P1)
+            minCost = soCosts[(d-dMin+1)*h*w+x2*h+y2] + P1;
+
+        soCost += minCost;
+        soCosts[(d-dMin)*h*w+x1*h+y1] = soCost;
+    }
 }
 
 /// update the scanline optimization cost when the direction is vertical
 /// y1 is current line and y2 is previous line
 void scanlineOptimizationV(const float* costs, float* soCosts, 
-						   const int y1, const int y2, const PARAMETERS& params)
+						   int y1, int y2, const PARAMETERS& params)
 {
-	int x, disparity;
-	float minCost, soCost, P1, P2;
-
-	const int h = params.h, w = params.w;
-	const int dMin = params.dMin, dMax = params.dMax;
-
-	for(x = 0; x < w; ++x){
-		minCost = costs[0*h*w+x*h+y1];
-		// find minimal previous cost for a given column index
-		for(disparity = dMin+1; disparity <= dMax; ++disparity){
-			if(minCost > costs[(disparity-dMin)*h*w+x*h+y2]){
-				minCost = (soCosts[(disparity-dMin)*h*w+x*h+y2]);
-			}
-		}
-
-		for(disparity = dMin; disparity <= dMax; ++disparity){
-			soCost = costs[(disparity-dMin)*h*w+x*h+y1];
-
-			// compute P1 and P2 parameters for better scanline optimization
-			scanlineOptimizationParameters(x, x, y1, y2, disparity, P1, P2, params);
-
-			// substract by min_k(Cr(p-r,k))
-			soCost -= minCost;
-
-			// compute min(Cr(p-r,d), Cr(p-r, d+-1) + P1, min_k(Cr(p-r,k)+P2)) 
-			minCost += P2;
-			if(minCost > costs[(disparity-dMin)*h*w+x*h+y2]){
-				minCost = soCosts[(disparity-dMin)*h*w+x*h+y2];
-			}
-			if(disparity != params.dMin && minCost > costs[(disparity-dMin-1)*h*w+x*h+y2] + P1){
-				minCost = soCosts[(disparity-dMin-1)*h*w+x*h+y2] + P1;
-			}
-			if(disparity != params.dMax && minCost > costs[(disparity-dMin+1)*h*w+x*h+y2] + P1){
-				minCost = soCosts[(disparity-dMin+1)*h*w+x*h+y2] + P1;
-			}
-
-			soCost += minCost;
-			soCosts[(disparity-dMin)*h*w+x*h+y1] = soCost;
-		}
-	}
+	for(int x=0; x<params.w; ++x)
+        optim(costs, soCosts, x, x, y1, y2, params);
 }
 
 /// update the scanline optimization cost when the direction is horizontal
 /// x1 is current column and x2 is previous column
 void scanlineOptimizationH(const float* costs, float* soCosts,
-						   const int x1, const int x2, const PARAMETERS& params)
+						   int x1, int x2, const PARAMETERS& params)
 {
-	int y, disparity;
-	float minCost, soCost, P1, P2;
-
-	const int h = params.h, w = params.w;
-	const int dMin = params.dMin, dMax = params.dMax;
-
-	for(y = 0; y < h; ++y){
-		minCost = costs[0*h*w+x1*h+y];
-		// find minimal previous cost for a given line index
-		for(disparity = dMin+1; disparity <= dMax; ++disparity){
-			if(minCost > costs[(disparity-dMin)*h*w+x2*h+y]){
-				minCost = (soCosts[(disparity-dMin)*h*w+x2*h+y]);
-			}
-		}
-		for(disparity = dMin; disparity <= dMax; ++disparity){
-			soCost = costs[(disparity-dMin)*h*w+x1*h+y];
-
-			// compute P1 and P2 parameters for better scanline optimization
-			scanlineOptimizationParameters(x1, x2, y, y, disparity, P1, P2, params);
-
-			// substract by min_k(Cr(p-r,k))
-			soCost -= minCost;
-
-			// compute min(Cr(p-r,d), Cr(p-r, d+-1) + P1, min_k(Cr(p-r,k)+P2)) 
-			minCost += P2;
-			if(minCost > costs[(disparity-dMin)*h*w+x2*h+y]){
-				minCost = soCosts[(disparity-dMin)*h*w+x2*h+y];
-			}
-			if(disparity != dMin && minCost > costs[(disparity-dMin-1)*h*w+x2*h+y] + P1){
-				minCost = soCosts[(disparity-dMin-1)*h*w+x2*h+y] + P1;
-			}
-			if(disparity != dMax && minCost > costs[(disparity-dMin+1)*h*w+x2*h+y] + P1){
-				minCost = soCosts[(disparity-dMin+1)*h*w+x2*h+y] + P1;
-			}
-
-			soCost += minCost;
-			soCosts[(disparity-dMin)*h*w+x1*h+y] = soCost;
-		}
-	}
+	for(int y=0; y<params.h; ++y)
+        optim(costs, soCosts, x1, x2, y, y, params);
 }
 
 /// compute the so cost by computing a vertical so in the "way" direction with first line of index y0
-void scanlineOptimizationComputationV(const float* costs, const int y0, const int way, 
+void scanlineOptimizationComputationV(const float* costs, int y0, int way, 
 									  float* costSO, const PARAMETERS& params)
 {
-	int x, y, disparity;
-
 	const int h = params.h, w = params.w;
 	const int dMin = params.dMin, dMax = params.dMax;
 	
 	float *tempor = new float[w*h*(dMax-dMin+1)];
 
 	// initialize vertical so cost
-	for(x = 0; x < w; ++x){
-		for(disparity = dMin; disparity <= dMax; ++disparity){
-			tempor[(disparity-dMin)*h*w+x*h+y0] = costs[(disparity-dMin)*h*w+x*h+y0];
-		}
-	}
+	for(int x=0; x<w; ++x)
+		for(int d=dMin; d<=dMax; ++d)
+			tempor[(d-dMin)*h*w+x*h+y0] = costs[(d-dMin)*h*w+x*h+y0];
 
 	// computes vertical so cost
-	for(y = y0 + way; y < h && y >= 0; y += way){
+	for(int y=y0+way; 0<=y && y<h; y+=way)
 		scanlineOptimizationV(costs, tempor, y, y-way, params);
-	}
 
 	// add so cost into costSO table
-	for(x = 0; x < w; ++x){
-		for(y = 0; y < h; ++y){
-			for(disparity = dMin; disparity <= dMax; ++disparity){
-				costSO[(disparity-dMin)*h*w+x*h+y] += tempor[(disparity-dMin)*h*w+x*h+y];
-			}
-		}
-	}
+	for(int x=0; x<w; ++x)
+		for(int y=0; y<h; ++y)
+			for(int d=dMin; d<=dMax; ++d)
+				costSO[(d-dMin)*h*w+x*h+y] += tempor[(d-dMin)*h*w+x*h+y];
+    delete [] tempor;
 }
 
 /// compute the so cost by computing an horizontal so in the "way" direction with first column of index x0
-void scanlineOptimizationComputationH(const float* costs, const int x0, const int way,
+void scanlineOptimizationComputationH(const float* costs, int x0, int way,
 									  float* costSO, const PARAMETERS& params)
 {
-	int x, y, disparity;
-
 	const int h = params.h, w = params.w;
 	const int dMin = params.dMin, dMax = params.dMax;
+
 	float *tempor = new float[w*h*(dMax-dMin+1)];
 
 	// initialize horizontal so cost
-	for(y = 0; y < h; ++y){
-		for(disparity = dMin; disparity <= dMax; ++disparity){
-			tempor[(disparity-dMin)*h*w+x0*h+y] = costs[(disparity-dMin)*h*w+x0*h+y];
-		}
-	}
+	for(int y=0; y<h; ++y)
+		for(int d=dMin; d<=dMax; ++d)
+			tempor[(d-dMin)*h*w+x0*h+y] = costs[(d-dMin)*h*w+x0*h+y];
 
 	// computes horizontal so cost
-	for(x = x0 + way; x < w && x >= 0; x += way){
+	for(int x=x0+way; 0<=x && x<w; x+=way)
 		scanlineOptimizationH(costs, tempor, x, x-way, params);
-	}
 
 	// add so cost into costSO table
-	for(x = 0; x < w; ++x){
-		for(y = 0; y < h; ++y){
-			for(disparity = dMin; disparity <= dMax; ++disparity){
-				costSO[(disparity-dMin)*h*w+x*h+y] += tempor[(disparity-dMin)*h*w+x*h+y];
-			}
-		}
-	}
+	for(int x=0; x<w; ++x)
+		for(int y=0; y<h; ++y)
+			for(int d=dMin; d<=dMax; ++d)
+				costSO[(d-dMin)*h*w+x*h+y] += tempor[(d-dMin)*h*w+x*h+y];
+    delete [] tempor;
 }
 
 /// update cost with scanline optimization method:
 /// C1(p,d) + min(Cr(p-r,d), Cr(p-r, d+-1) + P1, min_k(Cr(p-r,k)+P2)) - min_k(Cr(p-r,k))
 float* scanlineOptimization(const float* costs, const PARAMETERS& params)
 {
-	int x, y, disparity;
-
 	const int h = params.h, w = params.w;
 	const int dMin = params.dMin, dMax = params.dMax;
 
-	float *costSO = new float[w*h*(dMax-dMin+1)];
-	
-	// initialize so cost
-	for(x = 0; x < w; ++x){
-		for(y = 0; y < h; ++y){
-			for(disparity = dMin; disparity <= dMax; ++disparity){
-				costSO[(disparity-dMin)*h*w+x*h+y] = 0;
-			}
-		}
-	}
+    int size = w*h*(dMax-dMin+1);
+	float *costSO = new float[size];
+    std::fill(costSO, costSO+size, 0);
 
 	// computes the 4 directionnal so costs
 	// vertical downward

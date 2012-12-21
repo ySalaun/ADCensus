@@ -20,27 +20,7 @@
 
 #include "stereoDense/parameters.h"
 
-/// Absolute Differences between pixels (x1,y1) and (x2,y2).
-float ad(int x1, int y1, int x2, int y2, const PARAMETERS& params);
-
-/// Census measure between 9x7 patches centered on (x1,y1) and (x2,y2).
-/// Computes the Hamming distance between the structures around each pixels
-float census(int x1, int y1, int x2, int y2, const PARAMETERS& params);
-
-/// adCensus computes a cost defined by:
-/// Cost = (1-exp(COST_AD/lambdaAD)) + (1-exp(COST_CENSUS/lambdaCensus))
-/// it is a combination of the cost functions AD and Census explained above
-float adCensus(int x1,int y1, int x2,int y2, const PARAMETERS& params);
-
-/// agregateCosts1D computes the agregated costs of a table costs in the direction (dx, dy) and with the borders given in params
-/// disparity gives the current disparity
-/// it returns a table of the agregated costs
-float* agregateCosts1D(float* costs, int disparity, int dx, int dy, const PARAMETERS& params);
-
-/// agregateCosts2D computes the agregated costs of a table costs vertically and horizontally
-/// horizontalFirst gives the direction order and the windows borders are given in params
-/// disparity gives the current disparity
-/// it replaces the costs table by its agregated correspondent
-void agregateCosts2D(float* costs, int disparity, bool horizontalFirst, const PARAMETERS& params);
+float adCensus(int x1,int y1, int x2,int y2, const PARAMETERS& p);
+void agregateCosts2D(float* costs, bool horizontalFirst, const PARAMETERS& p);
 
 #endif

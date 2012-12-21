@@ -22,8 +22,8 @@
 /// Absolute Differences between pixels (x1,y1) and (x2,y2).
 float ad(int x1, int y1, int x2, int y2, const PARAMETERS& params)
 {
-	const float* p1 = params.im1.pixel(x1, y1);
-	const float* p2 = params.im2.pixel(x2, y2);
+	const float* p1 = params.im[0].pixel(x1, y1);
+	const float* p2 = params.im[1].pixel(x2, y2);
 	const float dist = (float)(std::abs((int)(*p1 - *p2)));
 
 	return dist;
@@ -33,12 +33,12 @@ float ad(int x1, int y1, int x2, int y2, const PARAMETERS& params)
 /// Computes the Hamming distance between the structures around each pixels
 float census(int x1, int y1, int x2, int y2, const PARAMETERS& params)
 {
-	const float p1ref = *(params.im1.pixel(x1, y1));
-	const float p2ref = *(params.im2.pixel(x2, y2));
+	const float p1ref = *(params.im[0].pixel(x1, y1));
+	const float p2ref = *(params.im[1].pixel(x2, y2));
 	float dist=0.0f;
 	for(int y = -params.winY; y <= params.winY; ++y) {
-		const float* p1 = params.im1.pixel(x1-params.winX, y1+y);
-		const float* p2 = params.im2.pixel(x2-params.winX, y2+y);
+		const float* p1 = params.im[0].pixel(x1-params.winX, y1+y);
+		const float* p2 = params.im[1].pixel(x2-params.winX, y2+y);
 		for(int x = -params.winX; x <= params.winX; ++x){
 			bool dif = (*p1++ - p1ref)*(*p2++ - p2ref) < 0;
 			if(dif){
@@ -71,78 +71,53 @@ float adCensus(int x1,int y1, int x2,int y2, const PARAMETERS& params)
 /// agregateCosts1D computes the agregated costs of a table costs in the direction (dx, dy) and with the borders given in params
 /// disparity gives the current disparity
 /// it returns a table of the agregated costs
-float* agregateCosts1D(float* costs, int disparity, int dx, int dy, const PARAMETERS& params)
+float* agregateCosts1D(float* costs, int dx, int dy, const PARAMETERS& p)
 {
-	int x, y, d, dmin, dmax;
+	const int offset = p.activePicture*p.w*p.h;
 
-	const int w = params.w, h = params.h;
-	const int offset = (params.activePicture - 1)*w*h;
-
-	float agregatedCost;
-	float* agregatedCosts = new float[w*h];
-	
+	float* agregatedCosts = new float[p.w*p.h];
 	// agregate costs in the direction (dx, dy)
-	for(x = 0; x < w; ++x){
-		for(y = 0; y < h; ++y){
-			// initialize agregated cost
-			agregatedCost = 0;
-			
+	for(int x=0; x<p.w; ++x)
+		for(int y=0; y<p.h; ++y){
+            int dmin, dmax;
 			// compute agregation window borders
-			// horizontal agregation
-			if(dy == 0){
-				dmin = -params.leftBorders[offset+x*h+y];
-				dmax =  params.rightBorders[offset+x*h+y];
+			if(dy == 0){ // horizontal agregation
+				dmin = -p.leftBorders[offset+x*p.h+y];
+				dmax =  p.rightBorders[offset+x*p.h+y];
 			}
-			// vertical agregation
-			else{
-				dmin = -params.upBorders[offset+x*h+y];
-				dmax =  params.downBorders[offset+x*h+y];
-			}
-			 
-			// agregate cost
-			for(d = dmin; d <= dmax; ++d){
-				agregatedCost += costs[(disparity-params.dMin)*h*w+(x+d*dx)*h+(y+d*dy)];
+			else{ // vertical agregation
+				dmin = -p.upBorders[offset+x*p.h+y];
+				dmax =  p.downBorders[offset+x*p.h+y];
 			}
 
-			// update cost in table
-			agregatedCosts[x*params.h+y] = agregatedCost;
+			// agregate cost
+            float c=0;
+			for(int d=dmin; d<=dmax; ++d)
+				c += costs[(x+d*dx)*p.h+(y+d*dy)];
+			agregatedCosts[x*p.h+y] = c;
 		}
-	}
 	return agregatedCosts;
 }
 
-/// agregateCosts2D computes the agregated costs of a table costs vertically and horizontally
-/// horizontalFirst gives the direction order and the windows borders are given in params
-/// disparity gives the current disparity
-/// it replaces the costs table by its agregated correspondent
-void agregateCosts2D(float* costs, int disparity, bool horizontalFirst, const PARAMETERS& params)
+/// Compute the agregated costs of a table costs vertically and horizontally.
+/// horizontalFirst gives the direction order.
+/// Replace the costs table by its agregation.
+void agregateCosts2D(float* costs, bool horizontalFirst, const PARAMETERS& p)
 {
-	int step, x, y;
+    int dx=0, dy=1;
+    if(horizontalFirst)
+        std::swap(dx,dy);
 
-	const int w = params.w, h = params.h;
-	const int dMin = params.dMin, dMax = params.dMax;
-
-	float *temporaryCosts;
-	
-	// agregate costs horizontally and vertically in the order imposed by horizontalFirst
-	for(step = 0; step < 2; ++ step){
-		// agregate horizontally
-		if(horizontalFirst){
-			temporaryCosts = agregateCosts1D(costs, disparity, 1, 0, params);
-		}
-		// agregate vertically
-		else{
-			temporaryCosts = agregateCosts1D(costs, disparity, 0, 1, params);
-		}
+	for(int i=0; i<2; i++) {
+        float *temporaryCosts = agregateCosts1D(costs, dx,dy, p);
 
 		// update the costs in costs table
-		for(x = 0; x < w; ++x){
-			for(y = 0; y < h; ++y){
-				costs[(disparity-dMin)*h*w+x*h+y] = temporaryCosts[x*h+y];
-			}
-		}
+		for(int x=0; x<p.w; ++x)
+			for(int y=0; y<p.h; ++y)
+				costs[x*p.h+y] = temporaryCosts[x*p.h+y];
+        delete [] temporaryCosts;
 
 		// change agregation direction
-		horizontalFirst = !horizontalFirst;
+        std::swap(dx,dy);
 	}
 }

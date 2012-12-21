@@ -7,12 +7,12 @@ class PARAMETERS{
 	public:
 	/*--------------PICTURES---------------*/
 	// left and right pictures for disparity computation
-	LWImage<float> im1, im2;
+	LWImage<float> im[2];
 
 	// height and width of pictures
 	int h,w;
 
-	// index of picture for processing
+	// index of picture for processing (0 or 1)
 	int activePicture;
 
 	/*--------------DISPARITY--------------*/
@@ -38,7 +38,8 @@ class PARAMETERS{
 	int *upBorders, *downBorders, *leftBorders, *rightBorders;
 
 	// method for adaptive windows
-	int patchBorder(const int x, const int y, const int dx, const int dy, const int index);
+	int patchBorder(const int x, const int y, const int dx, const int dy,
+                    const LWImage<float>& im);
 	int* patchesBorder(const int dx, const int dy);
 
 	/*--------SCANLINE OPTIMIZATION---------*/
@@ -47,14 +48,15 @@ class PARAMETERS{
 
 	/*---INITIALIZATION & DEFAULT VALUES---*/
 	// initialization of parameters need the 2 images and the disparity range
-	void initialization(LWImage<float> image1, LWImage<float> image2, int disparityMin, int disparityMax){
+	PARAMETERS(LWImage<float> image1, LWImage<float> image2,
+               int disparityMin, int disparityMax){
 		// images
-		im1 = image1;
-		im2 = image2;
+		im[0] = image1;
+		im[1] = image2;
 
 		// width and height of images
-		h = im1.h;
-		w = im1.w;
+		h = image1.h;
+		w = image1.w;
 
 		// index of active picture
 		activePicture = 1;
@@ -89,6 +91,12 @@ class PARAMETERS{
 		pi2 = 3.0;
 		tauSO = 15;
 	}
+    ~PARAMETERS() {
+        delete [] upBorders;
+        delete [] downBorders;
+        delete [] leftBorders;
+        delete [] rightBorders;
+    }
 };
 
 #endif
