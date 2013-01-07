@@ -1,28 +1,113 @@
 %-------------------------------------------------------------------------------
-% IPOL LaTeX class test example
-% by rafael grompone von gioi
-% June 4, 2012
+% IPOL article about On Building an Accurate Stereo Matching System on Graphics Hardware article
+% by Yohann Salaun & Pascal Monasse
+% February 2013
 %-------------------------------------------------------------------------------
 \documentclass{ipol}
 
-\ipolSetTitle{IPOL \LaTeX\ AD Census}
-\ipolSetAuthors{Rafael Grompone von Gioi$^1$ \& Rapha\"el Toucour$^2$}
+\ipolSetTitle{AD Census}
+\ipolSetAuthors{Yohann Salaun$^1$ \& Pascal Monasse$^2$}
 \ipolSetAffiliations{%
-$^1$ CMLA, ENS Cachan, France (\texttt{grompone@cmla.ens-cachan.fr})\\
-$^2$ IIE, UdelaR, Uruguay (\texttt{jirafa@fing.edu.uy})}
+$^1$ Polytechnique, France (\texttt{yohann.salaun@polytechnique.org})\\
+$^2$ Imagine, ENPC, France (\texttt{})}
 
 \begin{document}
 
 %-------------------------------------------------------------------------------
 \begin{abstract}
-This document describes and illustrates how to use the IPOL's
-\LaTeX\ class, created to produces a uniform layout for IPOL's
-articles. The restrictions imposed on articles to be published in IPOL
-are briefly discussed.
-\end{abstract}
+This paper present a local stereo matching algorithm supposed to have good accuracy performances as shown by its position in Middlebury benchmark. Originally published in order to be developped on graphics hardware, only the accuracy performance will be studied in this article. The algorithm bases its matching cost with the AD-Census measure, aggregates in cross-based regions and finalizes it with scanline optimization. Methods are then used to detect outliers and correct them to finally give a disparity map that top performed in Middlebury benchmark.
+\end{abstract} 
 
 %-------------------------------------------------------------------------------
-\section{Getting Started}
+\section{Introduction}
+
+%-------------------------------------------------------------------------------
+\section{Matching cost computation}
+
+\subsection{AD-Census}
+
+The cost used in this algorithm is the combination of two other costs:\\
+	- \textbf{ Absolute Difference} which computes the absolute difference of two pixel intensities.\\
+	- \textbf{ Census} which computes the difference of two pixel local structures\\
+\\ 
+The absolute difference is a common matching cost, often used in disparity map computation for its good results. However it is lacking of accuracy in textureless regions. That is why the combination of two costs, supposed to improve the AD measure where its efficiency is too weak, has been used in this article.\\
+The absolute difference cost is then given by the formula:
+\[
+	C_{AD}(p, pd) = \frac{1}{3} \sum_{i = R, G, B}  | I_i^{LEFT}(p) - I_i^{RIGHT}(p+d) | 
+\]
+Here and in the whole article, $p$ will be a pixel in the left picture and $pd$ will be its correspondent with disparity $d$ in the right picture.\\
+The census matching cost compares the local ordering of pixel intensities in a window of size 9 x 7.\\
+The census cost formula can be given by:
+\[
+	C_{CENSUS}(p, pd) = \sum_{q \in windows(p)} I
+\]
+The combination of these two costs is made with the function $\rho$ defined by:
+\[
+	\rho(cost, \lambda) = 1 - e^{-\frac{cost}{\lambda}}
+\]
+This function allow a better combination of the two costs by mapping their values into [0;1] where 0 stands for a perfect match and 1 for a total mismatch. Moreover, it allows us to easily define the limit between inliers and outliers separately for each cost.\\
+
+\subsection{ Cost aggregation }
+
+Once the cost is initialized with AD-Census as explained above, it is aggregated, for a given disparity, in windows in order to increase matching accuracy. The method used is inspired by the one proposed by \textit{ Zhang et al. REF}.
+The aggregation windows are computed independantly for each pixel and depends on the local structure of its neighbourhood (FIG. \ref{cost_computation}. The aim is to only take pixels that belong to the same structure in order to avoid occlusion issues.\\
+
+\begin{figure}[h]
+\begin{center}	
+\includegraphics[scale=0.8]{Images/cost_computation.png}
+	\label{cost_computation}
+	\caption{ The adaptive windows only keeps pixel that have strong enough color similarities with the pixel in its center.}
+\end{center}
+\end{figure}
+
+Thus, for each pixel $p$, upward, downard, leftward and rightward borders pixel $q$ are defined by being the last pixels in the given direction that assume:
+\begin{equation}
+	D_C(q, p) < \tau_1 \ \ and \ \ D_C(q, q_{predecessor}) < \tau_1
+	\label{cost_agg1}
+\end{equation}
+\begin{equation}
+	D_S(q, p) < L_1 
+	\label{cost_agg2}
+\end{equation}
+\begin{equation}
+	D_C(q, p) < \tau_2 < \tau_1 \ \ if \ \ L_2 <  D_S(q, p) < L_1
+	\label{cost_agg3}
+\end{equation}
+where $D_C(p, q) = \max_{i \in R, G, B} |I_i(p) - I_i(q)|$ is the color distance between 2 pixels and  $D_S(p, q) = |p - q|$ is the spatial distance between 2 pixels.\\
+Eq. \ref{cost_agg1} ensures that pixels which belong to the same window have a color similarity and that this similarity kept from the center of the window to the edge.\\
+Eq. \ref{cost_agg2} defines a limit size for the window.\\
+Eq. \ref{cost_agg3} allow bigger windows of size $L_1$ instead of $L_2$ only for textureless regions, when the pixels have strong color similarities.\\
+Two adaptive windows can then be defined depending on the order of aggregation. For each pixel $p$, the cost is aggregated horizontally (resp. vertically) with the borders defined above and then the cost is aggregated once again vertically (resp. horizontally). See FIG. \ref{cost_aggregation}.\\
+In order to get a stable cost volume, the cost is aggregated 4 times, twice horizontally first and twice vertically first.\\
+
+\begin{figure}[h]
+\begin{center}	
+\includegraphics[scale=0.8]{Images/cost_aggregation.png}
+	\label{cost_aggregation}
+	\caption{ The aggregation is done one direction after the other with the corresponding border pixels.}
+\end{center}
+\end{figure}
+
+For better matching results, a second aggregating step is then computed. It follows the multi-direction scanline optimizer developped by \textit{Hirschmuller REFFF}.\\
+Four scanline optimizations are processed independantly, leftward, rightward, upward and downward. For a given direction $r$, the cost is updated from the first column/line to the last with the following formula:
+\[
+	C_r (p, d) =  C(p, d) + min( C_r(p, d) , C_r(p-r, d+1) + P_1, C_r(p-r, d-1) + P_1, \min_k C_r(p-r, k) + P_2) - \min_k C_r(p-r, k)	
+\]
+where $p-r$ is the previous pixel along the direction $r$.\\
+$P_1 < P_2$ are parameters that penalize the disparity change between neighboring pixels. Thus, they depends on $D_1 = D_C(p, p-r)$ in the left picture and $D_2 = D_C(pd, pd-r)$ in the right picture. They are symmetrically set by the formula:
+\[
+	P_1 = \Pi_1, \ \ P_2 = \Pi_2, \ \ if \ \ D_1 < \tau_{SO} \ \ and \ \ D_2 < \tau_{SO} \\
+	P_1 = \frac{\Pi_1}{4}, \ \ P_2 =\frac{\Pi_2}{4}, \ \ if \ \ D_1 > \tau_{SO} \ \ and \ \ D_2 < \tau_{SO} \\
+	P_1 = \frac{\Pi_1}{4}, \ \ P_2 =\frac{\Pi_2}{4}, \ \ if \ \ D_1 < \tau_{SO} \ \ and \ \ D_2 > \tau_{SO} \\
+	P_1 = \frac{\Pi_1}{10}, \ \ P_2 =\frac{\Pi_2}{10}, \ \ if \ \ D_1 > \tau_{SO} \ \ and \ \ D_2 > \tau_{SO} \\
+\]
+where $\Pi_1, \ \ \Pi_2 \ \ and \tau_{SO}$ are parameters.\\
+\\
+Finally, the scanline optimization cost is the average of the 4 directionnal costs computed previously:
+\[
+	C(p, d) = \frac{1}{4} \sum_r C_r(p,d)
+\]
+
 
 There is no need for installation to use this class, just two files
 need to be copied to the same directory were are the \LaTeX\ source

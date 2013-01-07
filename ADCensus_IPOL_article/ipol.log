@@ -1,0 +1,14 @@
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdftex 2012.12.21)  21 DEC 2012 19:30
+entering extended mode
+**C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_IPOL_article/ipol.cls
+(C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_IPOL_article/ipol.cls
+! Undefined control sequence.
+l.22 \NeedsTeXFormat
+                    {LaTeX2e}
+? 
+! Emergency stop.
+l.22 \NeedsTeXFormat
+                    {LaTeX2e}
+End of file on the terminal!
+
+!  ==> Fatal error occurred, no output PDF file produced!
