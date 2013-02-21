@@ -20,7 +20,7 @@
 
 #include "stereoDense/parameters.h"
 
-float adCensus(int x1,int y1, int x2,int y2, const PARAMETERS& p);
+float adCensus(const int x1, const int y1, const int x2, const int y2, const PARAMETERS& p);
 void agregateCosts2D(float* costs, bool horizontalFirst, const PARAMETERS& p);
 
 #endif

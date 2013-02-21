@@ -9,8 +9,8 @@ class PARAMETERS{
 	// left and right pictures for disparity computation
 	LWImage<float> im[2];
 
-	// height and width of pictures
-	int h,w;
+	// height, width of pictures and their product
+	int h, w, wh;
 
 	// index of picture for processing (0 or 1)
 	int activePicture;
@@ -39,7 +39,7 @@ class PARAMETERS{
 
 	// method for adaptive windows
 	int patchBorder(const int x, const int y, const int dx, const int dy,
-                    const LWImage<float>& im);
+                    LWImage<float>& im);
 	int* patchesBorder(const int dx, const int dy);
 
 	/*--------SCANLINE OPTIMIZATION---------*/
@@ -57,6 +57,7 @@ class PARAMETERS{
 		// width and height of images
 		h = image1.h;
 		w = image1.w;
+		wh = w*h;
 
 		// index of active picture
 		activePicture = 1;

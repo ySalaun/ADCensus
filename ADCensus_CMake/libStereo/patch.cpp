@@ -20,38 +20,43 @@
 #include <iostream>
 
 /// Absolute Differences between pixels (x1,y1) and (x2,y2).
-float ad(int x1, int y1, int x2, int y2, const PARAMETERS& params)
+float ad(const int x1, const int y1, const int x2, const int y2, const PARAMETERS& params)
 {
 	const float* p1 = params.im[0].pixel(x1, y1);
 	const float* p2 = params.im[1].pixel(x2, y2);
-	const float dist = (float)(std::abs((int)(*p1 - *p2)));
-
-	return dist;
+	float dist = (float)(0);
+	for(int color=0; color<3; ++color){
+		dist += (float)(std::abs((int)(*(p1+color*params.wh) - *(p2+color*params.wh))));
+	}
+	return dist/3;
 }
 
 /// Census measure between 9x7 patches centered on (x1,y1) and (x2,y2).
 /// Computes the Hamming distance between the structures around each pixels
-float census(int x1, int y1, int x2, int y2, const PARAMETERS& params)
+float census(const int x1, const int y1, const int x2, const int y2, const PARAMETERS& params)
 {
-	const float p1ref = *(params.im[0].pixel(x1, y1));
-	const float p2ref = *(params.im[1].pixel(x2, y2));
 	float dist=0.0f;
-	for(int y = -params.winY; y <= params.winY; ++y) {
-		const float* p1 = params.im[0].pixel(x1-params.winX, y1+y);
-		const float* p2 = params.im[1].pixel(x2-params.winX, y2+y);
-		for(int x = -params.winX; x <= params.winX; ++x){
-			bool dif = (*p1++ - p1ref)*(*p2++ - p2ref) < 0;
-			if(dif){
-				dist += 1.0;
+	for(int color = 0; color < 3; ++color){
+		const float p1ref = *(params.im[0].pixel(x1, y1)+color*params.wh);
+		const float p2ref = *(params.im[1].pixel(x2, y2)+color*params.wh);
+		for(int y = -params.winY; y <= params.winY; ++y) {
+			const float* p1 = params.im[0].pixel(x1-params.winX, y1+y)+color*params.wh;
+			const float* p2 = params.im[1].pixel(x2-params.winX, y2+y)+color*params.wh;
+			for(int x = -params.winX; x <= params.winX; ++x){
+				bool dif = (*p1++ - p1ref)*(*p2++ - p2ref) < 0;
+				if(dif){
+					dist += 1.0;
+				}
 			}
 		}
 	}
 	return dist;
 }
+
 /// adCensus computes a cost defined by:
 /// Cost = (1-exp(COST_AD/lambdaAD)) + (1-exp(COST_CENSUS/lambdaCensus))
 /// it is a combination of the cost functions AD and Census explained above
-float adCensus(int x1,int y1, int x2,int y2, const PARAMETERS& params)
+float adCensus(const int x1,const int y1, const int x2, const int y2, const PARAMETERS& params)
 {
 	float dist = 0.0f;
 	
@@ -71,13 +76,15 @@ float adCensus(int x1,int y1, int x2,int y2, const PARAMETERS& params)
 /// agregateCosts1D computes the agregated costs of a table costs in the direction (dx, dy) and with the borders given in params
 /// disparity gives the current disparity
 /// it returns a table of the agregated costs
-float* agregateCosts1D(float* costs, int dx, int dy, const PARAMETERS& p)
+float* agregateCosts1D(const float* costs, const int dx, const int dy, int* windowSize, const PARAMETERS& p)
 {
 	const int offset = p.activePicture*p.w*p.h;
 
 	float* agregatedCosts = new float[p.w*p.h];
+	int* tmpWindowSize = new int[p.w*p.h];
+
 	// agregate costs in the direction (dx, dy)
-	for(int x=0; x<p.w; ++x)
+	for(int x=0; x<p.w; ++x){
 		for(int y=0; y<p.h; ++y){
             int dmin, dmax;
 			// compute agregation window borders
@@ -92,32 +99,58 @@ float* agregateCosts1D(float* costs, int dx, int dy, const PARAMETERS& p)
 
 			// agregate cost
             float c=0;
-			for(int d=dmin; d<=dmax; ++d)
+			for(int d=dmin; d<=dmax; ++d){
 				c += costs[(x+d*dx)*p.h+(y+d*dy)];
+				tmpWindowSize[x*p.h+y] += windowSize[(x+d*dx)*p.h+(y+d*dy)];
+			}
 			agregatedCosts[x*p.h+y] = c;
 		}
+	}
+
+	for(int x=0; x<p.w; ++x){
+		for(int y=0; y<p.h; ++y){
+			windowSize[x*p.h+y] = tmpWindowSize[x*p.h+y];
+		}
+	}
+	delete[] tmpWindowSize;
+
 	return agregatedCosts;
 }
 
 /// Compute the agregated costs of a table costs vertically and horizontally.
 /// horizontalFirst gives the direction order.
 /// Replace the costs table by its agregation.
-void agregateCosts2D(float* costs, bool horizontalFirst, const PARAMETERS& p)
+void agregateCosts2D(float* costs, const bool horizontalFirst, const PARAMETERS& p)
 {
     int dx=0, dy=1;
-    if(horizontalFirst)
+    if(horizontalFirst){
         std::swap(dx,dy);
+	}
+
+	int* windowSize = new int[p.h*p.w];
+	for(int x=0; x<p.w; ++x){
+		for(int y=0; y<p.h; ++y){
+			windowSize[x*p.h+y] = 1;
+		}
+	}
 
 	for(int i=0; i<2; i++) {
-        float *temporaryCosts = agregateCosts1D(costs, dx,dy, p);
+        float *temporaryCosts = agregateCosts1D(costs, dx,dy, windowSize, p);
 
 		// update the costs in costs table
-		for(int x=0; x<p.w; ++x)
-			for(int y=0; y<p.h; ++y)
+		for(int x=0; x<p.w; ++x){
+			for(int y=0; y<p.h; ++y){
 				costs[x*p.h+y] = temporaryCosts[x*p.h+y];
+				/*if(i == 1){
+					costs[x*p.h+y] /= windowSize[x*p.h+y];
+				}*/
+			}
+		}
+
         delete [] temporaryCosts;
 
 		// change agregation direction
         std::swap(dx,dy);
 	}
+	delete[] windowSize;
 }
