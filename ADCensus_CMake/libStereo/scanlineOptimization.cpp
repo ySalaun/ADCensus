@@ -19,6 +19,16 @@
 #include <cmath>
 #include <algorithm>
 
+/// Compute the color difference of 2 pixels
+int colorDiff(const float* p1, const float* p2, const int wh){
+	int d, diff = 0;
+	for(int color = 0; color < 3; ++color){
+		d = abs(int(*(p1+color*wh)-*(p2+color*wh)));
+		diff = (diff > d)? diff:d;
+	}
+	return diff;
+}
+
 /// computes the parameters for each pixel cost update during scanline optimization
 void scanlineOptimizationParameters(int x1, int x2, int y1, int y2,	int d,
                                     float& P1, float& P2,
@@ -28,9 +38,9 @@ void scanlineOptimizationParameters(int x1, int x2, int y1, int y2,	int d,
     if(a!=0) d=-d;
 
     // compute color differences between pixels in the two pictures
-    int d1 = (int)abs(*p.im[a].pixel(x1,y1)-*p.im[a].pixel(x2,y2)), d2=0;
+	int d1 = colorDiff(p.im[a].pixel(x1,y1), p.im[a].pixel(x2,y2), p.wh) ,d2 = 0;
     if(0<=x1+d && x1+d<p.w && 0<=x2+d && x2+d<p.w)
-       d2 = (int)abs(*p.im[b].pixel(x1+d,y1)-*p.im[b].pixel(x2+d,y2));
+       d2 = colorDiff(p.im[b].pixel(x1+d,y1), p.im[b].pixel(x2+d,y2), p.wh);
 
     // depending on the color differences computed previously, find the so parameters
     if(d1 < p.tauSO){
