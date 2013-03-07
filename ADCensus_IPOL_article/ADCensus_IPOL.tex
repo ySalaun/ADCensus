@@ -19,7 +19,11 @@ This paper present a local stereo matching algorithm supposed to have good accur
 \end{abstract} 
 
 %-------------------------------------------------------------------------------
-\section{Introduction}
+\section{Overview}
+
+Stereo matching is one of the most active research areas in computer vision. Many algorithms have been proposed in the last decades and  \cite{stereoTaxonomy} presents and classify many of them.\\
+Stereo algorithms can be split into 2 main families: \textbf{local} and \textbf{global} algorithm. The first one will only compare pixels from one picture to the other in order to find the best matches and compute the corresponding disparity map. The second one describes the disparity map computation problem as an energy minimization one and computes the disparity of each pixel at once.\\
+Most of the time local methods are fast but lack of accuracy and global ones are accurate but take a lot of time to compute. The method \cite{adCensus}  presented below belongs to the local algorithm family and the aim of their author was to to produce an accurate real-time method with GPU parallelization. When the article was published (August 2011), this method was the top performer of Middleburry benchmark \cite{middleBench} and is now (January 2013) second top performer. The aim of this article is to study the quality of the disparity map produced by this algorithm, putting aside the GPU paralellization and the time performance.
 
 %-------------------------------------------------------------------------------
 \section{Matching cost computation}
@@ -35,7 +39,7 @@ The absolute difference cost is then given by the formula:
 \[
 	C_{AD}(p, pd) = \frac{1}{3} \sum_{i = R, G, B}  | I_i^{LEFT}(p) - I_i^{RIGHT}(p+d) | 
 \]
-Here and in the whole article, $p$ will be a pixel in the left picture and $pd$ will be its correspondent with disparity $d$ in the right picture.\\
+Here and in the whole article, $p$ will be a pixel in the left picture and $p + d$ will be its correspondent with disparity $d$ in the right picture.\\
 The census matching cost compares the local ordering of pixel intensities in a window of size 9 x 7.\\
 The census cost formula can be given by:
 \[
@@ -49,7 +53,7 @@ This function allow a better combination of the two costs by mapping their value
 
 \subsection{ Cost aggregation }
 
-Once the cost is initialized with AD-Census as explained above, it is aggregated, for a given disparity, in windows in order to increase matching accuracy. The method used is inspired by the one proposed by \textit{ Zhang et al. REF}.
+Once the cost is initialized with AD-Census as explained above, it is aggregated, for a given disparity, in windows in order to increase matching accuracy. The method used is inspired by the one proposed by \textit{ Zhang et al.} \cite{costAggreg}.
 The aggregation windows are computed independantly for each pixel and depends on the local structure of its neighbourhood (FIG. \ref{cost_computation}. The aim is to only take pixels that belong to the same structure in order to avoid occlusion issues.\\
 
 \begin{figure}[h]
@@ -96,19 +100,25 @@ Four scanline optimizations are processed independantly, leftward, rightward, up
 where $p-r$ is the previous pixel along the direction $r$.\\
 $P_1 < P_2$ are parameters that penalize the disparity change between neighboring pixels. Thus, they depends on $D_1 = D_C(p, p-r)$ in the left picture and $D_2 = D_C(pd, pd-r)$ in the right picture. They are symmetrically set by the formula:
 \[
-	P_1 = \Pi_1, \ \ P_2 = \Pi_2, \ \ if \ \ D_1 < \tau_{SO} \ \ and \ \ D_2 < \tau_{SO} \\
-	P_1 = \frac{\Pi_1}{4}, \ \ P_2 =\frac{\Pi_2}{4}, \ \ if \ \ D_1 > \tau_{SO} \ \ and \ \ D_2 < \tau_{SO} \\
-	P_1 = \frac{\Pi_1}{4}, \ \ P_2 =\frac{\Pi_2}{4}, \ \ if \ \ D_1 < \tau_{SO} \ \ and \ \ D_2 > \tau_{SO} \\
+	P_1 = \Pi_1, \ \ P_2 = \Pi_2, \ \ if \ \ D_1 < \tau_{SO} \ \ and \ \ D_2 < \tau_{SO}
+\]
+\[
+	P_1 = \frac{\Pi_1}{4}, \ \ P_2 =\frac{\Pi_2}{4}, \ \ if \ \ D_1 > \tau_{SO} \ \ and \ \ D_2 < \tau_{SO}
+\]
+\[
+	P_1 = \frac{\Pi_1}{4}, \ \ P_2 =\frac{\Pi_2}{4}, \ \ if \ \ D_1 < \tau_{SO} \ \ and \ \ D_2 > \tau_{SO}
+\]
+\[
 	P_1 = \frac{\Pi_1}{10}, \ \ P_2 =\frac{\Pi_2}{10}, \ \ if \ \ D_1 > \tau_{SO} \ \ and \ \ D_2 > \tau_{SO} \\
 \]
-where $\Pi_1, \ \ \Pi_2 \ \ and \tau_{SO}$ are parameters.\\
+where $\Pi_1, \ \ \Pi_2 $ and $\tau_{SO}$ are parameters.\\
 \\
 Finally, the scanline optimization cost is the average of the 4 directionnal costs computed previously:
 \[
 	C(p, d) = \frac{1}{4} \sum_r C_r(p,d)
 \]
 
-
+---------------------------------------------------------------\\
 There is no need for installation to use this class, just two files
 need to be copied to the same directory were are the \LaTeX\ source
 files. These files are the class itself, \verb|ipol.cls|, and the logo
@@ -298,6 +308,36 @@ the authors
 
 \includegraphics[height=2em]{ipol_logo} \copyright\ IPOL (there's no
 need to credit this image, here is used as an example.)
+
+\section{References}
+
+\begin{thebibliography}{9}
+\bibitem{middleBench}
+	D. Scharstein and R. Szeliski,
+	\emph{ Middlebury benchmark}.
+	vision.middlebury.edu/stereo/
+
+\bibitem{adCensus}
+	X. Mei, X. Sun, M. Zhou, S. Jiao, H. Wang, and X. Zhang,
+	\emph{On building an accurate stereo matching system on graphics hardware}.
+	GPUCV,
+	2011.
+
+\bibitem{stereoTaxonomy}
+	D. Scharstein and R. Szeliski,
+   	\emph{ A taxonomy and evaluation of dense two-frame stereo correspondence algorithms}.
+	International Journal of Computer Vision, 
+	47(1/2/3):7-42, 
+	April-June 2002.
+
+\bibitem{costAggreg}
+	K. Zhang, J. Lu, and G. Lafruit,
+	\emph{ Cross-based local stereo matching using orthogonal integral images}.
+	 IEEE TCSVT,
+	19(7):1073–1079,
+	2009.
+
+\end{thebibliography}
 
 \end{document}
 %-------------------------------------------------------------------------------
