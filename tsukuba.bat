@@ -11,9 +11,6 @@ SET dmax=0
 
 SET dmap=%pathfile%\Images\%img%\disparity_map.png
 
-SET agreg_on=1
-SET so_on=1
-
-SET cmd=%execfile% %img1% %img2% %dmin% %dmax% %dmap% %agreg_on% %so_on%
+SET cmd=%execfile% %img1% %img2% %dmin% %dmax% %dmap%
 
 start %cmd%

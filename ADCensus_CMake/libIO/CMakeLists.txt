@@ -4,6 +4,7 @@ PROJECT(libIO)
 
 SET(SRC io_tiff.c io_tiff.h
         io_png.c io_png.h
+        cmdLine.h
         draw.c draw.h
         nan.h)
 

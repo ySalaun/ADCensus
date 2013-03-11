@@ -120,7 +120,7 @@ int main(int argc, char** argv)
 
     bool bNaN = has_nan(im, w*h);
     const size_t channels = (bNaN? (bTransparent? 2: 3): 1);
-    if(write_png_u8(argv[2], out, w, h, channels) != 0) {
+    if(io_png_write_u8(argv[2], out, w, h, channels) != 0) {
         std::cerr << "Impossible to write png image " << argv[2] <<std::endl;
         return 1;
     }

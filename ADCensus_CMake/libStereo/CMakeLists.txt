@@ -2,7 +2,8 @@ CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
 
 PROJECT(libStereo)
 
-SET(SRC patch.cpp patch.h scanlineOptimization.cpp scanlineOptimization.h)
+SET(SRC patch.cpp patch.h scanlineOptimization.cpp scanlineOptimization.h
+        occlusion.h occlusion.cpp)
 
 ADD_LIBRARY(Stereo ${SRC})
 
