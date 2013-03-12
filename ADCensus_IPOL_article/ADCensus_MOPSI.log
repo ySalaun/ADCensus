@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.10.11)  28 FEB 2013 09:28
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.10.11)  12 MAR 2013 20:50
 entering extended mode
 **ADCensus_MOPSI.tex
 
@@ -752,84 +752,351 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 56.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
-) [1
+)
+Underfull \hbox (badness 10000) in paragraph at lines 66--69
+
+ []
+
+<Images/tsukuba.png, id=1, 385.44pt x 289.08pt>
+File: Images/tsukuba.png Graphic file (type png)
+ <use Images/tsukuba.png>
+Package pdftex.def Info: Images/tsukuba.png used on input line 73.
+(pdftex.def)             Requested size: 127.19559pt x 95.39668pt.
+
+<Images/tsukuba_right.png, id=2, 385.44pt x 289.08pt>
+File: Images/tsukuba_right.png Graphic file (type png)
+
+<use Images/tsukuba_right.png>
+Package pdftex.def Info: Images/tsukuba_right.png used on input line 74.
+(pdftex.def)             Requested size: 127.19559pt x 95.39668pt.
+
+<Images/tsukuba_disp.png, id=3, 385.44pt x 289.08pt>
+File: Images/tsukuba_disp.png Graphic file (type png)
+
+<use Images/tsukuba_disp.png>
+Package pdftex.def Info: Images/tsukuba_disp.png used on input line 75.
+(pdftex.def)             Requested size: 127.19559pt x 95.39668pt.
+ [1
 Non-PDF special ignored!
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-LaTeX Font Info:    Try loading font information for U+dsrom on input line 94.
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Yohann/Documents
+/GitHub/ADCensus/ADCensus_IPOL_article/Images/tsukuba.png> <C:/Users/Yohann/Doc
+uments/GitHub/ADCensus/ADCensus_IPOL_article/Images/tsukuba_right.png> <C:/User
+s/Yohann/Documents/GitHub/ADCensus/ADCensus_IPOL_article/Images/tsukuba_disp.pn
+g>]
+LaTeX Font Info:    Try loading font information for U+dsrom on input line 107.
+
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\dstroke\udsrom.fd"
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 )
-Underfull \hbox (badness 10000) in paragraph at lines 99--101
+<Images/AD_only/disparity_map.png, id=15, 385.44pt x 289.08pt>
+File: Images/AD_only/disparity_map.png Graphic file (type png)
 
- []
+<use Images/AD_only/disparity_map.png>
+Package pdftex.def Info: Images/AD_only/disparity_map.png used on input line 12
+4.
+(pdftex.def)             Requested size: 154.17326pt x 115.62994pt.
 
+<Images/Census_only/disparity_map.png, id=16, 385.44pt x 289.08pt>
+File: Images/Census_only/disparity_map.png Graphic file (type png)
 
-Underfull \hbox (badness 10000) in paragraph at lines 104--106
+<use Images/Census_only/disparity_map.png>
+Package pdftex.def Info: Images/Census_only/disparity_map.png used on input lin
+e 125.
+(pdftex.def)             Requested size: 154.17326pt x 115.62994pt.
+File: Images/tsukuba.png Graphic file (type png)
+ <use Images/tsukuba.png>
+Package pdftex.def Info: Images/tsukuba.png used on input line 127.
+(pdftex.def)             Requested size: 148.3919pt x 111.29393pt.
 
- []
+<Images/ADCensus_only/disparity_map.png, id=17, 385.44pt x 289.08pt>
+File: Images/ADCensus_only/disparity_map.png Graphic file (type png)
 
-<Images/cost_computation.png, id=12, 380.01974pt x 209.583pt>
-File: Images/cost_computation.png Graphic file (type png)
-
-<use Images/cost_computation.png>
-Package pdftex.def Info: Images/cost_computation.png used on input line 109.
-(pdftex.def)             Requested size: 304.0162pt x 167.66661pt.
+<use Images/ADCensus_only/disparity_map.png>
+Package pdftex.def Info: Images/ADCensus_only/disparity_map.png used on input l
+ine 128.
+(pdftex.def)             Requested size: 154.17326pt x 115.62994pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 123--126
+
+Underfull \hbox (badness 10000) in paragraph at lines 139--141
 
  []
 
-<Images/cost_aggregation.png, id=27, 381.8265pt x 139.722pt>
+<Images/cost_computation.png, id=18, 380.01974pt x 209.583pt>
+File: Images/cost_computation.png Graphic file (type png)
+
+<use Images/cost_computation.png>
+Package pdftex.def Info: Images/cost_computation.png used on input line 144.
+(pdftex.def)             Requested size: 304.0162pt x 167.66661pt.
+ [2]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<Images/cost_aggregation.png, id=34, 381.8265pt x 139.722pt>
 File: Images/cost_aggregation.png Graphic file (type png)
 
 <use Images/cost_aggregation.png>
-Package pdftex.def Info: Images/cost_aggregation.png used on input line 129.
+Package pdftex.def Info: Images/cost_aggregation.png used on input line 163.
 (pdftex.def)             Requested size: 267.27672pt x 97.80472pt.
- [3 <C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_IPOL_article/Images/cos
-t_computation.png> <C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_IPOL_art
-icle/Images/cost_aggregation.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 152--155
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[3 <C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_IPOL_article/Images/AD_o
+nly/disparity_map.png> <C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_IPOL
+_article/Images/Census_only/disparity_map.png> <C:/Users/Yohann/Documents/GitHu
+b/ADCensus/ADCensus_IPOL_article/Images/ADCensus_only/disparity_map.png>]
+[4 <C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_IPOL_article/Images/cost
+_computation.png> <C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_IPOL_arti
+cle/Images/cost_aggregation.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 186--189
 
  []
 
-[4] [5] [6] [7]
+File: Images/ADCensus_only/disparity_map.png Graphic file (type png)
+<use Images/ADCensus_only/disparity_map.png>
+Package pdftex.def Info: Images/ADCensus_only/disparity_map.png used on input l
+ine 196.
+(pdftex.def)             Requested size: 196.5718pt x 147.42883pt.
+
+<Images/ADCensus_aggregated/disparity_map.png, id=44, 385.44pt x 289.08pt>
+File: Images/ADCensus_aggregated/disparity_map.png Graphic file (type png)
+
+<use Images/ADCensus_aggregated/disparity_map.png>
+Package pdftex.def Info: Images/ADCensus_aggregated/disparity_map.png used on i
+nput line 197.
+(pdftex.def)             Requested size: 192.71953pt x 144.53964pt.
+File: Images/tsukuba.png Graphic file (type png)
+ <use Images/tsukuba.png>
+Package pdftex.def Info: Images/tsukuba.png used on input line 200.
+(pdftex.def)             Requested size: 192.71953pt x 144.53964pt.
+
+<Images/ADCensus_aggregated_so/disparity_map.png, id=45, 385.44pt x 289.08pt>
+File: Images/ADCensus_aggregated_so/disparity_map.png Graphic file (type png)
+
+<use Images/ADCensus_aggregated_so/disparity_map.png>
+Package pdftex.def Info: Images/ADCensus_aggregated_so/disparity_map.png used o
+n input line 201.
+(pdftex.def)             Requested size: 192.71953pt x 144.53964pt.
+ [5 <C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_IPOL_article/Images/ADC
+ensus_aggregated/disparity_map.png> <C:/Users/Yohann/Documents/GitHub/ADCensus/
+ADCensus_IPOL_article/Images/ADCensus_aggregated_so/disparity_map.png>]
+File: Images/ADCensus_aggregated_so/disparity_map.png Graphic file (type png)
+
+<use Images/ADCensus_aggregated_so/disparity_map.png>
+Package pdftex.def Info: Images/ADCensus_aggregated_so/disparity_map.png used o
+n input line 226.
+(pdftex.def)             Requested size: 192.71953pt x 144.53964pt.
+
+<Images/ADCensus_aggregated_so/disparity_occlusion.png, id=49, 385.44pt x 289.0
+8pt>
+File: Images/ADCensus_aggregated_so/disparity_occlusion.png Graphic file (type 
+png)
+ <use Images/ADCensus_aggregated_so/disparity_occlusion.png>
+Package pdftex.def Info: Images/ADCensus_aggregated_so/disparity_occlusion.png 
+used on input line 227.
+(pdftex.def)             Requested size: 192.71953pt x 144.53964pt.
+File: Images/tsukuba.png Graphic file (type png)
+
+<use Images/tsukuba.png>
+Package pdftex.def Info: Images/tsukuba.png used on input line 229.
+(pdftex.def)             Requested size: 192.71953pt x 144.53964pt.
+
+<Images/ADCensus_aggregated_so/disparity_occlusion_filled_smoothed.png, id=50, 
+385.44pt x 289.08pt>
+File: Images/ADCensus_aggregated_so/disparity_occlusion_filled_smoothed.png Gra
+phic file (type png)
+
+<use Images/ADCensus_aggregated_so/disparity_occlusion_filled_smoothed.png>
+Package pdftex.def Info: Images/ADCensus_aggregated_so/disparity_occlusion_fill
+ed_smoothed.png used on input line 230.
+(pdftex.def)             Requested size: 192.71953pt x 144.53964pt.
+
+[6 <C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_IPOL_article/Images/ADCe
+nsus_aggregated_so/disparity_occlusion.png> <C:/Users/Yohann/Documents/GitHub/A
+DCensus/ADCensus_IPOL_article/Images/ADCensus_aggregated_so/disparity_occlusion
+_filled_smoothed.png>]
+Overfull \hbox (29.40315pt too wide) in paragraph at lines 245--254
+ [] 
+ []
+
+<Images/cones.png, id=54, 451.6875pt x 376.40625pt>
+File: Images/cones.png Graphic file (type png)
+ <use Images/cones.png>
+Package pdftex.def Info: Images/cones.png used on input line 265.
+(pdftex.def)             Requested size: 103.88593pt x 86.57161pt.
+
+<Images/teddy.png, id=55, 451.6875pt x 376.40625pt>
+File: Images/teddy.png Graphic file (type png)
+ <use Images/teddy.png>
+Package pdftex.def Info: Images/teddy.png used on input line 266.
+(pdftex.def)             Requested size: 103.88593pt x 86.57161pt.
+File: Images/tsukuba.png Graphic file (type png)
+
+<use Images/tsukuba.png>
+Package pdftex.def Info: Images/tsukuba.png used on input line 267.
+(pdftex.def)             Requested size: 114.86243pt x 86.14682pt.
+ <Images/venus.png, id=56, 435.6275pt x 384.43625pt>
+File: Images/venus.png Graphic file (type png)
+
+<use Images/venus.png>
+Package pdftex.def Info: Images/venus.png used on input line 268.
+(pdftex.def)             Requested size: 98.0186pt x 86.50027pt.
+
+<Images/theorical_results/cones.png, id=57, 451.6875pt x 376.40625pt>
+File: Images/theorical_results/cones.png Graphic file (type png)
+
+<use Images/theorical_results/cones.png>
+Package pdftex.def Info: Images/theorical_results/cones.png used on input line 
+269.
+(pdftex.def)             Requested size: 103.88593pt x 86.57161pt.
+
+<Images/theorical_results/teddy.png, id=58, 451.6875pt x 376.40625pt>
+File: Images/theorical_results/teddy.png Graphic file (type png)
+
+<use Images/theorical_results/teddy.png>
+Package pdftex.def Info: Images/theorical_results/teddy.png used on input line 
+270.
+(pdftex.def)             Requested size: 103.88593pt x 86.57161pt.
+
+<Images/theorical_results/tsukuba.png, id=59, 385.44pt x 289.08pt>
+File: Images/theorical_results/tsukuba.png Graphic file (type png)
+
+<use Images/theorical_results/tsukuba.png>
+Package pdftex.def Info: Images/theorical_results/tsukuba.png used on input lin
+e 271.
+(pdftex.def)             Requested size: 114.86243pt x 86.14682pt.
+
+<Images/theorical_results/venus.png, id=60, 435.6275pt x 384.43625pt>
+File: Images/theorical_results/venus.png Graphic file (type png)
+
+<use Images/theorical_results/venus.png>
+Package pdftex.def Info: Images/theorical_results/venus.png used on input line 
+272.
+(pdftex.def)             Requested size: 98.0186pt x 86.50027pt.
+
+<Images/cones_disp.png, id=61, 451.6875pt x 376.40625pt>
+File: Images/cones_disp.png Graphic file (type png)
+
+<use Images/cones_disp.png>
+Package pdftex.def Info: Images/cones_disp.png used on input line 273.
+(pdftex.def)             Requested size: 103.88593pt x 86.57161pt.
+
+<Images/teddy_disp.png, id=62, 451.6875pt x 376.40625pt>
+File: Images/teddy_disp.png Graphic file (type png)
+
+<use Images/teddy_disp.png>
+Package pdftex.def Info: Images/teddy_disp.png used on input line 274.
+(pdftex.def)             Requested size: 103.88593pt x 86.57161pt.
+File: Images/tsukuba_disp.png Graphic file (type png)
+ <use Images/tsukuba_disp.png>
+Package pdftex.def Info: Images/tsukuba_disp.png used on input line 275.
+(pdftex.def)             Requested size: 114.86243pt x 86.14682pt.
+
+<Images/venus_disp.png, id=63, 435.6275pt x 384.43625pt>
+File: Images/venus_disp.png Graphic file (type png)
+
+<use Images/venus_disp.png>
+Package pdftex.def Info: Images/venus_disp.png used on input line 276.
+(pdftex.def)             Requested size: 98.0186pt x 86.50027pt.
+
+<Images/practical_results/cones.png, id=64, 451.6875pt x 376.40625pt>
+File: Images/practical_results/cones.png Graphic file (type png)
+
+<use Images/practical_results/cones.png>
+Package pdftex.def Info: Images/practical_results/cones.png used on input line 
+277.
+(pdftex.def)             Requested size: 103.88593pt x 86.57161pt.
+
+<Images/practical_results/teddy.png, id=65, 451.6875pt x 376.40625pt>
+File: Images/practical_results/teddy.png Graphic file (type png)
+
+<use Images/practical_results/teddy.png>
+Package pdftex.def Info: Images/practical_results/teddy.png used on input line 
+278.
+(pdftex.def)             Requested size: 103.88593pt x 86.57161pt.
+
+<Images/practical_results/tsukuba.png, id=66, 385.44pt x 289.08pt>
+File: Images/practical_results/tsukuba.png Graphic file (type png)
+
+<use Images/practical_results/tsukuba.png>
+Package pdftex.def Info: Images/practical_results/tsukuba.png used on input lin
+e 279.
+(pdftex.def)             Requested size: 114.86243pt x 86.14682pt.
+
+<Images/practical_results/venus.png, id=67, 435.6275pt x 384.43625pt>
+File: Images/practical_results/venus.png Graphic file (type png)
+
+<use Images/practical_results/venus.png>
+Package pdftex.def Info: Images/practical_results/venus.png used on input line 
+280.
+(pdftex.def)             Requested size: 98.0186pt x 86.50027pt.
+
+Overfull \hbox (7.71832pt too wide) in paragraph at lines 263--282
+ [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[7] [8] [9] [10 <C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_IPOL_articl
+e/Images/cones.png (PNG copy)> <C:/Users/Yohann/Documents/GitHub/ADCensus/ADCen
+sus_IPOL_article/Images/teddy.png (PNG copy)> <C:/Users/Yohann/Documents/GitHub
+/ADCensus/ADCensus_IPOL_article/Images/venus.png> <C:/Users/Yohann/Documents/Gi
+tHub/ADCensus/ADCensus_IPOL_article/Images/theorical_results/cones.png (PNG cop
+y)> <C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_IPOL_article/Images/the
+orical_results/teddy.png (PNG copy)> <C:/Users/Yohann/Documents/GitHub/ADCensus
+/ADCensus_IPOL_article/Images/theorical_results/tsukuba.png (PNG copy)> <C:/Use
+rs/Yohann/Documents/GitHub/ADCensus/ADCensus_IPOL_article/Images/theorical_resu
+lts/venus.png (PNG copy)> <C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_I
+POL_article/Images/cones_disp.png (PNG copy)> <C:/Users/Yohann/Documents/GitHub
+/ADCensus/ADCensus_IPOL_article/Images/teddy_disp.png (PNG copy)> <C:/Users/Yoh
+ann/Documents/GitHub/ADCensus/ADCensus_IPOL_article/Images/venus_disp.png> <C:/
+Users/Yohann/Documents/GitHub/ADCensus/ADCensus_IPOL_article/Images/practical_r
+esults/cones.png> <C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_IPOL_arti
+cle/Images/practical_results/teddy.png> <C:/Users/Yohann/Documents/GitHub/ADCen
+sus/ADCensus_IPOL_article/Images/practical_results/tsukuba.png> <C:/Users/Yohan
+n/Documents/GitHub/ADCensus/ADCensus_IPOL_article/Images/practical_results/venu
+s.png>]
 (C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_IPOL_article\ADCensus_MOPSI
-.aux) ) 
+.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 7281 strings out of 494045
- 98756 string characters out of 3145965
- 184147 words of memory out of 3000000
- 10471 multiletter control sequences out of 15000+200000
+ 7404 strings out of 494045
+ 102786 string characters out of 3145965
+ 185193 words of memory out of 3000000
+ 10575 multiletter control sequences out of 15000+200000
  12744 words of font info for 51 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 36i,7n,38p,675b,334s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><
-C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Progr
-am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Progra
-m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/dstroke/dsrom10.
-pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-
-Output written on ADCensus_MOPSI.pdf (7 pages, 238912 bytes).
+ 36i,13n,38p,677b,371s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmsy5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/dstroke/dsrom10.pfb><
+C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on ADCensus_MOPSI.pdf (10 pages, 2269303 bytes).
 PDF statistics:
- 106 PDF objects out of 1000 (max. 8388607)
+ 143 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 131 words of extra memory for PDF output out of 10000 (max. 10000000)
 

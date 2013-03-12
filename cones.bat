@@ -6,11 +6,11 @@ SET img=Cones
 SET img1=%pathfile%\Images\%img%\left_picture.png
 SET img2=%pathfile%\Images\%img%\right_picture.png
 
-SET dmin=-30
+SET dmin=-60
 SET dmax=0
 
 SET dmap=%pathfile%\Images\%img%\disparity_map.png
 
-SET cmd=%execfile% %img1% %img2% %dmin% %dmax% %dmap%
+SET cmd=%execfile% -O r %img1% %img2% %dmin% %dmax% %dmap%
 
 start %cmd%

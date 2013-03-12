@@ -57,7 +57,6 @@ bool save_disparity(const char* fileName, const LWImage<int>& disparity,
 }
 
 /// Compute disparity map from im1 to im2.
-/// TODO with agregation & census windows, borders are more and more truncated....
 static void disparity(LWImage<float> im1, LWImage<float> im2,
                       int dMin, int dMax,
                       LWImage<int>& disp1, LWImage<int>& disp2) {
@@ -87,7 +86,7 @@ static void disparity(LWImage<float> im1, LWImage<float> im2,
                     *c++ = out? 5: adCensus(x1, y, x2, y, params);
 				}
         }
-
+		
 		// agregate cost for each pichel in its adaptive window for each possible value of disparity
 		std::cout << "Phase 2: agregate cost" << std::endl;
 		for(int d=dMin; d<=dMax; ++d){
@@ -97,13 +96,13 @@ static void disparity(LWImage<float> im1, LWImage<float> im2,
 				horizontalFirst = !horizontalFirst;
 			}
 		}
-
+		
 		// compute scanline optimization
 		std::cout << "Phase 3: scanline optimization" << std::endl;
         float* oldCosts=costVol;
 		costVol = scanlineOptimization(costVol, params);
         delete [] oldCosts;
-
+		
 		// find lowest cost and explicit disparity
 		std::cout << "Phase 4: compute best disparity" << std::endl;
         LWImage<int>& disp = (image==0)? disp1: disp2;
