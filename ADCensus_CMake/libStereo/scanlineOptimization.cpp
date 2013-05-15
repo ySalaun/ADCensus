@@ -19,6 +19,9 @@
 #include <cmath>
 #include <algorithm>
 
+// temp
+#include <iostream>
+
 /// Compute the color difference of 2 pixels
 int colorDiff(const float* p1, const float* p2, const int wh){
 	int d, diff = 0;
@@ -75,10 +78,11 @@ void optim(const float* costs, float* soCosts,
     for(int d=dMin+1; d<=dMax; ++d)
         if(minCost > soCosts[(d-dMin)*h*w+x2*h+y2])
             minCost = soCosts[(d-dMin)*h*w+x2*h+y2];
+	float minkCr = minCost;
 
     for(int d=dMin; d<=dMax; ++d) {
         // C1(p,d) - min_k(Cr(p-r,k))
-        float soCost = costs[(d-dMin)*h*w+x1*h+y1]-minCost;
+        float soCost = costs[(d-dMin)*h*w+x1*h+y1]-minkCr;
 
         // compute P1 and P2 parameters for better scanline optimization
         float P1, P2;
@@ -93,8 +97,7 @@ void optim(const float* costs, float* soCosts,
         if(d != params.dMax && minCost > soCosts[(d-dMin+1)*h*w+x2*h+y2] + P1)
             minCost = soCosts[(d-dMin+1)*h*w+x2*h+y2] + P1;
 
-        soCost += minCost;
-        soCosts[(d-dMin)*h*w+x1*h+y1] = soCost;
+        soCosts[(d-dMin)*h*w+x1*h+y1] = soCost + minCost;
     }
 }
 
@@ -157,8 +160,9 @@ void scanlineOptimizationComputationH(const float* costs, int x0, int way,
 			tempor[(d-dMin)*h*w+x0*h+y] = costs[(d-dMin)*h*w+x0*h+y];
 
 	// computes horizontal so cost
-	for(int x=x0+way; 0<=x && x<w; x+=way)
+	for(int x=x0+way; 0<=x && x<w; x+=way){
 		scanlineOptimizationH(costs, tempor, x, x-way, params);
+	}
 
 	// add so cost into costSO table
 	for(int x=0; x<w; ++x)

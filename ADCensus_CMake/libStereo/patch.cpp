@@ -76,12 +76,12 @@ float adCensus(const int x1,const int y1, const int x2, const int y2, const PARA
 /// agregateCosts1D computes the agregated costs of a table costs in the direction (dx, dy) and with the borders given in params
 /// disparity gives the current disparity
 /// it returns a table of the agregated costs
-float* agregateCosts1D(const float* costs, const int dx, const int dy, int* windowSize, const PARAMETERS& p)
+float* agregateCosts1D(const float* costs, const int dx, const int dy, float* windowSize, const PARAMETERS& p)
 {
 	const int offset = p.activePicture*p.w*p.h;
 
-	float* agregatedCosts = new float[p.w*p.h];
-	int* tmpWindowSize = new int[p.w*p.h];
+	float* agregatedCosts	= new float[p.w*p.h];
+	float* tmpWindowSize	= new float[p.w*p.h];
 
 	// agregate costs in the direction (dx, dy)
 	for(int x=0; x<p.w; ++x){
@@ -127,7 +127,7 @@ void agregateCosts2D(float* costs, const bool horizontalFirst, const PARAMETERS&
         std::swap(dx,dy);
 	}
 
-	int* windowSize = new int[p.h*p.w];
+	float* windowSize = new float[p.h*p.w];
 	for(int x=0; x<p.w; ++x){
 		for(int y=0; y<p.h; ++y){
 			windowSize[x*p.h+y] = 1;
@@ -141,9 +141,6 @@ void agregateCosts2D(float* costs, const bool horizontalFirst, const PARAMETERS&
 		for(int x=0; x<p.w; ++x){
 			for(int y=0; y<p.h; ++y){
 				costs[x*p.h+y] = temporaryCosts[x*p.h+y];
-				/*if(i == 1){
-					costs[x*p.h+y] /= windowSize[x*p.h+y];
-				}*/
 			}
 		}
 
@@ -152,5 +149,12 @@ void agregateCosts2D(float* costs, const bool horizontalFirst, const PARAMETERS&
 		// change agregation direction
         std::swap(dx,dy);
 	}
+	// normalize windows
+	for(int x=0; x<p.w; ++x){
+		for(int y=0; y<p.h; ++y){
+			costs[x*p.h+y] /= windowSize[x*p.h+y];
+		}
+	}
+
 	delete[] windowSize;
 }

@@ -102,7 +102,7 @@ static void disparity(LWImage<float> im1, LWImage<float> im2,
         float* oldCosts=costVol;
 		costVol = scanlineOptimization(costVol, params);
         delete [] oldCosts;
-		
+
 		// find lowest cost and explicit disparity
 		std::cout << "Phase 4: compute best disparity" << std::endl;
         LWImage<int>& disp = (image==0)? disp1: disp2;
@@ -114,6 +114,9 @@ static void disparity(LWImage<float> im1, LWImage<float> im2,
 					if( lowCosts[x*h+y] > costVol[(d-dMin)*h*w+x*h+y]) {
 						lowCosts[x*h+y] = costVol[(d-dMin)*h*w+x*h+y];
 						*disp.pixel(x,y) = d;
+						if (lowCosts[x*h+y] < 0){
+							std::cout << lowCosts[x*h+y] << std::endl;
+						}
 					}
 	}
     delete [] lowCosts;
