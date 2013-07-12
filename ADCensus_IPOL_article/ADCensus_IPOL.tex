@@ -5,339 +5,334 @@
 %-------------------------------------------------------------------------------
 \documentclass{ipol}
 
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsbsy}
+\usepackage{amssymb}
+\usepackage{algorithm2e}
+\usepackage{graphicx}
+\usepackage{psfrag}
+\usepackage{epsfig}
+\usepackage{multicol}
+\usepackage{cite}
+\usepackage{color}
+\usepackage{dsfont}
+\usepackage[center]{caption}
+\usepackage{listings} 
+\usepackage{xcolor} 
+\usepackage{textcomp} 
+\usepackage{hyperref}
+
+\hypersetup{
+    bookmarks=true,         % show bookmarks bar?
+    unicode=false,          % non-Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true,        % show Acrobat’s toolbar?
+    pdfmenubar=true,        % show Acrobat’s menu?
+    pdffitwindow=false,     % window fit to page when opened
+    pdfstartview={FitH},    % fits the width of the page to the window
+    pdftitle={My title},    % title
+    pdfauthor={Author},     % author
+    pdfsubject={Subject},   % subject of the document
+    pdfcreator={Creator},   % creator of the document
+    pdfproducer={Producer}, % producer of the document
+    pdfkeywords={keyword1} {key2} {key3}, % list of keywords
+    pdfnewwindow=true,      % links in new window
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=blue,          % color of internal links (change box color with linkbordercolor)
+    citecolor=blue,        % color of links to bibliography
+    filecolor=magenta,      % color of file links
+    urlcolor=cyan,           % color of external links
+	pdfborder	= {0 0 0}
+}
+
 \ipolSetTitle{AD Census}
-\ipolSetAuthors{Yohann Salaun$^1$ \& Pascal Monasse$^2$}
+\ipolSetAuthors{Yohann Salaun$^1$ \& Pascal Monasse$^1$}
 \ipolSetAffiliations{%
-$^1$ Polytechnique, France (\texttt{yohann.salaun@polytechnique.org})\\
-$^2$ Imagine, ENPC, France (\texttt{})}
+$^1$  (\texttt{})}
 
 \begin{document}
 
 %-------------------------------------------------------------------------------
 \begin{abstract}
-This paper present a local stereo matching algorithm supposed to have good accuracy performances as shown by its position in Middlebury benchmark. Originally published in order to be developped on graphics hardware, only the accuracy performance will be studied in this article. The algorithm bases its matching cost with the AD-Census measure, aggregates in cross-based regions and finalizes it with scanline optimization. Methods are then used to detect outliers and correct them to finally give a disparity map that top performed in Middlebury benchmark.
+This paper presents a local stereo matching algorithm supposed to have good accuracy performances as shown by its position in Middlebury benchmark. Originally published in order to be developed on graphics hardware, only the accuracy performance will be studied in this article. The algorithm bases its matching cost with the AD-Census measure, aggregates in cross-based regions and finalizes it with scanline optimization. Methods are then used to detect outliers and correct them to finally give a disparity map that top performed in Middlebury benchmark.
 \end{abstract} 
 
 %-------------------------------------------------------------------------------
 \section{Overview}
 
-Stereo matching is one of the most active research areas in computer vision. Many algorithms have been proposed in the last decades and  \cite{stereoTaxonomy} presents and classify many of them.\\
-Stereo algorithms can be split into 2 main families: \textbf{local} and \textbf{global} algorithm. The first one will only compare pixels from one picture to the other in order to find the best matches and compute the corresponding disparity map. The second one describes the disparity map computation problem as an energy minimization one and computes the disparity of each pixel at once.\\
-Most of the time local methods are fast but lack of accuracy and global ones are accurate but take a lot of time to compute. The method \cite{adCensus}  presented below belongs to the local algorithm family and the aim of their author was to to produce an accurate real-time method with GPU parallelization. When the article was published (August 2011), this method was the top performer of Middleburry benchmark \cite{middleBench} and is now (January 2013) second top performer. The aim of this article is to study the quality of the disparity map produced by this algorithm, putting aside the GPU paralellization and the time performance.
+Stereo matching is one of the most active research areas in computer vision. Many algorithms have been proposed in the last decades and several have been presented and classified by Scharstein \textit{et al.} \cite{stereoTaxonomy}.\\
+The method \cite{adCensus} presented was aimed to be an accurate real-time method with GPU parallelization. When the article was published (August 2011), this method was the top performer of Middleburry benchmark \cite{middleBench} and is now (August 2013) second top performer. The aim of this article is to study the quality of the disparity map produced by this algorithm, putting aside the GPU parallelization and the time performance.\\
+
+\begin{figure}[h]
+\begin{center}	
+\begin{tabular}{ccc}
+\includegraphics[width=0.3\textwidth]{Images/pictures/tsukuba.png} &
+\includegraphics[width=0.3\textwidth]{Images/tsukuba/right.png} &
+\includegraphics[width=0.3\textwidth]{Images/true_disparity/tsukuba.png}
+\\
+Left picture & Right picture & Real disparity
+\end{tabular}
+	\caption{Tsukuba pair from the Middlebury benchmark \cite{middleBench} and its real disparity map.}
+\end{center}
+\end{figure}
 
 %-------------------------------------------------------------------------------
+\newpage
+
 \section{Matching cost computation}
 
-\subsection{AD-Census}
+A pixel of the left image $I^{LEFT}$ and a pixel of the right one $I^{RIGHT}$ are considered as matching points if they are on the same row and if their neighborhood intensity is about the same. In order to compare intensities, a matching cost is computed. The cost is initialized with comparison based on 2 matching candidates. Then, the cost of a picture are aggregated together in order to include the neighborhood in the comparison and thus be more robust to noise. 
 
-The cost used in this algorithm is the combination of two other costs:\\
-	- \textbf{ Absolute Difference} which computes the absolute difference of two pixel intensities.\\
-	- \textbf{ Census} which computes the difference of two pixel local structures\\
-\\ 
+\subsection{AD-Census Cost Measure}
+
+The cost function used in this algorithm is a combination of two other costs:
+\begin{itemize}
+	\item[$\bullet$]\textbf{ Absolute Difference} which computes the absolute difference of two pixel intensities.
+	\item[$\bullet$]\textbf{ Census} which computes the difference of two pixel local structures.
+\end{itemize}
+
 The absolute difference is a common matching cost, often used in disparity map computation for its good results. However it is lacking of accuracy in textureless regions. That is why the combination of two costs, supposed to improve the AD measure where its efficiency is too weak, has been used in this article.\\
 The absolute difference cost is then given by the formula:
 \[
 	C_{AD}(p, pd) = \frac{1}{3} \sum_{i = R, G, B}  | I_i^{LEFT}(p) - I_i^{RIGHT}(p+d) | 
 \]
 Here and in the whole article, $p$ will be a pixel in the left picture and $p + d$ will be its correspondent with disparity $d$ in the right picture.\\
-The census matching cost compares the local ordering of pixel intensities in a window of size 9 x 7.\\
+The census matching cost compares the relative ordering of pixel intensities in a window of size 9 x 7 with respect to the central pixel intensity. It will penalize when neighbors have greater relative intensities in one picture and lower ones in the other.\\
 The census cost formula can be given by:
 \[
-	C_{CENSUS}(p, pd) = \sum_{q \in windows(p)} I
+	C_{CENSUS}(p, pd) = \sum_{i = R, G, B} \sum_{q \in \text{Neighbors}(p)} \mathds{1}_{\mathbb{R}^-}\left[\left(I_i^{L}(q)-I_i^{L}(p)\right)\left(I_i^{R}(q+d)-I_i^{R}(p+d)\right)\right]
 \]
+where $\mathds{1}_{\mathbb{R}^-}$ is the indicator function of $\mathbb{R}^-$.\\
 The combination of these two costs is made with the function $\rho$ defined by:
 \[
 	\rho(cost, \lambda) = 1 - e^{-\frac{cost}{\lambda}}
 \]
-This function allow a better combination of the two costs by mapping their values into [0;1] where 0 stands for a perfect match and 1 for a total mismatch. Moreover, it allows us to easily define the limit between inliers and outliers separately for each cost.\\
-
-\subsection{ Cost aggregation }
-
-Once the cost is initialized with AD-Census as explained above, it is aggregated, for a given disparity, in windows in order to increase matching accuracy. The method used is inspired by the one proposed by \textit{ Zhang et al.} \cite{costAggreg}.
-The aggregation windows are computed independantly for each pixel and depends on the local structure of its neighbourhood (FIG. \ref{cost_computation}. The aim is to only take pixels that belong to the same structure in order to avoid occlusion issues.\\
+This function allows a better combination of the two costs by mapping their values into [0;1] where 0 stands for a perfect match and 1 for a total mismatch. Moreover, it allows us to easily define the limit between inliers and outliers separately for each cost.\\
+The final cost measure is given by :
+\[
+	C(p,pd) = \rho(C_{AD}, \lambda_{AD}) + \rho(C_{CENSUS}, \lambda_{CENSUS})
+\]
+The results of these different measures can be observed for the Tsukuba pair in figure \ref{ADCensusPics}.
 
 \begin{figure}[h]
 \begin{center}	
-\includegraphics[scale=0.8]{Images/cost_computation.png}
+\begin{tabular}{cc}
+\includegraphics[width=0.45\textwidth]{Images/tsukuba/disparity_map_AD_only.png} &
+\includegraphics[width=0.45\textwidth]{Images/tsukuba/disparity_map_Census_only.png}\\
+AD only & Census only\\
+\includegraphics[width=0.45\textwidth]{Images/pictures/tsukuba.png} &
+\includegraphics[width=0.45\textwidth]{Images/tsukuba/disparity_map_ADCensus_only.png}
+\\
+Left picture & AD Census 
+\end{tabular}
+	\caption{The AD measure is very noisy because the comparison window is too small but the edges are sharper whereas the Census measure has the opposite characteristics. The AD Census is the compromise of the 2 previous measures.}
+	\label{ADCensusPics}
+\end{center}
+\end{figure}
+
+\subsection{ Cost Aggregation }
+
+Once the cost is initialized with AD-Census as explained above, it is aggregated in windows in order to increase matching accuracy. The method used is inspired by the one proposed by \textit{ Zhang et al.} \cite{costAggreg}.
+The aggregation windows are computed independently for each pixel and depends on the local structure of their neighborhoods. The aim of these adaptive windows is to consider only the pixels that have similar intensities and thus that should belong to the same structures. This way, occlusion issues and fattening effects should be less existing.\\
+
+\begin{figure}[h]
+\begin{center}	
+\includegraphics[width=0.7\textwidth]{Images/cost_computation.png}
 	\label{cost_computation}
-	\caption{ The adaptive windows only keeps pixel that have strong enough color similarities with the pixel in its center.}
+	\caption{ The adaptive windows only keeps pixel that have strong enough color similarities with the pixel in its center. It also has a maximum size which avoid the case of huge windows.}
 \end{center}
 \end{figure}
 
-Thus, for each pixel $p$, upward, downard, leftward and rightward borders pixel $q$ are defined by being the last pixels in the given direction that assume:
-\begin{equation}
-	D_C(q, p) < \tau_1 \ \ and \ \ D_C(q, q_{predecessor}) < \tau_1
-	\label{cost_agg1}
-\end{equation}
-\begin{equation}
-	D_S(q, p) < L_1 
-	\label{cost_agg2}
-\end{equation}
-\begin{equation}
-	D_C(q, p) < \tau_2 < \tau_1 \ \ if \ \ L_2 <  D_S(q, p) < L_1
-	\label{cost_agg3}
-\end{equation}
+We then define, for each pixel $p$, upward, downard, leftward and rightward borders pixel $q$ with the following algorithm. The border pixel $q$ has to be the last pixel in a given direction that is such that:
+\begin{itemize}
+	\item[\textbf{1. }]$D_C(q, p) < \tau_1$ and $D_C(q, q_{predecessor}) < \tau_1$
+	\item[\textbf{2. }]$D_S(q, p) < L_1$
+	\item[\textbf{3. }]$D_C(q, p) < \tau_2 < \tau_1$ if $L_2 <  D_S(q, p) < L_1$
+\end{itemize}
 where $D_C(p, q) = \max_{i \in R, G, B} |I_i(p) - I_i(q)|$ is the color distance between 2 pixels and  $D_S(p, q) = |p - q|$ is the spatial distance between 2 pixels.\\
-Eq. \ref{cost_agg1} ensures that pixels which belong to the same window have a color similarity and that this similarity kept from the center of the window to the edge.\\
-Eq. \ref{cost_agg2} defines a limit size for the window.\\
-Eq. \ref{cost_agg3} allow bigger windows of size $L_1$ instead of $L_2$ only for textureless regions, when the pixels have strong color similarities.\\
-Two adaptive windows can then be defined depending on the order of aggregation. For each pixel $p$, the cost is aggregated horizontally (resp. vertically) with the borders defined above and then the cost is aggregated once again vertically (resp. horizontally). See FIG. \ref{cost_aggregation}.\\
-In order to get a stable cost volume, the cost is aggregated 4 times, twice horizontally first and twice vertically first.\\
+The first condition ensures that pixels which belong to the same window have enough color similarity and that this similarity is kept from the center of the window to the edge. The second defines a limit size for the window in order to avoid too large windows that would not perform better but would cost more computation time. The last condition reduce the maximal size of the window when the region is too textured.\\
+With the borders defined, the cost can be aggregated either horizontally first or vertically first. This way, two adaptive windows are defined depending on the order of aggregation. In order to get a stable cost volume, \cite{adCensus} advises us to compute the agregation 4 times, twice horizontally first and twice vertically first.\\
+The effect of the aggregation can be observed on figure \ref{soPics}.
 
 \begin{figure}[h]
 \begin{center}	
-\includegraphics[scale=0.8]{Images/cost_aggregation.png}
+\includegraphics[width=0.7\textwidth]{Images/cost_aggregation.png}
 	\label{cost_aggregation}
-	\caption{ The aggregation is done one direction after the other with the corresponding border pixels.}
+	\caption{The aggregation is done one direction after the other with the corresponding border pixels.}
 \end{center}
 \end{figure}
 
-For better matching results, a second aggregating step is then computed. It follows the multi-direction scanline optimizer developped by \textit{Hirschmuller REFFF}.\\
-Four scanline optimizations are processed independantly, leftward, rightward, upward and downward. For a given direction $r$, the cost is updated from the first column/line to the last with the following formula:
-\[
-	C_r (p, d) =  C(p, d) + min( C_r(p, d) , C_r(p-r, d+1) + P_1, C_r(p-r, d-1) + P_1, \min_k C_r(p-r, k) + P_2) - \min_k C_r(p-r, k)	
-\]
+\subsection{Scanline Optimization}
+
+For better matching results, a second aggregating step is then computed. It follows the multi-direction scanline optimizer developed by \textit{Hirschmuller} in \cite{scanlineOptim}. The idea is to refine the cost along one direction by comparing the cost of the neighboring pixels and disparities.\\
+Four scanline optimizations are thus processed independently, leftward, rightward, upward and downward. For a given direction $r$, the cost is updated from the first column/line to the last with the following formula:
+\begin{eqnarray*}
+	C_r (p, d) &=&
+	 C(p, d) - \min_k C_r(p-r, k)\\
+	 && + \min\left( C_r(p, d) , C_r(p-r, d+1) + P_1, C_r(p-r, d-1) + P_1, \min_k C_r(p-r, k) + P_2\right)
+\end{eqnarray*}
 where $p-r$ is the previous pixel along the direction $r$.\\
-$P_1 < P_2$ are parameters that penalize the disparity change between neighboring pixels. Thus, they depends on $D_1 = D_C(p, p-r)$ in the left picture and $D_2 = D_C(pd, pd-r)$ in the right picture. They are symmetrically set by the formula:
-\[
-	P_1 = \Pi_1, \ \ P_2 = \Pi_2, \ \ if \ \ D_1 < \tau_{SO} \ \ and \ \ D_2 < \tau_{SO}
-\]
-\[
-	P_1 = \frac{\Pi_1}{4}, \ \ P_2 =\frac{\Pi_2}{4}, \ \ if \ \ D_1 > \tau_{SO} \ \ and \ \ D_2 < \tau_{SO}
-\]
-\[
-	P_1 = \frac{\Pi_1}{4}, \ \ P_2 =\frac{\Pi_2}{4}, \ \ if \ \ D_1 < \tau_{SO} \ \ and \ \ D_2 > \tau_{SO}
-\]
-\[
-	P_1 = \frac{\Pi_1}{10}, \ \ P_2 =\frac{\Pi_2}{10}, \ \ if \ \ D_1 > \tau_{SO} \ \ and \ \ D_2 > \tau_{SO} \\
-\]
+$P_1 < P_2$ are parameters that penalize the disparity change between neighboring pixels. They depends on $D_1 = D_C(p, p-r)$ in the left picture and $D_2 = D_C(pd, pd-r)$ in the right picture. They are symmetrically set by the formulas:
+\begin{itemize}
+	\item[\textbf{1. }]$P_1 = \Pi_1, \ \ P_2 = \Pi_2,$ if $D_1 < \tau_{SO}$ and $D_2 < \tau_{SO}$
+	\item[\textbf{2. }]$P_1 = \frac{\Pi_1}{4}, \ \ P_2 =\frac{\Pi_2}{4},$ if $D_1 > \tau_{SO}$ and $D_2 < \tau_{SO}$
+	\item[\textbf{3. }]$P_1 = \frac{\Pi_1}{4}, \ \ P_2 =\frac{\Pi_2}{4},$ if $D_1 < \tau_{SO}$ and $D_2 > \tau_{SO}$
+	\item[\textbf{4. }]$P_1 = \frac{\Pi_1}{10}, \ \ P_2 =\frac{\Pi_2}{10},$ if $D_1 > \tau_{SO}$ and $D_2 > \tau_{SO}$
+\end{itemize}
 where $\Pi_1, \ \ \Pi_2 $ and $\tau_{SO}$ are parameters.\\
 \\
-Finally, the scanline optimization cost is the average of the 4 directionnal costs computed previously:
+Finally, the scanline optimization cost is the average of the 4 directional costs computed previously:
 \[
 	C(p, d) = \frac{1}{4} \sum_r C_r(p,d)
 \]
 
----------------------------------------------------------------\\
-There is no need for installation to use this class, just two files
-need to be copied to the same directory were are the \LaTeX\ source
-files. These files are the class itself, \verb|ipol.cls|, and the logo
-file, that can be either \verb|ipol_logo.eps| if you compile with
-\verb|latex| or \verb|ipol_logo.png| if you compile with
-\verb|pdflatex|. If not sure, just copy the three of these files.
-
-The minimal example of the class is as follows:
-\begin{verbatim}
-\documentclass{ipol}
-\begin{document}
-\end{document}
-\end{verbatim}
-It will only generates IPOL's header, including it's logo, and the
-words ``title'' and ``authors'' where the title and authors should be
-placed.  This example is useless but can be used to test your system.
-
-This class is based on the standard 'article' class of \LaTeX\ and it
-is used essentially in the same way. There are two main use
-instruction: the layout must not be changed and title is not generated
-with the usual \verb|\title|, \verb|\author|, \verb|\date|, and
-\verb|\maketitle| commands. Let us discuss one by one.
-
-This class was created to provide a uniform layout for IPOL articles,
-so no command should be used that would change the page layout: do not
-change paper size (it must be A4 paper), do not change the page
-margins, do not change the font type, size, or color.
-
-The commands \verb|\ipolSetTitle|, \verb|\ipolSetAuthors| and
-\verb|\ipolSetAffiliations|, are provided by the IPOL class to set the
-information needed to generate the title of the article. These
-commands must be used in the preamble of the \LaTeX\ file, that is
-between the \verb|\documentclass{ipol}| and \verb|\begin{document}|
-commands. This is important, otherwise the title will not be generated
-correctly. As the name of the commands imply, \verb|\ipolSetTitle| is
-used to set the title of the article, \verb|\ipolSetAuthors| is used
-to set the article's authors, and \verb|\ipolSetAffiliations| is used
-to set the authors affiliations. This last command is optional. The
-following is an example of how to use it:
-\begin{verbatim}
-\documentclass{ipol}
-\ipolSetTitle{Ceci n'est pas un article}
-\ipolSetAuthors{Rafael Grompone von Gioi}
-\ipolSetAffiliations{CMLA, ENS Cachan, France}
-\begin{document}
-\end{document}
-\end{verbatim}
-If there are more than one author, and they have different affiliations,
-they may be indicated as follows:
-\begin{verbatim}
-\documentclass{ipol}
-\ipolSetTitle{Ceci n'est pas un article}
-\ipolSetAuthors{Rafael Grompone von Gioi$^1$ \& Raphael Toucour$^2$}
-\ipolSetAffiliations{$^1$ CMLA, ENS Cachan, France\\
-                     $^2$ IIE, UdelaR, Uruguay}
-\begin{document}
-\end{document}
-\end{verbatim}
-For the rest, the class is used as the standard ``article'' class:
-packages or definitions can be added in the preamble, and the main
-text can contain sections, subsections, mathematics, figures, tables,
-etc.
-
-The rest of this document describes some special command for IPOL and
-briefly comments on some conditions that will be imposed for a final
-article, just before publishing at IPOL. (These restrictions are not
-necessary for submissions but will reduce the work later.)
-
-%-------------------------------------------------------------------------------
-\section{Specific IPOL Commands}
-
-Once an article is published at IPOL it will be assigned a DOI number
-and a universal DOI web address to refer to it. The IPOL class
-provides a command that will later contain the article's DOI number
-(\verb|\ipolDOI|) and a command that will contain the article's web
-address (\verb|\ipolLink|). These are the only reference that should
-be used for the IPOL article itself and to its complementary contents
-on the web.
-
-These commands will have a default value in a preprint version, but
-once the paper is accepted they will be replaced by the right value.
-One may want to have a valid link while the article is being prepared
-and peer reviewed. For that purpose, the command \verb|\ipolPreprintLink|
-is used to set the article link \verb|\ipolLink| to a temporary
-value. For example,
-\begin{verbatim}
-\ipolPreprintLink{https://tools.ipol.im/wiki/ref/manuscript_guidelines/}
-\end{verbatim}
-This command should be used in the document's preamble (i.e., after
-\verb|\documentclass{ipol}| and before \verb|\begin{document}|).
-
-The command \verb|\ipolLink| only provides the address of the
-corresponding IPOL article. To produce a link with it or other
-address, the command \verb|\href{}{}| should be used. The first
-parameter is the link address while the second is the text that will
-be shown in the resulting document. Also, to be able to read the
-address in a printed version of the document, the address is also
-printed as footnote. For example, the commands
-\begin{verbatim}
-\href{\ipolLink}{the article page}
-\href{https://tools.ipol.im/wiki/ref/manuscript_guidelines/}{guidelines}
-\end{verbatim}
-produce the following links:
-\href{\ipolLink}{the article page} and
-\href{https://tools.ipol.im/wiki/ref/manuscript_guidelines/}{guidelines}.
-
-Two particular environments are defined to generate two particular
-parts of IPOL articles: \verb|ipolCode| and \verb|ipolSupp|. The first
-one generates the ``Source Code'' description paragraph while the
-second generates the ``Supplementary Material'' description
-paragraph. These environment work similarly as the ``abstract'' and
-should be used after the \verb|\begin{document}| and before the main
-text of the article. The following is an example:
-\begin{verbatim}
-\documentclass{ipol}
-\ipolSetTitle{Ceci n'est pas un article}
-\ipolSetAuthors{Rafael Grompone von Gioi}
-\begin{document}
-
-\begin{abstract}
-A short description of the article.
-\end{abstract}
-
-\begin{ipolCode}
-Description of the source code to be found \href{\ipolLink}{here}.
-\end{ipolCode}
-
-\begin{ipolSupp}
-Some articles could provide additional material, not part of the
-peer reviewed article but related and useful. It should be found at
-\href{\ipolLink}{the web page}.
-\end{ipolSupp}
-
-\section{Introduction}
-The article main text starts here.
-
-\end{document}
-\end{verbatim}
-
-%-------------------------------------------------------------------------------
-\section{IPOL final article restrictions}
-
-This document describes IPOL \LaTeX\ class that provides a uniform
-layout for IPOL articles. Authors should also check the
-\href{https://tools.ipol.im/wiki/ref/manuscript_guidelines/}{IPOL
-  manuscript guidelines} where the requirements and suggestions about
-the contents, style and description detail for IPOL articles are
-described.
-
-The PDF files for IPOL submissions are generated by the authors using
-any method that produces a readable PDF file. Once an article is
-accepted, however, the final version will be generated at IPOL servers
-in order to provide PDF files with controlled sizes and resolutions
-conditions. For that aim, there are some restrictions that must be
-imposed to the source files. In what follows are described the main
-restrictions, but more details are described
-\href{https://tools.ipol.im/wiki/ref/manuscript_guidelines/}{here}.
-
-The final documents will be generated using pdf\LaTeX. This forces
-some restrictions, in particular the only graphical formats directly
-accepted are PNG, JPEG and PDF itself. Images or figures in other kind
-of formats should be converted to one of these.
-
-The files and directories must follow a strict naming as defined
-\href{https://tools.ipol.im/wiki/ref/manuscript_guidelines/}{here}.
-
-Finally, the authors must warrant to be the authors of every part
-of the final article, or must include permission of the copyright
-holder. In particular, if images not owned by the authors are used,
-the authors and permissions to be used must be included in the article.
-For example, by adding a final section as follows:
-\begin{verbatim}
-\section*{Image Credits}
-
-\includegraphics[height=2em]{image1.png}
-\href{http://a.link.here}{Courtesy of Name Surname}
+\begin{figure}[h]
+\begin{center}	
+\begin{tabular}{cc}
+\includegraphics[width=0.45\textwidth]{Images/tsukuba/disparity_map_ADCensus_only.png} & 
+\includegraphics[width=0.45\textwidth]{Images/tsukuba/disparity_map_ADCensus_aggregated.png}
 \\
-\includegraphics[height=2em]{image2.png}
-\copyright\ Pierre Dupont
+without aggregation & with aggregation \\
+\includegraphics[width=0.45\textwidth]{Images/pictures/tsukuba.png} &
+\includegraphics[width=0.45\textwidth]{Images/tsukuba/disparity_map_ADCensus_aggregated_so.png}
 \\
-\includegraphics[height=2em]{image3.png}
-the authors
-\end{verbatim}
+Left picture & with aggregation and \\
+& scanline optimization
+\end{tabular}
+	\caption{The aggregation has a sort of denoising effect but creates some artifacts due to the fattening effect. The scanline optimization does not seem to be very effective.}
+	\label{soPics}
+\end{center}
+\end{figure}
 
-%-------------------------------------------------------------------------------
-\section*{Image Credits}
+\section{Disparity Refinement}
 
-\includegraphics[height=2em]{ipol_logo} \copyright\ IPOL (there's no
-need to credit this image, here is used as an example.)
+The aim of this part is to find the outliers in the disparity maps of the right and the left picture. Once they are found, their intensities are replaced by new one computed with the information found on the neighboring inliers. The original article
+\cite{adCensus} proposes many methods in order to find outliers and correct their values.\\
+The first one is the left-right consistency check that is commonly used for refinement. It consists of declaring outliers all the pixels whose disparity is not consistent between left and right picture:
+\[
+	p \text{ is declared outlier } \Leftrightarrow \text{disparity}(p) \neq \text{disparity}(p+d)
+\]
+However, even if \cite{adCensus} does not precise it, we consider that pixels that checks the equality above with an error of $\pm 1$ are not considered as outliers. In fact, as the disparity is an integer, many good matches would be declared as outliers.\\
+The other methods of refinement presented by \cite{adCensus} were not enough detailed so we used another algorithm implemented in \cite{ipolFill} and inspired by \cite{cvFill}.
+The main idea of this filling algorithm is to consider that the rejected pixels are mainly occluded pixels. Thus, the algorithm looks for the nearest non occluded pixel on the same line and assign its disparity. Then, in order to avoid streak-line artifacts, this line-oriented procedure is followed by a smoothness filtering using bilateral filter.
 
-\section{References}
+\begin{figure}[h]
+\begin{center}	
+\begin{tabular}{cc}
+\includegraphics[width=0.45\textwidth]{Images/tsukuba/disparity_map_ADCensus_aggregated_so.png} &
+\includegraphics[width=0.45\textwidth]{Images/tsukuba/disparity_occlusion_ADCensus_aggregated_so.png} \\
+disparity map & outliers detection \\
+\includegraphics[width=0.45\textwidth]{Images/pictures/tsukuba.png} &
+\includegraphics[width=0.45\textwidth]{Images/tsukuba/disparity_occlusion_filled_smoothed_ADCensus_aggregated_so.png}\\
+Left picture & outliers filled
+\end{tabular}
+	\caption{The scanline optimization does not seem to be very effective.}
+	\label{refinePics}
+\end{center}
+\end{figure}
 
-\begin{thebibliography}{9}
-\bibitem{middleBench}
-	D. Scharstein and R. Szeliski,
-	\emph{ Middlebury benchmark}.
-	vision.middlebury.edu/stereo/
+\newpage
 
-\bibitem{adCensus}
-	X. Mei, X. Sun, M. Zhou, S. Jiao, H. Wang, and X. Zhang,
-	\emph{On building an accurate stereo matching system on graphics hardware}.
-	GPUCV,
-	2011.
+\section{Results}
 
-\bibitem{stereoTaxonomy}
-	D. Scharstein and R. Szeliski,
-   	\emph{ A taxonomy and evaluation of dense two-frame stereo correspondence algorithms}.
-	International Journal of Computer Vision, 
-	47(1/2/3):7-42, 
-	April-June 2002.
+The default parameters are the same than the one presented in \cite{adCensus} and are summed up in table \ref{params}.
+\begin{table}[htbp]
+\begin{center}
+  \begin{tabular}{||c|c|c||c|c|c|c|c||c|c|c||}
+		\hline
+		\multicolumn{3}{||c||}{AD Census} & \multicolumn{5}{c||}{Cost Aggregation} & \multicolumn{3}{c||}{Scanline Optimization}\\
+		\hline
+		$\lambda_{AD}$ & $\lambda_{CENSUS}$ & Census window & $L_1$ & $L_2$ & $\tau_1$ & $\tau_2$ & Iterations & $\Pi_1$ & $\Pi_2$ & $\tau_{SO}$\\
+		\hline
+		10 & 30 & 9$\times$7 & 34 & 17 & 20 & 6 & H-V-H-V & 1 & 3 & 15\\
+		\hline
+\end{tabular}
+\end{center}
+\caption{Default parameters used for the algorithm.\\ H (resp. V) is for a horizontally-first (resp. vertically-first) cost aggregation.}
+\label{params}
+\end{table}
 
-\bibitem{costAggreg}
-	K. Zhang, J. Lu, and G. Lafruit,
-	\emph{ Cross-based local stereo matching using orthogonal integral images}.
-	 IEEE TCSVT,
-	19(7):1073–1079,
-	2009.
+The algorithm has run on the Middlebury database in order to be compared with the results obtained in \cite{adCensus}. Even though the method used for refinement is totally different between our algorithm and the method presented in \cite{adCensus}, some artifacts that should disappear thanks to the cost computation processus can be seen in our final disparity map.
 
-\end{thebibliography}
+\subsection{Census}
+
+TO CHANGE
+
+In \cite{adCensus}, the AD Census measure is presented as a method that can find the good disparity in textureless region while the AD measure alone cannot. In fact, our results show that the Census measure is better than the AD measure in textureless region. However, the AD-Census measure as presented in \cite{adCensus} and implemented in our algorithm is less efficient than Census alone in such regions. One solution could be that the coefficients used to run our algorithm and supposed to be the same as \cite{adCensus} are not strictly the same. Assigning a larger weight for Census measure could then maybe solve this issue.
+
+\begin{figure}[h]
+\begin{center}	
+\begin{tabular}{ccccc}
+\includegraphics[width=0.18\textwidth]{Images/pictures/teddy_crop.png} &
+\includegraphics[width=0.18\textwidth]{Images/theorical_results/teddy_crop.png} &
+\includegraphics[width=0.18\textwidth]{Images/practical_results/teddy_crop.png} &
+\includegraphics[width=0.18\textwidth]{Images/practical_results/teddy_census_crop.png} &
+\includegraphics[width=0.18\textwidth]{Images/practical_results/teddy_ad_census_crop.png} \\
+left picture & results obtained in \cite{adCensus} & our results without & census and & ad census and\\
+& & outliers filling & aggregation only & aggregation only\\
+\end{tabular}
+	\caption{Comparison of the different measures in textureless region.}
+	\label{censusPics}
+\end{center}
+\end{figure}
+
+\subsection{Scanline Optimization}
+
+No real results are shown in \cite{adCensus} about the before and after of the scanline optimization. However, when running our algorithm, no meaningful difference can be observed. In fact, some noise disappear but also appear on different places. Once again, it could be a 
+difference between the parameters used to run the algorithm though we used the same presented in the article.
+
+\begin{figure}[h]
+\begin{center}	
+\begin{tabular}{cc}
+\includegraphics[width=0.45\textwidth]{Images/tsukuba/disparity_map_ADCensus_aggregated.png} &
+\includegraphics[width=0.45\textwidth]{Images/tsukuba/disparity_map_ADCensus_aggregated_so.png} \\
+before & after\\
+\end{tabular}
+	\caption{Comparison between before and after scanline optimization.}
+	\label{censusPics}
+\end{center}
+\end{figure}
+
+\begin{figure}[h]
+\begin{center}	
+\begin{tabular}{cccc}
+Cones & Teddy & Tsukuba & Venus\\
+\includegraphics[width=0.220\textwidth]{Images/pictures/cones.png} &
+\includegraphics[width=0.220\textwidth]{Images/pictures/teddy.png} &
+\includegraphics[width=0.245\textwidth]{Images/pictures/tsukuba.png} &
+\includegraphics[width=0.210\textwidth]{Images/pictures/venus.png}\\
+\includegraphics[width=0.220\textwidth]{Images/theorical_results/cones.png} &
+\includegraphics[width=0.220\textwidth]{Images/theorical_results/teddy.png} &
+\includegraphics[width=0.245\textwidth]{Images/theorical_results/tsukuba.png} &
+\includegraphics[width=0.210\textwidth]{Images/theorical_results/venus.png}\\
+\includegraphics[width=0.220\textwidth]{Images/true_disparity/cones.png} &
+\includegraphics[width=0.220\textwidth]{Images/true_disparity/teddy.png} &
+\includegraphics[width=0.245\textwidth]{Images/true_disparity/tsukuba.png} &
+\includegraphics[width=0.210\textwidth]{Images/true_disparity/venus.png}\\
+\includegraphics[width=0.220\textwidth]{Images/practical_results/cones.png} &
+\includegraphics[width=0.220\textwidth]{Images/practical_results/teddy.png} &
+\includegraphics[width=0.245\textwidth]{Images/practical_results/tsukuba.png} &
+\includegraphics[width=0.210\textwidth]{Images/practical_results/venus.png}\\
+\includegraphics[width=0.220\textwidth]{Images/after_correction/cones.png} &
+\includegraphics[width=0.220\textwidth]{Images/after_correction/teddy.png} &
+\includegraphics[width=0.245\textwidth]{Images/after_correction/tsukuba.png} &
+\includegraphics[width=0.210\textwidth]{Images/after_correction/venus.png}\\
+\end{tabular}
+	\caption{The 4 pictures used for the ranking in middlebury benchmark. First line shows the left picture of each pair, second line the results obtained by \cite{adCensus}, third line the truth presented in \cite{middleBench} and the last two show the results obtained with our algorithm (before and after outliers correction).}
+	\label{middlPics}
+\end{center}
+\end{figure}
+
+\newpage
+
+\section{Conclusion}
+
+Finally, the article \cite{adCensus} giving no sufficient details, the algorithm that we implemented is too different from the original one that topped the Middlebury benchmark. Thus, the quality of the disparity map obtained by our algorithm cannot really be a proof that \cite{adCensus} works or does not work well. However, the results presented in the previous part seem to contradict a bit its good performances and the choices made for the algorithm.\\
+The work to be done from now would be to suppose that the parameters given  are not necessarily the best (even for the Middlebury benchmark only) Then we could try with many different parameters and see if their choices really influence the results.\\
+What can be said about \cite{adCensus} is that an algorithm has been implemented and perform very well for the Cones, Teddy, Tsukuba and Venus pictures. However, we do not really know how far this algorithm is from the article and thus its implementation cannot be performed without the authors' participation. Because of this difference, we cannot say if it outperforms only Middlebury benchmark or if it is really one of the current state of the art method about disparity computation.
+
+\bibliographystyle{plain}
+\bibliography{literature}
 
 \end{document}
 %-------------------------------------------------------------------------------

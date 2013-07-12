@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.10.11)  12 MAR 2013 11:41
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.7.11)  12 JUL 2013 17:12
 entering extended mode
 **ADCensus_IPOL.tex
 
@@ -8,13 +8,13 @@ LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
 croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
-lician, german, german-x-2009-06-19, greek, gujarati, hindi, hungarian, iceland
-ic, indonesian, interlingua, irish, italian, kannada, kurmanji, lao, latin, lat
-vian, lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerm
-an, ngerman-x-2009-06-19, nynorsk, oriya, panjabi, pinyin, polish, portuguese, 
-romanian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swis
-sgerman, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, u
-senglishmax, welsh, loaded.
+lician, german, german-x-2012-05-30, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
+ lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
+german-x-2012-05-30, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
+an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
+ishmax, welsh, loaded.
 (C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_IPOL_article\ipol.cls
 Document Class: ipol 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
@@ -54,7 +54,7 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gread@gobject=\count87
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
-Package: hyperref 2012/05/13 v6.82q Hypertext links for LaTeX
+Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
 Package: hobsub-hyperref 2012/04/25 v1.12 Bundle oberdiek, subset hyperref (HO)
@@ -108,6 +108,9 @@ Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
+Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
+)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
@@ -116,43 +119,44 @@ Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 \Hy@pagecounter=\count89
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
-File: pd1enc.def 2012/05/13 v6.82q Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 )
 \Hy@SavedSpaceFactor=\count90
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 3941.
+Package hyperref Info: Option `colorlinks' set `true' on input line 4319.
 
 
 Package hyperref Warning: Option `pagecolor' is not available anymore.
 
-Package hyperref Info: Hyper figures OFF on input line 4062.
-Package hyperref Info: Link nesting OFF on input line 4067.
-Package hyperref Info: Hyper index ON on input line 4070.
-Package hyperref Info: Plain pages OFF on input line 4077.
-Package hyperref Info: Backreferencing OFF on input line 4082.
+Package hyperref Info: Hyper figures OFF on input line 4443.
+Package hyperref Info: Link nesting OFF on input line 4448.
+Package hyperref Info: Hyper index ON on input line 4451.
+Package hyperref Info: Plain pages OFF on input line 4458.
+Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4300.
+Package hyperref Info: Bookmarks ON on input line 4688.
 \c@Hy@tempcnt=\count91
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ltxmisc\url.sty"
 \Urlmuskip=\muskip10
 Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 4653.
+LaTeX Info: Redefining \url on input line 5041.
+\XeTeXLinkMargin=\dimen104
 \Fld@menulength=\count92
-\Field@Width=\dimen104
-\Fld@charsize=\dimen105
-Package hyperref Info: Hyper figures OFF on input line 5773.
-Package hyperref Info: Link nesting OFF on input line 5778.
-Package hyperref Info: Hyper index ON on input line 5781.
-Package hyperref Info: backreferencing OFF on input line 5788.
-Package hyperref Info: Link coloring ON on input line 5791.
-Package hyperref Info: Link coloring with OCG OFF on input line 5798.
-Package hyperref Info: PDF/A mode OFF on input line 5803.
-LaTeX Info: Redefining \ref on input line 5843.
-LaTeX Info: Redefining \pageref on input line 5847.
+\Field@Width=\dimen105
+\Fld@charsize=\dimen106
+Package hyperref Info: Hyper figures OFF on input line 6295.
+Package hyperref Info: Link nesting OFF on input line 6300.
+Package hyperref Info: Hyper index ON on input line 6303.
+Package hyperref Info: backreferencing OFF on input line 6310.
+Package hyperref Info: Link coloring ON on input line 6313.
+Package hyperref Info: Link coloring with OCG OFF on input line 6320.
+Package hyperref Info: PDF/A mode OFF on input line 6325.
+LaTeX Info: Redefining \ref on input line 6365.
+LaTeX Info: Redefining \pageref on input line 6369.
 \Hy@abspage=\count93
 \c@Item=\count94
 \c@Hfootnote=\count95
@@ -161,7 +165,7 @@ LaTeX Info: Redefining \pageref on input line 5847.
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
-File: hpdftex.def 2012/05/13 v6.82q Hyperref driver for pdfTeX
+File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
 \Fld@listcount=\count96
 \c@bookmark@seq@number=\count97
 
@@ -186,206 +190,902 @@ File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 )
-\Gin@req@height=\dimen106
-\Gin@req@width=\dimen107
+\Gin@req@height=\dimen107
+\Gin@req@width=\dimen108
 ))
-(C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_IPOL_article\ADCensus_IPOL.
-aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
- ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count98
-\scratchdimen=\dimen108
-\scratchbox=\box26
-\nofMPsegments=\count99
-\nofMParguments=\count100
-\everyMPshowfont=\toks15
-\MPscratchCnt=\count101
-\MPscratchDim=\dimen109
-\MPnumerator=\count102
-\makeMPintoPDFobject=\count103
-\everyMPtoPDFconversion=\toks16
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip44
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks15
+\ex@=\dimen109
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen110
 )
-\AtBeginShipoutBox=\box27
-Package hyperref Info: Link coloring ON on input line 14.
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count98
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count99
+\leftroot@=\count100
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count101
+\DOTSCASE@=\count102
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen111
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count103
+\c@MaxMatrixCols=\count104
+\dotsspace@=\muskip11
+\c@parentequation=\count105
+\dspbrk@lvl=\count106
+\tag@help=\toks16
+\row@=\count107
+\column@=\count108
+\maxfields@=\count109
+\andhelp@=\toks17
+\eqnshift@=\dimen112
+\alignsep@=\dimen113
+\tagshift@=\dimen114
+\tagwidth@=\dimen115
+\totwidth@=\dimen116
+\lineht@=\dimen117
+\@envbody=\toks18
+\multlinegap=\skip45
+\multlinetaggap=\skip46
+\mathdisplay@stack=\toks19
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+(C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_IPOL_article\algorithm2e.st
+y
+Package: algorithm2e 2005/10/04 v3.9 algorithms environments
+\c@AlgoLine=\count110
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\xspace.sty"
+Package: xspace 2009/10/20 v1.13 Space after command names (DPC,MH)
+)
+********************************************************
+Package `algorithm2e' Release 3.9 -- october 04 2005 --
+- algorithm2e-announce@lirmm.fr mailing list for announcement about releases
+- algorithm2e-discussion@lirmm.fr mailing list for discussion about package
+subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
+- Author: Christophe Fiorio (fiorio@lirmm.fr)
+********************************************************
+\skiptotal=\skip47
+\skiprule=\skip48
+\skiphlne=\skip49
+\skiptext=\skip50
+\skiplength=\skip51
+\algomargin=\skip52
+\skipalgocfslide=\skip53
+\algowidth=\dimen118
+\inoutsize=\dimen119
+\inoutline=\dimen120
+\algocf@inoutbox=\box28
+\algocf@inputbox=\box29
+\AlCapSkip=\skip54
+\AlCapHSkip=\skip55
+\algocf@capbox=\box30
+\c@algocfline=\count111
+\c@algocf=\count112
+\algocf@algoframe=\box31
+\algocf@algobox=\box32
+) (C:\Users\Yohann\AppData\Roaming\MiKTeX\2.9\tex\latex\psfrag\psfrag.sty
+Package: psfrag 1998/04/11 v3.04 PSfrag (MCG)
+\pfg@pcount=\count113
+\pfg@scount=\count114
+\pfg@temp=\write3
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\epsfig.sty"
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+\epsfxsize=\dimen121
+\epsfysize=\dimen122
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\multicol.sty"
+Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
+\c@tracingmulticols=\count115
+\mult@box=\box33
+\multicol@leftmargin=\dimen123
+\c@unbalance=\count116
+\c@collectmore=\count117
+\doublecol@number=\count118
+\multicoltolerance=\count119
+\multicolpretolerance=\count120
+\full@width=\dimen124
+\page@free=\dimen125
+\premulticols=\dimen126
+\postmulticols=\dimen127
+\multicolsep=\skip56
+\multicolbaselineskip=\skip57
+\partial@page=\box34
+\last@line=\box35
+\mult@rightbox=\box36
+\mult@grightbox=\box37
+\mult@gfirstbox=\box38
+\mult@firstbox=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\@tempa=\box50
+\@tempa=\box51
+\@tempa=\box52
+\@tempa=\box53
+\@tempa=\box54
+\@tempa=\box55
+\@tempa=\box56
+\c@columnbadness=\count121
+\c@finalcolumnbadness=\count122
+\last@try=\dimen128
+\multicolovershoot=\dimen129
+\multicolundershoot=\dimen130
+\mult@nat@firstbox=\box57
+\colbreak@box=\box58
+\multicol@sort@counter=\count123
+)
+(C:\Users\Yohann\AppData\Roaming\MiKTeX\2.9\tex\latex\cite\cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 373.
+Package: cite 2010/09/10  v 5.3
+)
+(C:\Users\Yohann\AppData\Roaming\MiKTeX\2.9\tex\latex\dstroke\dsfont.sty
+Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
+)
+(C:\Users\Yohann\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+(C:\Users\Yohann\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen131
+\captionmargin@=\dimen132
+\captionwidth=\dimen133
+\caption@tempdima=\dimen134
+\caption@indent=\dimen135
+\caption@parindent=\dimen136
+\caption@hangindent=\dimen137
+)
+\c@ContinuedFloat=\count124
+Package caption Info: hyperref package is loaded.
+)
+(C:\Users\Yohann\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.sty
+\lst@mode=\count125
+\lst@gtempboxa=\box59
+\lst@token=\toks20
+\lst@length=\count126
+\lst@currlwidth=\dimen138
+\lst@column=\count127
+\lst@pos=\count128
+\lst@lostspace=\dimen139
+\lst@width=\dimen140
+\lst@newlines=\count129
+\lst@lineno=\count130
+\lst@maxwidth=\dimen141
+
+(C:\Users\Yohann\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmisc.sty
+File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
+\c@lstnumber=\count131
+\lst@skipnumbers=\count132
+\lst@framebox=\box60
+)
+(C:\Users\Yohann\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.cfg
+File: listings.cfg 2007/02/22 1.4 listings configuration
+))
+Package: listings 2007/02/22 1.4 (Carsten Heinz)
+
+(C:\Users\Yohann\AppData\Roaming\MiKTeX\2.9\tex\latex\xcolor\xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+LaTeX Info: Redefining \color on input line 702.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\textcomp.sty"
+Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 71.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1enc.def"
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+)
+LaTeX Info: Redefining \oldstylenums on input line 266.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 281.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 282.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 283.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 284.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 285.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 286.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 287.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 288.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 289.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 290.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 291.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 292.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 293.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 294.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 295.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 296.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 297.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 298.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 299.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 300.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 301.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 302.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 303.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 304.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 305.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 306.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 307.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 308.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 309.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 310.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 311.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 312.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 313.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 314.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 315.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 316.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 317.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 318.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 319.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 320.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 321.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 322.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 323.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 324.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 325.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 326.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 327.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 328.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 329.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 330.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 331.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 332.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 333.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 334.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 335.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 336.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 337.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 338.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 339.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 340.
+)
+
+Package hyperref Warning: Option `bookmarks' has already been used,
+(hyperref)                setting the option has no effect on input line 46.
+
+Package hyperref Info: Option `unicode' set `false' on input line 46.
+Package hyperref Info: Option `pdftoolbar' set `true' on input line 46.
+Package hyperref Info: Option `pdfmenubar' set `true' on input line 46.
+Package hyperref Info: Option `pdffitwindow' set `false' on input line 46.
+Package hyperref Info: Option `pdfnewwindow' set `true' on input line 46.
+Package hyperref Info: Option `colorlinks' set `true' on input line 46.
+
+(C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_IPOL_article\ADCensus_IPOL.
+aux
+
+LaTeX Warning: Label `censusPics' multiply defined.
+
+)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 53.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 53.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 53.
+
+(C:\Users\Yohann\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count133
+\scratchdimen=\dimen142
+\scratchbox=\box61
+\nofMPsegments=\count134
+\nofMParguments=\count135
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count136
+\MPscratchDim=\dimen143
+\MPnumerator=\count137
+\makeMPintoPDFobject=\count138
+\everyMPtoPDFconversion=\toks22
+)
+\AtBeginShipoutBox=\box62
+Package hyperref Info: Link coloring ON on input line 53.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
-Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count104
+\c@section@level=\count139
 )
-LaTeX Info: Redefining \ref on input line 14.
-LaTeX Info: Redefining \pageref on input line 14.
-LaTeX Info: Redefining \nameref on input line 14.
+LaTeX Info: Redefining \ref on input line 53.
+LaTeX Info: Redefining \pageref on input line 53.
+LaTeX Info: Redefining \nameref on input line 53.
 
 (C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_IPOL_article\ADCensus_IPOL.
 out)
 (C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_IPOL_article\ADCensus_IPOL.
 out)
-\@outlinefile=\write3
- <ipol_logo.png, id=31, 707.64375pt x 324.21124pt>
+\@outlinefile=\write4
+ <ipol_logo.png, id=43, 707.64375pt x 324.21124pt>
 File: ipol_logo.png Graphic file (type png)
  <use ipol_logo.png>
-Package pdftex.def Info: ipol_logo.png used on input line 14.
+Package pdftex.def Info: ipol_logo.png used on input line 53.
 (pdftex.def)             Requested size: 138.28258pt x 63.35204pt.
-LaTeX Font Info:    Try loading font information for OMS+cmss on input line 14.
-
-LaTeX Font Info:    No file OMScmss.fd. on input line 14.
+LaTeX Font Info:    Try loading font information for TS1+cmss on input line 53.
 
 
-LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
-(Font)              using `OMS/cmsy/m/n' instead on input line 14.
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmss.fd"
+File: ts1cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 53.
 
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 14.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 14.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 14.
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 53.
 
-Overfull \hbox (167.65727pt too wide) in paragraph at lines 14--14
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Overfull \hbox (167.65727pt too wide) in paragraph at lines 53--53
 [][] []
  []
 
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 14.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 14.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: listings package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\c@lstlisting=\count140
 
-Underfull \hbox (badness 10000) in paragraph at lines 33--39
-
- []
-
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 39.
-[1
-
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Yohann/Documents
-/GitHub/ADCensus/ADCensus_IPOL_article/ipol_logo.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 51--53
+Underfull \hbox (badness 10000) in paragraph at lines 63--65
 
  []
 
+<Images/pictures/tsukuba.png, id=50, 385.44pt x 289.08pt>
+File: Images/pictures/tsukuba.png Graphic file (type png)
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--58
+<use Images/pictures/tsukuba.png>
+Package pdftex.def Info: Images/pictures/tsukuba.png used on input line 69.
+(pdftex.def)             Requested size: 153.64644pt x 115.23296pt.
+
+<Images/tsukuba/right.png, id=51, 385.44pt x 289.08pt>
+File: Images/tsukuba/right.png Graphic file (type png)
+
+<use Images/tsukuba/right.png>
+Package pdftex.def Info: Images/tsukuba/right.png used on input line 70.
+(pdftex.def)             Requested size: 153.64644pt x 115.23296pt.
+
+<Images/true_disparity/tsukuba.png, id=52, 385.44pt x 289.08pt>
+File: Images/true_disparity/tsukuba.png Graphic file (type png)
+
+<use Images/true_disparity/tsukuba.png>
+Package pdftex.def Info: Images/true_disparity/tsukuba.png used on input line 7
+1.
+(pdftex.def)             Requested size: 153.64644pt x 115.23296pt.
+ [1
+Non-PDF special ignored!
+
+{C:/Users/Yohann/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Y
+ohann/Documents/GitHub/ADCensus/ADCensus_IPOL_article/ipol_logo.png> <C:/Users/
+Yohann/Documents/GitHub/ADCensus/ADCensus_IPOL_article/Images/pictures/tsukuba.
+png> <C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_IPOL_article/Images/ts
+ukuba/right.png> <C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_IPOL_artic
+le/Images/true_disparity/tsukuba.png>]
+LaTeX Font Info:    Try loading font information for U+dsrom on input line 103.
+
+
+(C:\Users\Yohann\AppData\Roaming\MiKTeX\2.9\tex\latex\dstroke\udsrom.fd
+File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
+)
+<Images/tsukuba/disparity_map_AD_only.png, id=76, 385.44pt x 289.08pt>
+File: Images/tsukuba/disparity_map_AD_only.png Graphic file (type png)
+
+<use Images/tsukuba/disparity_map_AD_only.png>
+Package pdftex.def Info: Images/tsukuba/disparity_map_AD_only.png used on input
+ line 120.
+(pdftex.def)             Requested size: 230.46576pt x 172.84943pt.
+
+<Images/tsukuba/disparity_map_Census_only.png, id=77, 385.44pt x 289.08pt>
+File: Images/tsukuba/disparity_map_Census_only.png Graphic file (type png)
+
+<use Images/tsukuba/disparity_map_Census_only.png>
+Package pdftex.def Info: Images/tsukuba/disparity_map_Census_only.png used on i
+nput line 121.
+(pdftex.def)             Requested size: 230.46576pt x 172.84943pt.
+File: Images/pictures/tsukuba.png Graphic file (type png)
+
+<use Images/pictures/tsukuba.png>
+Package pdftex.def Info: Images/pictures/tsukuba.png used on input line 123.
+(pdftex.def)             Requested size: 230.46576pt x 172.84943pt.
+
+<Images/tsukuba/disparity_map_ADCensus_only.png, id=78, 385.44pt x 289.08pt>
+File: Images/tsukuba/disparity_map_ADCensus_only.png Graphic file (type png)
+
+<use Images/tsukuba/disparity_map_ADCensus_only.png>
+Package pdftex.def Info: Images/tsukuba/disparity_map_ADCensus_only.png used on
+ input line 124.
+(pdftex.def)             Requested size: 230.46576pt x 172.84943pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 135--137
 
  []
 
-<Images/cost_computation.png, id=59, 380.01974pt x 209.583pt>
+<Images/cost_computation.png, id=80, 380.01974pt x 209.583pt>
 File: Images/cost_computation.png Graphic file (type png)
 
 <use Images/cost_computation.png>
-Package pdftex.def Info: Images/cost_computation.png used on input line 61.
-(pdftex.def)             Requested size: 304.0162pt x 167.66661pt.
- [2 <C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_IPOL_article/Images/cos
-t_computation.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 79--86
+Package pdftex.def Info: Images/cost_computation.png used on input line 140.
+(pdftex.def)             Requested size: 358.50316pt x 197.72438pt.
+ [2]
 
- []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Images/cost_aggregation.png, id=78, 381.8265pt x 139.722pt>
+[3 <C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_IPOL_article/Images/tsuk
+uba/disparity_map_AD_only.png> <C:/Users/Yohann/Documents/GitHub/ADCensus/ADCen
+sus_IPOL_article/Images/tsukuba/disparity_map_Census_only.png> <C:/Users/Yohann
+/Documents/GitHub/ADCensus/ADCensus_IPOL_article/Images/tsukuba/disparity_map_A
+DCensus_only.png>]
+<Images/cost_aggregation.png, id=103, 381.8265pt x 139.722pt>
 File: Images/cost_aggregation.png Graphic file (type png)
 
 <use Images/cost_aggregation.png>
-Package pdftex.def Info: Images/cost_aggregation.png used on input line 89.
-(pdftex.def)             Requested size: 305.46161pt x 111.77774pt.
-
-Overfull \hbox (36.13326pt too wide) detected at line 99
-\OML/cmm/m/it/12 C[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 p; d\OT1/cmr/m/n/12 ) = \
-OML/cmm/m/it/12 C\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 p; d\OT1/cmr/m/n/12 ) + \OML
-/cmm/m/it/12 min\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 C[]\OT1/cmr/m/n/12 (\OML/cmm/
-m/it/12 p; d\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; C[]\OT1/cmr/m/n/12 (\OML/cmm/m/
-it/12 p \OMS/cmsy/m/n/12   \OML/cmm/m/it/12 r; d \OT1/cmr/m/n/12 + 1) + \OML/cm
-m/m/it/12 P[]; C[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 p \OMS/cmsy/m/n/12   \OML/c
-mm/m/it/12 r; d \OMS/cmsy/m/n/12   \OT1/cmr/m/n/12 1) + \OML/cmm/m/it/12 P[]; [
-] C[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 p \OMS/cmsy/m/n/12   \OML/cmm/m/it/12 r;
- k\OT1/cmr/m/n/12 ) + \OML/cmm/m/it/12 P[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12   
-[] \OML/cmm/m/it/12 C[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 p \OMS/cmsy/m/n/12   \
-OML/cmm/m/it/12 r; k\OT1/cmr/m/n/12 )
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 113--117
+Package pdftex.def Info: Images/cost_aggregation.png used on input line 159.
+(pdftex.def)             Requested size: 358.50316pt x 131.19157pt.
+ [4 <C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_IPOL_article/Images/cos
+t_computation.png> <C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_IPOL_art
+icle/Images/cost_aggregation.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 182--185
 
  []
 
-[3 <C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_IPOL_article/Images/cost
-_aggregation.png>] [4] [5]
-File: ipol_logo.png Graphic file (type png)
- <use ipol_logo.png>
-Package pdftex.def Info: ipol_logo.png used on input line 309.
-(pdftex.def)             Requested size: 51.28935pt x 23.49976pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 309.
+File: Images/tsukuba/disparity_map_ADCensus_only.png Graphic file (type png)
+<use Images/tsukuba/disparity_map_ADCensus_only.png>
+Package pdftex.def Info: Images/tsukuba/disparity_map_ADCensus_only.png used on
+ input line 192.
+(pdftex.def)             Requested size: 230.46576pt x 172.84943pt.
+
+<Images/tsukuba/disparity_map_ADCensus_aggregated.png, id=115, 385.44pt x 289.0
+8pt>
+File: Images/tsukuba/disparity_map_ADCensus_aggregated.png Graphic file (type p
+ng)
+ <use Images/tsukuba/disparity_map_ADCensus_aggregated.png>
+Package pdftex.def Info: Images/tsukuba/disparity_map_ADCensus_aggregated.png u
+sed on input line 193.
+(pdftex.def)             Requested size: 230.46576pt x 172.84943pt.
+File: Images/pictures/tsukuba.png Graphic file (type png)
+
+<use Images/pictures/tsukuba.png>
+Package pdftex.def Info: Images/pictures/tsukuba.png used on input line 196.
+(pdftex.def)             Requested size: 230.46576pt x 172.84943pt.
+
+<Images/tsukuba/disparity_map_ADCensus_aggregated_so.png, id=116, 385.44pt x 28
+9.08pt>
+File: Images/tsukuba/disparity_map_ADCensus_aggregated_so.png Graphic file (typ
+e png)
+ <use Images/tsukuba/disparity_map_ADCensus_aggregated_so.png>
+Package pdftex.def Info: Images/tsukuba/disparity_map_ADCensus_aggregated_so.pn
+g used on input line 197.
+(pdftex.def)             Requested size: 230.46576pt x 172.84943pt.
 
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 309.
- [6]
-Missing character: There is no â in font cmr12!
-Missing character: There is no € in font cmr12!
-Missing character: There is no “ in font cmr12!
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 342.
- [7]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 342.
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: Images/tsukuba/disparity_map_ADCensus_aggregated_so.png Graphic file (typ
+e png)
+<use Images/tsukuba/disparity_map_ADCensus_aggregated_so.png>
+Package pdftex.def Info: Images/tsukuba/disparity_map_ADCensus_aggregated_so.pn
+g used on input line 222.
+(pdftex.def)             Requested size: 230.46576pt x 172.84943pt.
+
+<Images/tsukuba/disparity_occlusion_ADCensus_aggregated_so.png, id=122, 385.44p
+t x 289.08pt>
+File: Images/tsukuba/disparity_occlusion_ADCensus_aggregated_so.png Graphic fil
+e (type png)
+
+<use Images/tsukuba/disparity_occlusion_ADCensus_aggregated_so.png>
+Package pdftex.def Info: Images/tsukuba/disparity_occlusion_ADCensus_aggregated
+_so.png used on input line 223.
+(pdftex.def)             Requested size: 230.46576pt x 172.84943pt.
+File: Images/pictures/tsukuba.png Graphic file (type png)
+
+<use Images/pictures/tsukuba.png>
+Package pdftex.def Info: Images/pictures/tsukuba.png used on input line 225.
+(pdftex.def)             Requested size: 230.46576pt x 172.84943pt.
+
+<Images/tsukuba/disparity_occlusion_filled_smoothed_ADCensus_aggregated_so.png,
+ id=123, 385.44pt x 289.08pt>
+File: Images/tsukuba/disparity_occlusion_filled_smoothed_ADCensus_aggregated_so
+.png Graphic file (type png)
+
+<use Images/tsukuba/disparity_occlusion_filled_smoothed_ADCensus_aggregated_so.
+png>
+Package pdftex.def Info: Images/tsukuba/disparity_occlusion_filled_smoothed_ADC
+ensus_aggregated_so.png used on input line 226.
+(pdftex.def)             Requested size: 230.46576pt x 172.84943pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[5] [6 <C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_IPOL_article/Images/
+tsukuba/disparity_map_ADCensus_aggregated.png> <C:/Users/Yohann/Documents/GitHu
+b/ADCensus/ADCensus_IPOL_article/Images/tsukuba/disparity_map_ADCensus_aggregat
+ed_so.png>] <Images/pictures/teddy_crop.png, id=143, 48.18pt x 48.18pt>
+File: Images/pictures/teddy_crop.png Graphic file (type png)
+
+<use Images/pictures/teddy_crop.png>
+Package pdftex.def Info: Images/pictures/teddy_crop.png used on input line 266.
+
+(pdftex.def)             Requested size: 92.18317pt x 92.18323pt.
+
+<Images/theorical_results/teddy_crop.png, id=144, 48.18pt x 48.18pt>
+File: Images/theorical_results/teddy_crop.png Graphic file (type png)
+
+<use Images/theorical_results/teddy_crop.png>
+Package pdftex.def Info: Images/theorical_results/teddy_crop.png used on input 
+line 267.
+(pdftex.def)             Requested size: 92.18317pt x 92.18323pt.
+
+<Images/practical_results/teddy_crop.png, id=145, 48.18pt x 48.18pt>
+File: Images/practical_results/teddy_crop.png Graphic file (type png)
+
+<use Images/practical_results/teddy_crop.png>
+Package pdftex.def Info: Images/practical_results/teddy_crop.png used on input 
+line 268.
+(pdftex.def)             Requested size: 92.18317pt x 92.18323pt.
+
+<Images/practical_results/teddy_census_crop.png, id=146, 48.18pt x 48.18pt>
+File: Images/practical_results/teddy_census_crop.png Graphic file (type png)
+
+<use Images/practical_results/teddy_census_crop.png>
+Package pdftex.def Info: Images/practical_results/teddy_census_crop.png used on
+ input line 269.
+(pdftex.def)             Requested size: 92.18317pt x 92.18323pt.
+
+<Images/practical_results/teddy_ad_census_crop.png, id=147, 48.18pt x 48.18pt>
+File: Images/practical_results/teddy_ad_census_crop.png Graphic file (type png)
+
+
+<use Images/practical_results/teddy_ad_census_crop.png>
+Package pdftex.def Info: Images/practical_results/teddy_ad_census_crop.png used
+ on input line 270.
+(pdftex.def)             Requested size: 92.18317pt x 92.18323pt.
+
+Overfull \hbox (34.20049pt too wide) in paragraph at lines 265--274
+ [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: Images/tsukuba/disparity_map_ADCensus_aggregated.png Graphic file (type p
+ng)
+<use Images/tsukuba/disparity_map_ADCensus_aggregated.png>
+Package pdftex.def Info: Images/tsukuba/disparity_map_ADCensus_aggregated.png u
+sed on input line 287.
+(pdftex.def)             Requested size: 230.46576pt x 172.84943pt.
+File: Images/tsukuba/disparity_map_ADCensus_aggregated_so.png Graphic file (typ
+e png)
+
+<use Images/tsukuba/disparity_map_ADCensus_aggregated_so.png>
+Package pdftex.def Info: Images/tsukuba/disparity_map_ADCensus_aggregated_so.pn
+g used on input line 288.
+(pdftex.def)             Requested size: 230.46576pt x 172.84943pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<Images/pictures/cones.png, id=150, 451.6875pt x 376.40625pt>
+File: Images/pictures/cones.png Graphic file (type png)
+
+<use Images/pictures/cones.png>
+Package pdftex.def Info: Images/pictures/cones.png used on input line 300.
+(pdftex.def)             Requested size: 112.67354pt x 93.89456pt.
+
+<Images/pictures/teddy.png, id=151, 451.6875pt x 376.40625pt>
+File: Images/pictures/teddy.png Graphic file (type png)
+
+<use Images/pictures/teddy.png>
+Package pdftex.def Info: Images/pictures/teddy.png used on input line 301.
+(pdftex.def)             Requested size: 112.67354pt x 93.89456pt.
+File: Images/pictures/tsukuba.png Graphic file (type png)
+ <use Images/pictures/tsukuba.png>
+Package pdftex.def Info: Images/pictures/tsukuba.png used on input line 302.
+(pdftex.def)             Requested size: 125.47415pt x 94.10426pt.
+
+<Images/pictures/venus.png, id=152, 435.6275pt x 384.43625pt>
+File: Images/pictures/venus.png Graphic file (type png)
+
+<use Images/pictures/venus.png>
+Package pdftex.def Info: Images/pictures/venus.png used on input line 303.
+(pdftex.def)             Requested size: 107.55486pt x 94.91216pt.
+
+<Images/theorical_results/cones.png, id=153, 451.6875pt x 376.40625pt>
+File: Images/theorical_results/cones.png Graphic file (type png)
+
+<use Images/theorical_results/cones.png>
+Package pdftex.def Info: Images/theorical_results/cones.png used on input line 
+304.
+(pdftex.def)             Requested size: 112.67354pt x 93.89456pt.
+
+<Images/theorical_results/teddy.png, id=154, 451.6875pt x 376.40625pt>
+File: Images/theorical_results/teddy.png Graphic file (type png)
+
+<use Images/theorical_results/teddy.png>
+Package pdftex.def Info: Images/theorical_results/teddy.png used on input line 
+305.
+(pdftex.def)             Requested size: 112.67354pt x 93.89456pt.
+
+<Images/theorical_results/tsukuba.png, id=155, 385.44pt x 289.08pt>
+File: Images/theorical_results/tsukuba.png Graphic file (type png)
+
+<use Images/theorical_results/tsukuba.png>
+Package pdftex.def Info: Images/theorical_results/tsukuba.png used on input lin
+e 306.
+(pdftex.def)             Requested size: 125.47415pt x 94.10426pt.
+
+<Images/theorical_results/venus.png, id=156, 435.6275pt x 384.43625pt>
+File: Images/theorical_results/venus.png Graphic file (type png)
+
+<use Images/theorical_results/venus.png>
+Package pdftex.def Info: Images/theorical_results/venus.png used on input line 
+307.
+(pdftex.def)             Requested size: 107.55486pt x 94.91216pt.
+
+<Images/true_disparity/cones.png, id=157, 451.6875pt x 376.40625pt>
+File: Images/true_disparity/cones.png Graphic file (type png)
+
+<use Images/true_disparity/cones.png>
+Package pdftex.def Info: Images/true_disparity/cones.png used on input line 308
+.
+(pdftex.def)             Requested size: 112.67354pt x 93.89456pt.
+
+<Images/true_disparity/teddy.png, id=158, 451.6875pt x 376.40625pt>
+File: Images/true_disparity/teddy.png Graphic file (type png)
+
+<use Images/true_disparity/teddy.png>
+Package pdftex.def Info: Images/true_disparity/teddy.png used on input line 309
+.
+(pdftex.def)             Requested size: 112.67354pt x 93.89456pt.
+File: Images/true_disparity/tsukuba.png Graphic file (type png)
+ <use Images/true_disparity/tsukuba.png>
+Package pdftex.def Info: Images/true_disparity/tsukuba.png used on input line 3
+10.
+(pdftex.def)             Requested size: 125.47415pt x 94.10426pt.
+
+<Images/true_disparity/venus.png, id=159, 435.6275pt x 384.43625pt>
+File: Images/true_disparity/venus.png Graphic file (type png)
+
+<use Images/true_disparity/venus.png>
+Package pdftex.def Info: Images/true_disparity/venus.png used on input line 311
+.
+(pdftex.def)             Requested size: 107.55486pt x 94.91216pt.
+
+<Images/practical_results/cones.png, id=160, 451.6875pt x 376.40625pt>
+File: Images/practical_results/cones.png Graphic file (type png)
+
+<use Images/practical_results/cones.png>
+Package pdftex.def Info: Images/practical_results/cones.png used on input line 
+312.
+(pdftex.def)             Requested size: 112.67354pt x 93.89456pt.
+
+<Images/practical_results/teddy.png, id=161, 451.6875pt x 376.40625pt>
+File: Images/practical_results/teddy.png Graphic file (type png)
+
+<use Images/practical_results/teddy.png>
+Package pdftex.def Info: Images/practical_results/teddy.png used on input line 
+313.
+(pdftex.def)             Requested size: 112.67354pt x 93.89456pt.
+
+<Images/practical_results/tsukuba.png, id=162, 385.44pt x 289.08pt>
+File: Images/practical_results/tsukuba.png Graphic file (type png)
+
+<use Images/practical_results/tsukuba.png>
+Package pdftex.def Info: Images/practical_results/tsukuba.png used on input lin
+e 314.
+(pdftex.def)             Requested size: 125.47415pt x 94.10426pt.
+
+<Images/practical_results/venus.png, id=163, 435.6275pt x 384.43625pt>
+File: Images/practical_results/venus.png Graphic file (type png)
+
+<use Images/practical_results/venus.png>
+Package pdftex.def Info: Images/practical_results/venus.png used on input line 
+315.
+(pdftex.def)             Requested size: 107.55486pt x 94.91216pt.
+
+<Images/after_correction/cones.png, id=164, 451.6875pt x 376.40625pt>
+File: Images/after_correction/cones.png Graphic file (type png)
+
+<use Images/after_correction/cones.png>
+Package pdftex.def Info: Images/after_correction/cones.png used on input line 3
+16.
+(pdftex.def)             Requested size: 112.67354pt x 93.89456pt.
+
+<Images/after_correction/teddy.png, id=165, 451.6875pt x 376.40625pt>
+File: Images/after_correction/teddy.png Graphic file (type png)
+
+<use Images/after_correction/teddy.png>
+Package pdftex.def Info: Images/after_correction/teddy.png used on input line 3
+17.
+(pdftex.def)             Requested size: 112.67354pt x 93.89456pt.
+
+<Images/after_correction/tsukuba.png, id=166, 385.44pt x 289.08pt>
+File: Images/after_correction/tsukuba.png Graphic file (type png)
+
+<use Images/after_correction/tsukuba.png>
+Package pdftex.def Info: Images/after_correction/tsukuba.png used on input line
+ 318.
+(pdftex.def)             Requested size: 125.47415pt x 94.10426pt.
+
+<Images/after_correction/venus.png, id=167, 435.6275pt x 384.43625pt>
+File: Images/after_correction/venus.png Graphic file (type png)
+
+<use Images/after_correction/venus.png>
+Package pdftex.def Info: Images/after_correction/venus.png used on input line 3
+19.
+(pdftex.def)             Requested size: 107.55486pt x 94.91216pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[7 <C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_IPOL_article/Images/tsuk
+uba/disparity_occlusion_ADCensus_aggregated_so.png> <C:/Users/Yohann/Documents/
+GitHub/ADCensus/ADCensus_IPOL_article/Images/tsukuba/disparity_occlusion_filled
+_smoothed_ADCensus_aggregated_so.png>]
+(C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_IPOL_article\ADCensus_IPOL.
+bbl
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¼ in font cmr12!
+ [8 <C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_IPOL_article/Images/pic
+tures/teddy_crop.png> <C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_IPOL_
+article/Images/theorical_results/teddy_crop.png> <C:/Users/Yohann/Documents/Git
+Hub/ADCensus/ADCensus_IPOL_article/Images/practical_results/teddy_crop.png> <C:
+/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_IPOL_article/Images/practical_
+results/teddy_census_crop.png> <C:/Users/Yohann/Documents/GitHub/ADCensus/ADCen
+sus_IPOL_article/Images/practical_results/teddy_ad_census_crop.png>])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 337.
+
+[9] [10 <C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_IPOL_article/Images
+/pictures/cones.png (PNG copy)> <C:/Users/Yohann/Documents/GitHub/ADCensus/ADCe
+nsus_IPOL_article/Images/pictures/teddy.png (PNG copy)> <C:/Users/Yohann/Docume
+nts/GitHub/ADCensus/ADCensus_IPOL_article/Images/pictures/venus.png> <C:/Users/
+Yohann/Documents/GitHub/ADCensus/ADCensus_IPOL_article/Images/theorical_results
+/cones.png (PNG copy)> <C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_IPOL
+_article/Images/theorical_results/teddy.png (PNG copy)> <C:/Users/Yohann/Docume
+nts/GitHub/ADCensus/ADCensus_IPOL_article/Images/theorical_results/tsukuba.png 
+(PNG copy)> <C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_IPOL_article/Im
+ages/theorical_results/venus.png (PNG copy)> <C:/Users/Yohann/Documents/GitHub/
+ADCensus/ADCensus_IPOL_article/Images/true_disparity/cones.png (PNG copy)> <C:/
+Users/Yohann/Documents/GitHub/ADCensus/ADCensus_IPOL_article/Images/true_dispar
+ity/teddy.png (PNG copy)> <C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_I
+POL_article/Images/true_disparity/venus.png> <C:/Users/Yohann/Documents/GitHub/
+ADCensus/ADCensus_IPOL_article/Images/practical_results/cones.png> <C:/Users/Yo
+hann/Documents/GitHub/ADCensus/ADCensus_IPOL_article/Images/practical_results/t
+eddy.png> <C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_IPOL_article/Imag
+es/practical_results/tsukuba.png> <C:/Users/Yohann/Documents/GitHub/ADCensus/AD
+Census_IPOL_article/Images/practical_results/venus.png> <C:/Users/Yohann/Docume
+nts/GitHub/ADCensus/ADCensus_IPOL_article/Images/after_correction/cones.png> <C
+:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_IPOL_article/Images/after_cor
+rection/teddy.png> <C:/Users/Yohann/Documents/GitHub/ADCensus/ADCensus_IPOL_art
+icle/Images/after_correction/tsukuba.png> <C:/Users/Yohann/Documents/GitHub/ADC
+ensus/ADCensus_IPOL_article/Images/after_correction/venus.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 337.
 
 (C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_IPOL_article\ADCensus_IPOL.
 aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 342.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 342.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 337.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 337.
 Package rerunfilecheck Info: File `ADCensus_IPOL.out' has not changed.
-(rerunfilecheck)             Checksum: B7AA4069860BAB781A77079E4507EFED;403.
+(rerunfilecheck)             Checksum: B70DC382299F60BB3017BBB5C4F6885F;589.
 
 
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 342.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 337.
  ) 
 Here is how much of TeX's memory you used:
- 5025 strings out of 494045
- 74711 string characters out of 3145965
- 161565 words of memory out of 3000000
- 8259 multiletter control sequences out of 15000+200000
- 10882 words of font info for 39 fonts, out of 3000000 for 9000
- 715 hyphenation exceptions out of 8191
- 36i,8n,28p,679b,432s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.p
-fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Pro
-gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Program Files/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
-msfonts/cm/cmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmtt12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt8
-.pfb>
-Output written on ADCensus_IPOL.pdf (7 pages, 272848 bytes).
+ 10494 strings out of 493921
+ 157340 string characters out of 3147279
+ 267293 words of memory out of 3000000
+ 13598 multiletter control sequences out of 15000+200000
+ 15581 words of font info for 62 fonts, out of 3000000 for 9000
+ 841 hyphenation exceptions out of 8191
+ 36i,12n,39p,672b,438s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Yohann\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
+\tcss0800.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:
+/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program
+ Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmtt8.pfb><C:/Users/Yohann/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/dst
+roke/dsrom12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbo
+ls/msbm10.pfb>
+Output written on ADCensus_IPOL.pdf (10 pages, 2394115 bytes).
 PDF statistics:
- 193 PDF objects out of 1000 (max. 8388607)
- 31 named destinations out of 1000 (max. 500000)
- 72 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 280 PDF objects out of 1000 (max. 8388607)
+ 39 named destinations out of 1000 (max. 500000)
+ 261 words of extra memory for PDF output out of 10000 (max. 10000000)
 

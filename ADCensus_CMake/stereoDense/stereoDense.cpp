@@ -24,7 +24,7 @@ static bool loadImage(const char* name, LWImage<float>& im) {
     return (im.data!=0);
 }
 
-/// Save \a disparity image in 8-bit PNG image.
+/// Save a disparity image in 8-bit PNG image.
 ///
 /// The disp->gray function is affine: gray=a*disp+b.
 /// Pixels outside [0,255] are assumed invalid and written in cyan color.
@@ -102,7 +102,7 @@ static void disparity(LWImage<float> im1, LWImage<float> im2,
         float* oldCosts=costVol;
 		costVol = scanlineOptimization(costVol, params);
         delete [] oldCosts;
-
+		
 		// find lowest cost and explicit disparity
 		std::cout << "Phase 4: compute best disparity" << std::endl;
         LWImage<int>& disp = (image==0)? disp1: disp2;

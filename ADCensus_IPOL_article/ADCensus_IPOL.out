@@ -1,7 +1,10 @@
 \BOOKMARK [1][-]{section.1}{Overview}{}% 1
 \BOOKMARK [1][-]{section.2}{Matching cost computation}{}% 2
-\BOOKMARK [2][-]{subsection.2.1}{AD-Census}{section.2}% 3
-\BOOKMARK [2][-]{subsection.2.2}{ Cost aggregation }{section.2}% 4
-\BOOKMARK [1][-]{section.3}{Specific IPOL Commands}{}% 5
-\BOOKMARK [1][-]{section.4}{IPOL final article restrictions}{}% 6
-\BOOKMARK [1][-]{section.5}{References}{}% 7
+\BOOKMARK [2][-]{subsection.2.1}{AD-Census Cost Measure}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{ Cost Aggregation }{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{Scanline Optimization}{section.2}% 5
+\BOOKMARK [1][-]{section.3}{Disparity Refinement}{}% 6
+\BOOKMARK [1][-]{section.4}{Results}{}% 7
+\BOOKMARK [2][-]{subsection.4.1}{Census}{section.4}% 8
+\BOOKMARK [2][-]{subsection.4.2}{Scanline Optimization}{section.4}% 9
+\BOOKMARK [1][-]{section.5}{Conclusion}{}% 10

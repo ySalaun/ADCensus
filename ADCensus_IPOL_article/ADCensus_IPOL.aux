@@ -1,4 +1,5 @@
 \relax 
+\providecommand\hyper@newdestlabel[2]{}
 \providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
 \HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
 \global\let\oldcontentsline\contentsline
@@ -14,25 +15,71 @@
 \global\let\hyper@last\relax 
 \gdef\HyperFirstAtBeginDocument#1{#1}
 \providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
 \citation{stereoTaxonomy}
 \citation{adCensus}
 \citation{middleBench}
+\citation{middleBench}
+\citation{middleBench}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Overview}{1}{section.1}}
-\@writefile{toc}{\contentsline {section}{\numberline {2}Matching cost computation}{1}{section.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}AD-Census}{1}{subsection.2.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Tsukuba pair from the Middlebury benchmark \cite  {middleBench} and its real disparity map.\relax }}{1}{figure.caption.1}}
 \citation{costAggreg}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2} Cost aggregation }{2}{subsection.2.2}}
-\newlabel{cost_computation}{{2.2}{2}{Cost aggregation\relax }{subsection.2.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces  The adaptive windows only keeps pixel that have strong enough color similarities with the pixel in its center.}}{2}{figure.1}}
-\newlabel{cost_agg1}{{1}{2}{Cost aggregation\relax }{equation.2.1}{}}
-\newlabel{cost_agg2}{{2}{3}{Cost aggregation\relax }{equation.2.2}{}}
-\newlabel{cost_agg3}{{3}{3}{Cost aggregation\relax }{equation.2.3}{}}
-\newlabel{cost_aggregation}{{2.2}{3}{Cost aggregation\relax }{equation.2.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces  The aggregation is done one direction after the other with the corresponding border pixels.}}{3}{figure.2}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Specific IPOL Commands}{5}{section.3}}
-\bibcite{middleBench}{1}
-\bibcite{adCensus}{2}
-\@writefile{toc}{\contentsline {section}{\numberline {4}IPOL final article restrictions}{6}{section.4}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}References}{6}{section.5}}
-\bibcite{stereoTaxonomy}{3}
-\bibcite{costAggreg}{4}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Matching cost computation}{2}{section.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}AD-Census Cost Measure}{2}{subsection.2.1}}
+\citation{adCensus}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces The AD measure is very noisy because the comparison window is too small but the edges are sharper whereas the Census measure has the opposite characteristics. The AD Census is the compromise of the 2 previous measures.\relax }}{3}{figure.caption.2}}
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{ADCensusPics}{{2}{3}{The AD measure is very noisy because the comparison window is too small but the edges are sharper whereas the Census measure has the opposite characteristics. The AD Census is the compromise of the 2 previous measures.\relax }{figure.caption.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2} Cost Aggregation }{3}{subsection.2.2}}
+\citation{scanlineOptim}
+\newlabel{cost_computation}{{\caption@xref {cost_computation}{ on input line 141}}{4}{Cost Aggregation}{figure.caption.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces  The adaptive windows only keeps pixel that have strong enough color similarities with the pixel in its center. It also has a maximum size which avoid the case of huge windows.\relax }}{4}{figure.caption.3}}
+\newlabel{cost_aggregation}{{\caption@xref {cost_aggregation}{ on input line 160}}{4}{Cost Aggregation}{figure.caption.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces The aggregation is done one direction after the other with the corresponding border pixels.\relax }}{4}{figure.caption.4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Scanline Optimization}{4}{subsection.2.3}}
+\citation{adCensus}
+\citation{adCensus}
+\citation{adCensus}
+\citation{ipolFill}
+\citation{cvFill}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Disparity Refinement}{5}{section.3}}
+\citation{adCensus}
+\citation{adCensus}
+\citation{adCensus}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces The aggregation has a sort of denoising effect but creates some artifacts due to the fattening effect. The scanline optimization does not seem to be very effective.\relax }}{6}{figure.caption.5}}
+\newlabel{soPics}{{5}{6}{The aggregation has a sort of denoising effect but creates some artifacts due to the fattening effect. The scanline optimization does not seem to be very effective.\relax }{figure.caption.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Results}{6}{section.4}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Default parameters used for the algorithm.  H (resp. V) is for a horizontally-first (resp. vertically-first) cost aggregation.\relax }}{6}{table.caption.7}}
+\newlabel{params}{{1}{6}{Default parameters used for the algorithm.\\ H (resp. V) is for a horizontally-first (resp. vertically-first) cost aggregation.\relax }{table.caption.7}{}}
+\citation{adCensus}
+\citation{adCensus}
+\citation{adCensus}
+\citation{adCensus}
+\citation{adCensus}
+\citation{adCensus}
+\citation{middleBench}
+\citation{adCensus}
+\citation{middleBench}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces The scanline optimization does not seem to be very effective.\relax }}{7}{figure.caption.6}}
+\newlabel{refinePics}{{6}{7}{The scanline optimization does not seem to be very effective.\relax }{figure.caption.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Census}{7}{subsection.4.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Scanline Optimization}{7}{subsection.4.2}}
+\citation{adCensus}
+\citation{adCensus}
+\citation{adCensus}
+\bibstyle{plain}
+\bibdata{literature}
+\bibcite{cvFill}{1}
+\bibcite{scanlineOptim}{2}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Comparison of the different measures in textureless region.\relax }}{8}{figure.caption.8}}
+\newlabel{censusPics}{{7}{8}{Comparison of the different measures in textureless region.\relax }{figure.caption.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Comparison between before and after scanline optimization.\relax }}{8}{figure.caption.9}}
+\newlabel{censusPics}{{8}{8}{Comparison between before and after scanline optimization.\relax }{figure.caption.9}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusion}{8}{section.5}}
+\bibcite{costAggreg}{3}
+\bibcite{middleBench}{4}
+\bibcite{stereoTaxonomy}{5}
+\bibcite{ipolFill}{6}
+\bibcite{adCensus}{7}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces The 4 pictures used for the ranking in middlebury benchmark. First line shows the left picture of each pair, second line the results obtained by \cite  {adCensus}, third line the truth presented in \cite  {middleBench} and the last two show the results obtained with our algorithm (before and after outliers correction).\relax }}{10}{figure.caption.10}}
+\newlabel{middlPics}{{9}{10}{The 4 pictures used for the ranking in middlebury benchmark. First line shows the left picture of each pair, second line the results obtained by \cite {adCensus}, third line the truth presented in \cite {middleBench} and the last two show the results obtained with our algorithm (before and after outliers correction).\relax }{figure.caption.10}{}}

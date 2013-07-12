@@ -1,0 +1,39 @@
+\begin{thebibliography}{1}
+
+\bibitem{cvFill}
+M.~Bleyer C.~Rother C.~Rhemann, A.~Hosni and M.~Gelautz.
+\newblock Fast cost-volume filtering for visual correspondence and beyond.
+\newblock {\em IEEE CVPR}, 2001.
+
+\bibitem{scanlineOptim}
+H.~Hirschmüller.
+\newblock Stereo processing by semiglobal matching and mutual information.
+\newblock {\em IEEE TPAMI}, 2008.
+
+\bibitem{costAggreg}
+J.~Lu K.~Zhang and G.~Lafruit.
+\newblock Cross-based local stereo matching using orthogonal integral images.
+\newblock {\em IEEE TCSVT}, 2009.
+
+\bibitem{middleBench}
+D.~Scharstein and R.~Szeliski.
+\newblock Middlebury benchmark.
+\newblock {\em vision.middlebury.edu/stereo/}.
+
+\bibitem{stereoTaxonomy}
+D.~Scharstein and R.~Szeliski.
+\newblock A taxonomy and evaluation of dense two-frame stereo correspondence
+  algorithms.
+\newblock {\em International Journal of Computer Vision}, 2002.
+
+\bibitem{ipolFill}
+P.~Tan and P.~Monasse.
+\newblock Stereo disparity through cost aggregation with guided filter.
+\newblock {\em IPOL}, 2013.
+
+\bibitem{adCensus}
+M.~Zhou S. Jiao H.~Wang X.~Mei, X.~Sun and X.~Zhang.
+\newblock On building an accurate stereo matching system on graphics hardware.
+\newblock {\em GPUCV}, 2011.
+
+\end{thebibliography}
