@@ -69,6 +69,80 @@ void detect_occlusion(LWImage<int>& disparityLeft,
         }
 }
 
+/// Detect left-right discrepancies in disparity and put incoherent pixels to
+/// value \a dOcclusion in \a disparityLeft.
+void detect_outliers(LWImage<int>& disparityLeft,
+                      const LWImage<int>& disparityRight,
+                      int dOcclusion, int dMismatch, int tolDisp,
+					  int dMin, int dMax) {
+    const int w=disparityLeft.w, h=disparityLeft.h;
+    for(int y=0; y<h; y++)
+        for(int x=0; x<w; x++) {
+            int disparity = *disparityLeft.pixel(x,y);
+            // if the point is an outlier, differentiate it between occlusion and mismatch
+			if(x+disparity<0 || x+disparity>=w || abs(disparity-*disparityRight.pixel(x+disparity,y))>tolDisp){
+				bool occlusion = true;
+				for(int d = dMin; d <= dMax; ++d){
+					if(x+disparity >= 0 && x+disparity < w && d == *disparityRight.pixel(x+d,y)){
+						occlusion = false;
+						break;
+					}
+				}
+                *disparityLeft.pixel(x,y) = (occlusion)? dOcclusion:dMismatch;
+			}
+        }
+}
+
+void regionVoting(LWImage<int>& disp_outliers, const PARAMETERS& p){
+	// histogram for voting
+	float* Hp = new float[p.dMax - p.dMin + 1];
+	// fill the histogram with 0
+	for(int d = p.dMin; d <= p.dMax; ++d){
+		Hp[d-p.dMin] = 0;
+	}
+	// loop on the whole picture
+	for(int x=0; x<p.w; ++x){
+		for(int y=0; y<p.h; ++y){
+			// when the pixel is not an outlier, continue
+			if(*disp_outliers.pixel(x,y) >= p.dMin){
+				continue;
+			}
+			int leftBorder = -p.leftBorders[x*p.h+y];
+			int rightBorder = p.rightBorders[x*p.h+y];
+			int nVote = 0;
+			for(int xx = leftBorder; xx <= rightBorder; ++xx){
+				int upBorder = -p.upBorders[(x+xx)*p.h+y];
+				int downBorder = p.downBorders[(x+xx)*p.h+y];
+				for(int yy = upBorder; yy <= downBorder; ++yy){
+					// if the pixel is an outlier, there is no vote to take into account
+					if(*disp_outliers.pixel(x+xx, y+yy) < p.dMin){
+						continue;
+					}
+					// increase the number of votes
+					++ nVote;
+					// update the histogram
+					++ Hp[*disp_outliers.pixel(x+xx, y+yy) - p.dMin];
+				}
+			}
+			// is the number of vote sufficient
+			if(nVote <= p.tauS){
+				continue;
+			}
+			int disparity = *disp_outliers.pixel(x,y);
+			float voteRatio, voteRatioMax = 0.f;
+			for(int d = p.dMin; d <= p.dMax; ++d){
+				voteRatio = Hp[d-p.dMin]/nVote;
+				if(voteRatio > voteRatioMax){
+					voteRatioMax = voteRatio;
+					disparity = (voteRatioMax > p.tauH)? d:disparity;
+				}
+				Hp[d-p.dMin] = 0;
+			}
+			*disp_outliers.pixel(x,y) = disparity;
+		}
+	}
+}
+
 /// Square function
 inline float sqr(float v1) {
     return v1*v1;

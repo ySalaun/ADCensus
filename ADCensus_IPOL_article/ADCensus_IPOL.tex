@@ -54,14 +54,15 @@ $^1$  (\texttt{})}
 
 %-------------------------------------------------------------------------------
 \begin{abstract}
-This paper presents a local stereo matching algorithm supposed to have good accuracy performances as shown by its position in Middlebury benchmark. Originally published in order to be developed on graphics hardware, only the accuracy performance will be studied in this article. The algorithm bases its matching cost with the AD-Census measure, aggregates in cross-based regions and finalizes it with scanline optimization. Methods are then used to detect outliers and correct them to finally give a disparity map that top performed in Middlebury benchmark.
+This paper presents a local stereo matching algorithm \cite{adCensus} supposed to have good accuracy performances as shown by its position in Middlebury benchmark \cite{middleBench}. Originally published in order to be developed on graphics hardware, only the accuracy performance will be studied in this article. The algorithm bases its matching cost with a composition of the absolute difference and the Census costs. It is then aggregated in cross-based regions \cite{costAggreg} and ends with a scanline optimization \cite{scanlineOptim}. Methods are then used to detect outliers and correct them to finally give a disparity map that top performed in Middlebury benchmark.
 \end{abstract} 
 
 %-------------------------------------------------------------------------------
-\section{Overview}
+\section{Introduction}
 
-Stereo matching is one of the most active research areas in computer vision. Many algorithms have been proposed in the last decades and several have been presented and classified by Scharstein \textit{et al.} \cite{stereoTaxonomy}.\\
-The method \cite{adCensus} presented was aimed to be an accurate real-time method with GPU parallelization. When the article was published (August 2011), this method was the top performer of Middleburry benchmark \cite{middleBench} and is now (August 2013) second top performer. The aim of this article is to study the quality of the disparity map produced by this algorithm, putting aside the GPU parallelization and the time performance.\\
+Stereo matching is one of the most active research areas in computer vision. Many algorithms have been proposed in the last decades and several have been compared by Scharstein \textit{et al.} \cite{stereoTaxonomy}. The method presented here \cite{adCensus} was aimed to be an accurate real-time method with GPU parallelization. When the article was published (August 2011), this method was the top performer of Middleburry benchmark \cite{middleBench} and is now (August 2013) second top performer. The aim of this article is to study the quality of the disparity map produced by this algorithm, putting aside the GPU parallelization and the time performance.\\
+
+TODO: write a real introduction
 
 \begin{figure}[h]
 \begin{center}	
@@ -72,7 +73,7 @@ The method \cite{adCensus} presented was aimed to be an accurate real-time metho
 \\
 Left picture & Right picture & Real disparity
 \end{tabular}
-	\caption{Tsukuba pair from the Middlebury benchmark \cite{middleBench} and its real disparity map.}
+	\caption{Tsukuba pair from the Middlebury benchmark \cite{middleBench} and its true disparity map.}
 \end{center}
 \end{figure}
 

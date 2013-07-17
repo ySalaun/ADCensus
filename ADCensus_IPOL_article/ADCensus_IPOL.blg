@@ -1,33 +1,13 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: ADCensus_IPOL.aux
 The style file: plain.bst
 Database file #1: literature.bib
-Name 1 in "X. Mei, X. Sun, M. Zhou, S. Jiao, H. Wang, and X. Zhang" has a comma at the end for entry adCensus
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "X. Mei, X. Sun, M. Zhou, S. Jiao, H. Wang, and X. Zhang" for entry adCensus
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "X. Mei, X. Sun, M. Zhou, S. Jiao, H. Wang, and X. Zhang" for entry adCensus
-while executing---line 1049 of file plain.bst
-Name 1 in "K. Zhang, J. Lu, and G. Lafruit" has a comma at the end for entry costAggreg
+Name 1 in "D. Scharstein, and R. Szeliski" has a comma at the end for entry stereoTaxonomy
 while executing---line 1049 of file plain.bst
 Name 1 in "P. Tan, and P. Monasse" has a comma at the end for entry ipolFill
 while executing---line 1049 of file plain.bst
-Name 1 in "C. Rhemann, A. Hosni, M. Bleyer, C. Rother, and M. Gelautz" has a comma at the end for entry cvFill
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "C. Rhemann, A. Hosni, M. Bleyer, C. Rother, and M. Gelautz" for entry cvFill
-while executing---line 1049 of file plain.bst
-Name 1 in "C. Rhemann, A. Hosni, M. Bleyer, C. Rother, and M. Gelautz" has a comma at the end for entry cvFill
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "C. Rhemann, A. Hosni, M. Bleyer, C. Rother, and M. Gelautz" for entry cvFill
-while executing---line 1090 of file plain.bst
-Name 1 in "K. Zhang, J. Lu, and G. Lafruit" has a comma at the end for entry costAggreg
-while executing---line 1090 of file plain.bst
 Warning--empty year in middleBench
+Name 1 in "D. Scharstein, and R. Szeliski" has a comma at the end for entry stereoTaxonomy
+while executing---line 1090 of file plain.bst
 Name 1 in "P. Tan, and P. Monasse" has a comma at the end for entry ipolFill
 while executing---line 1090 of file plain.bst
-Name 1 in "X. Mei, X. Sun, M. Zhou, S. Jiao, H. Wang, and X. Zhang" has a comma at the end for entry adCensus
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "X. Mei, X. Sun, M. Zhou, S. Jiao, H. Wang, and X. Zhang" for entry adCensus
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "X. Mei, X. Sun, M. Zhou, S. Jiao, H. Wang, and X. Zhang" for entry adCensus
-while executing---line 1090 of file plain.bst
-(There were 14 error messages)
+(There were 4 error messages)

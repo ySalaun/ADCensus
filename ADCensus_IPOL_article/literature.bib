@@ -1,5 +1,5 @@
 @Article{stereoTaxonomy,
-author = {D. Scharstein and R. Szeliski},
+author = {D. Scharstein, and R. Szeliski},
 title = {A taxonomy and evaluation of dense two-frame stereo correspondence algorithms},
 journal = {International Journal of Computer Vision},
 year = {2002},
@@ -7,26 +7,51 @@ OPTpages = {47(1/2/3):7-42},
 OPTmonth = {April-June}
 }
 
-@Article{costAggreg,
-author = {K. Zhang, J. Lu, and G. Lafruit},
-title = {Cross-based local stereo matching using orthogonal integral images},
-journal = {IEEE TCSVT},
-year = {2009},
-OPTpages = {19(7):1073–1079}
+@article{costAggreg,
+    abstract = {{We propose an area-based local stereo matching algorithm for accurate disparity estimation across all image regions. A well-known challenge to local stereo methods is to decide an appropriate support window for the pixel under consideration, adapting the window shape or the pixelwise support weight to the underlying scene structures. Our stereo method tackles this problem with two key contributions. First, for each anchor pixel an upright cross local support skeleton is adaptively constructed, with four varying arm lengths decided on color similarity and connectivity constraints. Second, given the local cross-decision results, we dynamically construct a shape-adaptive full support region on the fly, merging horizontal segments of the crosses in the vertical neighborhood. Approximating image structures accurately, the proposed method is among the best performing local stereo methods according to the benchmark Middlebury stereo evaluation. Additionally, it reduces memory consumption significantly thanks to our compact local cross representation. To accelerate matching cost aggregation performed in an arbitrarily shaped 2-D region, we also propose an orthogonal integral image technique, yielding a speedup factor of 5-15 over the straightforward integration.}},
+    author = {Zhang, K. and Lu, J. and Lafruit, G.},
+    citeulike-article-id = {10106880},
+    citeulike-linkout-0 = {http://portal.acm.org/citation.cfm?id=1641709},
+    issn = {1051-8215},
+    journal = {IEEE Trans. Cir. and Sys. for Video Technol.},
+    keywords = {stereo},
+    month = jul,
+    pages = {1073--1079},
+    posted-at = {2011-12-08 13:28:08},
+    priority = {2},
+    publisher = {Institute of Electrical and Electronics Engineers Inc., The},
+    title = {{Cross-based local stereo matching using orthogonal integral images}},
+    url = {http://portal.acm.org/citation.cfm?id=1641709},
+    volume = {19},
+    year = {2009}
 }
 
-@Article{cvFill,
-author = {C. Rhemann, A. Hosni, M. Bleyer, C. Rother, and M. Gelautz},
-title = {Fast Cost-Volume Filtering for Visual Correspondence and Beyond},
-journal = {IEEE CVPR},
-year = {2001}
+@article{cvFill,
+    author = {Hosni, A. and Rhemann, C. and Bleyer, M. and Rother, C. and Gelautz, M.},
+    title = {Fast Cost-Volume Filtering for Visual Correspondence and Beyond},
+    journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+    year = {2013},
+    volume = {35},
+    number = {2},
+    pages = {504--511},
+    url = {http://ieeexplore.ieee.org/xpl/articleDetails.jsp?tp=&arnumber=6256668&contentType=Journals+%26+Magazines&searchField%3DSearch_All%26queryText%3D10.1109%2FTPAMI.2012.156},
+    doi = {10.1109/TPAMI.2012.156},
+    keywords = {Stereo matching, Optical flow, Interactive image segmentation}
 }
 
-@Article{adCensus,
-author = {X. Mei, X. Sun, M. Zhou, S. Jiao, H. Wang, and X. Zhang},
-title = {On building an accurate stereo matching system on graphics hardware},
-journal = {GPUCV},
-year = {2011}
+
+@inproceedings{adCensus,
+    author = {Mei, X. and Sun, X. and Zhou, M. and Jiao, S. and Wang, H. and Zhang, X.},
+    booktitle = {Third Workshop on GPUs for Computer Vision},
+    citeulike-article-id = {10099488},
+    day = {7},
+    keywords = {stereo},
+    location = {Bercelona, Spain},
+    month = nov,
+    posted-at = {2011-12-06 15:41:40},
+    priority = {2},
+    title = {{On Building an Accurate Stereo Matching System on Graphics Hardware}},
+    year = {2011}
 }
 
 @Article{middleBench,
@@ -42,11 +67,23 @@ journal = {vision.middlebury.edu/stereo/}
 	year = {2013}
 }
 
-@Article{scanlineOptim,
-	author = {H. Hirschmüller},
-	title = {Stereo processing by semiglobal matching
-and mutual information},
-	journal = {IEEE TPAMI},
-	year = {2008},
-	OPTpages = {30(2):328–341}
-}
+
+@article{scanlineOptim,
+ author = {Hirschmuller, H.},
+ title = {Stereo Processing by Semiglobal Matching and Mutual Information},
+ journal = {IEEE Trans. Pattern Anal. Mach. Intell.},
+ issue_date = {February 2008},
+ volume = {30},
+ number = {2},
+ month = feb,
+ year = {2008},
+ issn = {0162-8828},
+ pages = {328--341},
+ numpages = {14},
+ url = {http://dx.doi.org/10.1109/TPAMI.2007.1166},
+ doi = {10.1109/TPAMI.2007.1166},
+ acmid = {1340245},
+ publisher = {IEEE Computer Society},
+ address = {Washington, DC, USA},
+ keywords = {global optimization, multi-baseline, mutual information, stereo, stereo, mutual information, global optimization, multi-baseline},
+} 

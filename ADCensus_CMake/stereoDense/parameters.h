@@ -46,6 +46,11 @@ class PARAMETERS{
 	float pi1, pi2;
 	int tauSO;
 
+	/*------------REGION VOTING-------------*/
+	int nVote;
+	int tauS;
+	float tauH;
+
 	/*---INITIALIZATION & DEFAULT VALUES---*/
 	// initialization of parameters need the 2 images and the disparity range
 	PARAMETERS(LWImage<float> image1, LWImage<float> image2,
@@ -91,6 +96,11 @@ class PARAMETERS{
 		pi1 = 1.0;
 		pi2 = 3.0;
 		tauSO = 15;
+
+		//default values for region voting parameters
+		nVote = 5;
+		tauS = 20;
+		tauH = 0.4;
 	}
     ~PARAMETERS() {
         delete [] upBorders;

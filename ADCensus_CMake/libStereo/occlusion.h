@@ -19,7 +19,12 @@
 #ifndef OCCLUSION_H
 #define OCCLUSION_H
 
+#define DISP_OCCLUSION 1
+#define DISP_MISMATCH 2
+
 #include "libLWImage/LWImage.h"
+#include "stereoDense/parameters.h"
+#include <iostream>
 
 /// Parameters for filling occlusions
 struct ParamOcclusion {
@@ -41,6 +46,11 @@ void fillMaxX(LWImage<int>& im, int vMin);
 void detect_occlusion(LWImage<int>& disparityLeft,
                       const LWImage<int>& disparityRight,
                       int dOcclusion, int tol_disp);
+void detect_outliers(LWImage<int>& disparityLeft,
+                      const LWImage<int>& disparityRight,
+                      int dOcclusion, int dMismatch, int tolDisp,
+					  int dMin, int dMax);
+void regionVoting(LWImage<int>& disp_outliers, const PARAMETERS& p);
 void fill_occlusion(const LWImage<int>& dispDense,
                     const LWImage<float>& guidance,
                     LWImage<int>& disparity, int dispMin, int dispMax,
