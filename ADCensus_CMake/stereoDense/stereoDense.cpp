@@ -16,6 +16,7 @@ static const char* OUTFILEL2 = "disparity_left_02_cost_aggregated.png";
 static const char* OUTFILEL3 = "disparity_left_03_scanline_optimization.png";
 static const char* OUTFILEL4 = "disparity_left_04_outliers.png";
 static const char* OUTFILEL5 = "disparity_left_05_region_voting.png";
+static const char* OUTFILEL6 = "disparity_left_06_proper_interpolation.png";
 
 static const char* OUTFILER1 = "disparity_right_01_cost_only.png";
 static const char* OUTFILER2 = "disparity_right_02_cost_aggregated.png";
@@ -182,7 +183,11 @@ static void disparity(LWImage<float> im1, LWImage<float> im2,
 	}
 
 	// proper interpolation
-
+	std::cout << "Phase 3: proper interpolation" << std::endl; 
+	properInterpolation(disp1, params);
+	if(! save_disparity(OUTFILEL6, disp1, dMin,dMax, grayMin, grayMax)) {
+		std::cerr << "Error writing file " << OUTFILEL5 << std::endl;
+	}
 	// depth discontinuity adjustment
 
 	// sub-pixel enhancement
@@ -196,7 +201,6 @@ int main (int argc, char** argv)
     int grayMin=255, grayMax=0;
     char sense='r'; // Camera motion direction: 'r'=to-right, 'l'=to-left
     CmdLine cmd;
-
     ParamOcclusion paramOcc; // Parameters for filling occlusions
     cmd.add( make_option('o',paramOcc.tol_disp) ); // Detect occlusion
     cmd.add( make_option('O',sense) ); // Fill occlusion

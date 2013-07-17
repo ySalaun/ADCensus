@@ -51,6 +51,7 @@ void detect_outliers(LWImage<int>& disparityLeft,
                       int dOcclusion, int dMismatch, int tolDisp,
 					  int dMin, int dMax);
 void regionVoting(LWImage<int>& disp_outliers, const PARAMETERS& p);
+void properInterpolation(LWImage<int>& disp_outliers, const PARAMETERS& p);
 void fill_occlusion(const LWImage<int>& dispDense,
                     const LWImage<float>& guidance,
                     LWImage<int>& disparity, int dispMin, int dispMax,

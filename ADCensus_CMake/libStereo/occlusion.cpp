@@ -17,6 +17,7 @@
  */
 
 #include "occlusion.h"
+#include "patch.cpp"
 #include <algorithm>
 #include <numeric>
 #include <vector>
@@ -93,7 +94,10 @@ void detect_outliers(LWImage<int>& disparityLeft,
         }
 }
 
-void regionVoting(LWImage<int>& disp_outliers, const PARAMETERS& p){
+void regionVoting(LWImage<int>& disp, const PARAMETERS& p){
+	// temporary disparity map that avoids too fast correction
+	LWImage<int>& dispTemp = alloc_image<int>(disp.w,disp.h);
+
 	// histogram for voting
 	float* Hp = new float[p.dMax - p.dMin + 1];
 	// fill the histogram with 0
@@ -104,7 +108,8 @@ void regionVoting(LWImage<int>& disp_outliers, const PARAMETERS& p){
 	for(int x=0; x<p.w; ++x){
 		for(int y=0; y<p.h; ++y){
 			// when the pixel is not an outlier, continue
-			if(*disp_outliers.pixel(x,y) >= p.dMin){
+			if(*disp.pixel(x,y) >= p.dMin){
+				*dispTemp.pixel(x,y) = *disp.pixel(x,y);
 				continue;
 			}
 			int leftBorder = -p.leftBorders[x*p.h+y];
@@ -115,20 +120,21 @@ void regionVoting(LWImage<int>& disp_outliers, const PARAMETERS& p){
 				int downBorder = p.downBorders[(x+xx)*p.h+y];
 				for(int yy = upBorder; yy <= downBorder; ++yy){
 					// if the pixel is an outlier, there is no vote to take into account
-					if(*disp_outliers.pixel(x+xx, y+yy) < p.dMin){
+					if(*disp.pixel(x+xx, y+yy) < p.dMin){
 						continue;
 					}
 					// increase the number of votes
 					++ nVote;
 					// update the histogram
-					++ Hp[*disp_outliers.pixel(x+xx, y+yy) - p.dMin];
+					++ Hp[*disp.pixel(x+xx, y+yy) - p.dMin];
 				}
 			}
 			// is the number of vote sufficient
 			if(nVote <= p.tauS){
+				*dispTemp.pixel(x,y) = *disp.pixel(x,y);
 				continue;
 			}
-			int disparity = *disp_outliers.pixel(x,y);
+			int disparity = *disp.pixel(x,y);
 			float voteRatio, voteRatioMax = 0.f;
 			for(int d = p.dMin; d <= p.dMax; ++d){
 				voteRatio = Hp[d-p.dMin]/nVote;
@@ -138,9 +144,75 @@ void regionVoting(LWImage<int>& disp_outliers, const PARAMETERS& p){
 				}
 				Hp[d-p.dMin] = 0;
 			}
-			*disp_outliers.pixel(x,y) = disparity;
+			*dispTemp.pixel(x,y) = disparity;
 		}
 	}
+	std::copy(dispTemp.data, dispTemp.data+dispTemp.w*dispTemp.h, disp.data);
+	free(dispTemp.data);
+}
+
+void properInterpolation(LWImage<int>& disp, const PARAMETERS& p){
+	// temporary disparity map that avoids too fast correction
+	LWImage<int>& dispTemp = alloc_image<int>(disp.w,disp.h);
+	// look on the 16 different directions
+	int directionX[] = {0, 2, 2, 2, 0, -2, -2, -2, 1, 2, 2, 1, -1, -2, -2, -1} ;
+	int directionY[] = {2, 2, 0, -2, -2, -2, 0, 2, 2, 1, -1, -2, -2, -1, 1, 2} ;
+	// loop on the whole picture
+	for(int x=0; x<p.w; ++x){
+		for(int y=0; y<p.h; ++y){
+			// when the pixel is not an outlier, continue
+			if(*disp.pixel(x,y) >= p.dMin){
+				*dispTemp.pixel(x,y) = *disp.pixel(x,y);
+				continue;
+			}
+			std::vector<int> disparities(16, *disp.pixel(x,y));
+			std::vector<float> cost(16, -1);
+			for(int d=0; d<16; ++d){
+				int X=x, Y=y;
+				for(int step=0; step < 20; ++step){
+					// go one step further
+					if(step%2 == 0){
+						X += directionX[d]/2;
+						Y += directionY[d]/2;
+					}
+					else{
+						X += directionX[d] - directionX[d]/2;
+						Y += directionY[d] - directionY[d]/2;
+					}
+					if(X < 0 || X >= p.w || Y < 0 || Y >= p.h){
+						break;
+					}
+					if(*disp.pixel(X,Y) >= p.dMin){
+						disparities[d] = *disp.pixel(X,Y);
+						cost[d] = ad(x, y, X, Y, p);
+						break;
+					}
+				}
+			}
+			if(*disp.pixel(x,y) == DISP_OCCLUSION){
+				int disparity = disparities[0];
+				for(int d=1; d<16; ++d){
+					if(disparity > disparities[d]){
+						disparity = disparities[d];
+					}
+				}
+				*dispTemp.pixel(x,y) = disparity;
+			}
+			else{
+				int disparity = disparities[0];
+				float minCost = cost[0];
+				for(int d=1; d<16; ++d){
+					if(minCost == -1 || (cost[d] < disparities[d] && cost[d] != -1)){
+						disparity = disparities[d];
+						minCost = cost[d];
+					}
+				}
+				*dispTemp.pixel(x,y) = disparity;
+			}
+		}
+	}
+	std::copy(dispTemp.data, dispTemp.data+dispTemp.w*dispTemp.h, disp.data);
+	free(dispTemp.data);
 }
 
 /// Square function

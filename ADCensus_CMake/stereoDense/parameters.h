@@ -100,7 +100,7 @@ class PARAMETERS{
 		//default values for region voting parameters
 		nVote = 5;
 		tauS = 20;
-		tauH = 0.4;
+		tauH = 0.4f;
 	}
     ~PARAMETERS() {
         delete [] upBorders;
