@@ -1,0 +1,1 @@
+C:\Users\Yohann\Documents\GitHub\ADCensus\ADCensus_Build\bin\Release\stereoDense.exe -O r C:\Users\Yohann\Documents\GitHub\ADCensus\Images\Tsukuba\left_picture.png C:\Users\Yohann\Documents\GitHub\ADCensus\Images\Tsukuba\right_picture.png -20 0 C:\Users\Yohann\Documents\GitHub\ADCensus\Images\Tsukuba\disparity_map.png

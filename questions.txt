@@ -1,0 +1,5 @@
+Census measure: take colors into account ? only intensity ?
+				9x7 window means 9 rows/ columns ?
+				==> do not seems to change a lot the results...
+				
+depth discontinuity adjustment: how edges are detected ?

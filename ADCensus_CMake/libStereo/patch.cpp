@@ -39,10 +39,10 @@ float census(const int x1, const int y1, const int x2, const int y2, const PARAM
 	for(int color = 0; color < 3; ++color){
 		const float p1ref = *(params.im[0].pixel(x1, y1)+color*params.wh);
 		const float p2ref = *(params.im[1].pixel(x2, y2)+color*params.wh);
-		for(int y = -params.winY; y <= params.winY; ++y) {
-			const float* p1 = params.im[0].pixel(x1-params.winX, y1+y)+color*params.wh;
-			const float* p2 = params.im[1].pixel(x2-params.winX, y2+y)+color*params.wh;
-			for(int x = -params.winX; x <= params.winX; ++x){
+		for(int y = -params.winY/2; y <= params.winY/2; ++y) {
+			const float* p1 = params.im[0].pixel(x1-params.winX/2, y1+y)+color*params.wh;
+			const float* p2 = params.im[1].pixel(x2-params.winX/2, y2+y)+color*params.wh;
+			for(int x = -params.winX/2; x <= params.winX/2; ++x){
 				bool dif = (*p1++ - p1ref)*(*p2++ - p2ref) < 0;
 				if(dif){
 					dist += 1.0;

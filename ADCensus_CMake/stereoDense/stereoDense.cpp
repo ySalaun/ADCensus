@@ -100,7 +100,6 @@ static void disparity(LWImage<float> im1, LWImage<float> im2,
 					  const int grayMin, const int grayMax,
 					  PARAMETERS &params) {
 	const int h = params.h, w = params.w;
-
 	// tables
 	float* costVol = new float[h*w*(dMax-dMin+1)];
 	float* lowCosts = new float[h*w];
