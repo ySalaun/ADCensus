@@ -84,7 +84,7 @@ void detect_outliers(LWImage<int>& disparityLeft,
 			if(x+disparity<0 || x+disparity>=w || abs(disparity-*disparityRight.pixel(x+disparity,y))>tolDisp){
 				bool occlusion = true;
 				for(int d = dMin; d <= dMax; ++d){
-					if(x+disparity >= 0 && x+disparity < w && d == *disparityRight.pixel(x+d,y)){
+					if(x+disparity >= 0 && x+disparity < w && d == *disparityRight.pixel(x+disparity,y)){
 						occlusion = false;
 						break;
 					}
